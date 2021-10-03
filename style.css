@@ -1,0 +1,202 @@
+/** Main Style **/
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+/* Home Page */
+
+html {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+/* Background */
+
+background {
+  background-color: #f2fbff;
+}
+
+#nav_bar {
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  color: #9c6c1b;
+  align-items: right;
+  font-size: 1em;
+  height: 10px;
+  margin: auto 0 auto;
+  text-align: right;
+  width: 100%;
+  padding-top: 1em;
+  padding-left: 0.75em;
+  padding-bottom: 0.5em;
+}
+
+#nav_bar a:hover {
+  font-weight: bold;
+}
+
+#nav_bar a:link {
+  color: #9c6c1b;
+}
+
+#current_page {
+  font-weight: bold;
+  text-underline-position: below;
+}
+
+#nav_bar a:active {
+  font-weight: bold;
+}
+
+.nav_span {
+  margin-right: 2em;
+}
+
+.nav_span a {
+  text-decoration: none;
+}
+
+#small_logo {
+  position: absolute;
+  width: 60px;
+  height: 51.5px;
+  left: 12px;
+  top: 13px;
+}
+
+#shopping_cart {
+  position: absolute;
+  height: 50px;
+  left: 94.44%;
+  right: 3.26%;
+}
+
+/** Top Part **/
+#logo {
+  position: absolute;
+  width: 140px;
+  height: 120.17px;
+  left: 93px;
+  top: 258.27px;
+}
+
+#top_part {
+  padding-top: 20px;
+}
+
+h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  padding-bottom: -2px;
+  color: #f54572;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  color: #353535;
+}
+
+/** Cards **/
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row {
+  padding-top: 150px;
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  background-color: white;
+  padding-top: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background: #f54572;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+object {
+  color: #f54572;
+}
+
+object:hover {
+  color: white;
+}
+
+h4 {
+  color: #353535;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 39px;
+  text-align: center;
+}
+
+h4:hover {
+  font-weight: bold;
+  color: white;
+}
+
+#link {
+  text-align: center;
+}
+
+#link a:link {
+  color: #f54572;
+}
+
+/** Footer **/
+#footer {
+  background-color: #5d3f0d;
+  color: white;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  height: 3em;
+  padding-top: 4px;
+}
