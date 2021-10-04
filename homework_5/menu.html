@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--Home Page-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bun Bun Bakeshop: Menu</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="menu_style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="menu_main">
+      <!-- Navigation Bar -->
+      <div id="nav_bar">
+        <a href="home.html"
+          ><img
+            id="small_logo"
+            src="images/bb_bakeshop_logo.png"
+            alt="bun bun bakeshop logo"
+        /></a>
+        <!--Logo created using Adobe Illustrator-->
+        <span class="nav_span">Home</span>
+        <span class="nav_span"><a href="about.html">About</a></span>
+        <span class="nav_span" id="current_page"
+          ><a href="menu.html">Menu</a></span
+        >
+        <span class="nav_span"
+          ><a href="cart.html"
+            ><img
+              id="shopping_cart"
+              src="images/shopping_cart.png"
+              alt="shopping cart" /></a
+        ></span>
+      </div>
+
+      <!--Filters & Sort Features -->
+      <div class="filters">
+        <!--Filter by Occasion-->
+        <div class="dropdown" id="occasion_list">
+          <span class="filter_span">
+            <form>
+              <label for="occasion">Occasion</label>
+              <select id="occasion" name="occasion">
+                <option value="birthday">Birthday</option>
+                <option value="surprise">Make Their Day</option>
+                <option value="breakfast">Breakfast</option>
+              </select>
+            </form>
+          </span>
+        </div>
+
+        <!--Filter by Diet -->
+        <div class="dropdown" id="diet_list">
+          <span class="filter_span">
+            <form>
+              <label for="diet">Diet</label>
+              <select id="diet" name="diet">
+                <option value="vegan">Vegan</option>
+                <option value="gf">Gluten-Free (GF)</option>
+                <option value="nf">Nut-Free</option>
+                <option value="df">Dairy-Free</option>
+              </select>
+            </form>
+          </span>
+        </div>
+
+        <!--Sort By Functionality-->
+        <div class="dropdown" id="sortby_list">
+          <span class="filter_span">
+            <form>
+              <label for="sortby">Sort By</label>
+              <select id="sortby" name="sortby">
+                <option value="price_lth">Price: low to high</option>
+                <option value="price_htl">Price: high to low</option>
+                <option value="alph">Alphabetical</option>
+              </select>
+            </form>
+          </span>
+        </div>
+
+        <!--Reset-->
+        <div class="dropdown">
+          <p id="filter_reset">Reset</p>
+        </div>
+      </div>
+
+      <!--Menu Items-->
+      <!--https://www.w3schools.com/howto/howto_css_three_columns.asp-->
+      <div class="menu_items">
+        <div class="items" id="original">
+          <img
+            class="product_img"
+            src="images/original.jpg"
+            alt="original bun"
+          />
+          <p>
+            <span class="product_title">Original </span
+            ><span class="cost">$3.00</span>
+          </p>
+          <p class="description">
+            Classic, gooey cinnamon bun with icing on top
+          </p>
+        </div>
+
+        <div class="items" id="blackberry">
+          <img
+            class="product_img"
+            src="images/blackberry.jpg"
+            alt="blackberry bun"
+          />
+          <p>
+            <span class="product_title">Blackberry </span
+            ><span class="cost">$4.00</span>
+          </p>
+          <p class="description">
+            Flaky original cinnamon bun dough infused with swirls of fresh
+            blackberries
+          </p>
+        </div>
+
+        <div class="items" id="walnut">
+          <img class="product_img" src="images/walnut.jpg" alt="walnut bun" />
+          <p>
+            <span class="product_title">Walnut </span
+            ><span class="cost">$5.00</span>
+          </p>
+          <p class="description">
+            Ground walnut neaded into the dough and slivered walnuts dusted on
+            top
+          </p>
+        </div>
+
+        <div class="items" id="original_gf">
+          <img
+            class="product_img"
+            src="images/original_gf.jpg"
+            alt="original gf bun"
+          />
+          <p>
+            <span class="product_title">Original GF </span
+            ><span class="cost">$4.50</span>
+          </p>
+          <p class="description">
+            The same gooey goodness from the original classic bun, but without
+            gluten
+          </p>
+        </div>
+
+        <div class="items" id="pumpkin_spice">
+          <img
+            class="product_img"
+            src="images/pumpkin_spice.jpg"
+            alt="pumpkin spice bun"
+          />
+          <p>
+            <span class="product_title">Pumpkin Spice </span
+            ><span class="cost">$5.50</span>
+          </p>
+          <p class="description">
+            Bringing feelings of fall, the pumpkin spice bun tastes like a warm
+            latte
+          </p>
+        </div>
+
+        <div class="items" id="caramel_pecan">
+          <img
+            class="product_img"
+            src="images/caramel_pecan.jpg"
+            alt="caramel pecan bun"
+          />
+          <p>
+            <span class="product_title">Caramel Pecan </span
+            ><span class="cost">$5.50</span>
+          </p>
+          <p class="description">
+            Original dough with swirls of candied caramel and ground pecans
+          </p>
+        </div>
+      </div>
+
+      <div id="footer">
+        <p>
+          112 Spring Street, Pittsburgh, PA <span id="dot">&#183;</span> (555)
+          555-5555
+        </p>
+        <!--https://www.toptal.com/designers/htmlarrows/punctuation/middle-dot/-->
+      </div>
+    </div>
+  </body>
+</html>
