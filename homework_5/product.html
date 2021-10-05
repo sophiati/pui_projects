@@ -46,6 +46,8 @@
 
       <!--Product Image-->
       <div id="column_1" class="product_claims">
+        <h2>Original</h2>
+
         <img
           id="original_pd"
           class="pd_images"
@@ -56,8 +58,49 @@
 
       <!--Description & Menu Items-->
       <div id="column_2" class="product_claims">
-        <p>Classic, gooey cinnamon bun with icing on top</p>
+        <div id="detail_description">
+          <p>Classic, gooey cinnamon bun with icing on top</p>
+        </div>
+
         <hr size="" width="" color="" />
+
+        <div class="pieces">
+          <button type="button">1pc</button>
+          <button type="button">3pc</button>
+          <button type="button">6pc</button>
+          <button type="button">12pc</button>
+        </div>
+
+        <div class="glaze">
+          <button type="button">None</button>
+          <button type="button">Sugar-Milk</button>
+          <button type="button">Vanilla-Milk</button>
+          <button type="button">Double-Chocolate</button>
+        </div>
+
+        <div class="quantity">
+          <form>
+            <label for="qty">Quantity</label>
+            <select id="qty" name="qty">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10+">10+</option>
+            </select>
+          </form>
+        </div>
+        <h5>Price</h5>
+        <p class="detailed_price">$3.00</p>
+
+        <form>
+          <input type="submit" value="Add to Cart" class="submit" />
+        </form>
       </div>
 
       <div id="footer">

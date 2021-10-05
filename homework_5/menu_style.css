@@ -1,20 +1,69 @@
+/*Filters & Sorting*/
 .filters {
-  align-items: left;
+  /* align-items: center; */
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
   height: 65px;
   margin: auto 0 auto;
   text-align: left;
-  width: 100%;
-  padding-top: 10px;
+  /* width: 100%; */
+  padding-top: 75px;
   padding-left: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 75px;
 }
 
-.filter_span {
+/* .filter_span {
   position: relative;
   top: 25%;
   transform: translateY(-25%);
   margin-left: 2em;
+} */
+
+select {
+  display: flex;
+  padding: 10px 14px;
+  width: 172px;
+  height: 44px;
+  background: #ffffff;
+  border: 2px solid #d0d5dd;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
 }
+
+/* select,
+#sortby {
+  border: none;
+} */
+
+.reset {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 30px;
+  /* or 150% */
+
+  color: #5b5b5b;
+}
+
+option {
+  color: #101828;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/*select,
+ {
+  display: flex;
+  padding: 10px 14px;
+  width: 172px;
+  height: 44px;
+}*/
 
 /*.dropdown:after {
   content: "";
@@ -23,9 +72,25 @@
   margin-left: 20px;
 }*/
 
+/*Main Menu Items*/
 * {
   box-sizing: border-box;
 }
+
+h2 {
+  padding-left: 25px;
+}
+
+.menu_items {
+  /* margin: 25px auto 25px auto; */
+  padding-left: 25px;
+}
+
+/* .menu_items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
 
 .items {
   float: left;
@@ -42,8 +107,8 @@
 }
 
 .product_img {
-  width: 402px;
-  height: 372px;
+  width: 362px;
+  height: 337px;
 }
 
 @media screen and (max-width: 600px) {
@@ -55,13 +120,13 @@
 .product_title {
   font-family: "Poppins", sans-serif;
   font-size: 28px;
-  font-style: 600;
+  font-weight: 600;
 }
 
 .cost {
   font-family: "Poppins", sans-serif;
   font-size: 28px;
-  font-style: 600;
+  font-weight: 600;
   color: #42b5d9;
   justify-self: right;
 }
@@ -72,4 +137,13 @@
   font-style: 400;
   color: #b5b5b5;
   width: 402px;
+}
+
+h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 79px;
+  color: #f54572;
 }
