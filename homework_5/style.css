@@ -1,6 +1,6 @@
 /** Main Style **/
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Home Page */
 /*General*/
@@ -29,13 +29,14 @@ body {
 
 #main {
   background-color: #e3f6fd;
-  /* min-height: 100%; */
+  min-height: 100%;
   padding-top: 100px;
 }
 
 /* Navigation Bar */
 
 #nav_bar {
+  /* visibility: hidden; */
   background-color: white;
   font-family: "Montserrat", sans-serif;
   color: #9c6c1b;
@@ -52,9 +53,10 @@ body {
   position: fixed;
 }
 
-#nav_bar a:hover {
-  font-weight: 700;
-}
+/* #nav_bar a:hover {
+  font-weight: 500;
+  color: #f54572;
+} */
 
 #nav_bar a:link {
   color: #9c6c1b;
@@ -65,13 +67,14 @@ body {
 }
 
 #current_page {
-  font-weight: bold;
-  text-underline-position: below;
+  font-weight: 700;
+  border-bottom: 3px solid #f54572;
 }
 
-#nav_bar a:active {
+/* #nav_bar a:active {
   font-weight: 700;
-}
+  border-bottom: 3px solid #f54572;
+} */
 
 .nav_span {
   position: relative;
@@ -128,7 +131,7 @@ h1 {
   /* float: inherit; */
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 54px;
   padding-bottom: -2px;
   height: 89px;
@@ -141,7 +144,7 @@ h1 {
 h3 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 36px;
   color: #353535;
   line-height: 1px;
@@ -176,16 +179,21 @@ h3 {
   clear: both;
 }
 
+.column a {
+  text-decoration: none;
+}
+
 .card {
   background-color: white;
   padding-top: 45px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 16px;
+  padding-bottom: 12px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: 0.3s;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .card:hover {
@@ -197,11 +205,11 @@ h3 {
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
+    /* margin-bottom: 15px; */
   }
 }
 
-svg {
+.row svg {
   width: 107px;
   height: 107px;
   stroke: #f54572;
@@ -212,23 +220,26 @@ svg {
   stroke: #ffffff;
 }
 
-h5 {
+.container h5 {
   color: #353535;
   font-family: "Poppins";
-  font-style: normal;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 39px;
   text-align: center;
+  text-decoration: none;
 }
 
 .card:hover h5 {
   font-weight: bold;
   color: white;
+  text-decoration: none;
 }
 
 #link {
   text-align: center;
+  padding-bottom: 15px;
 }
 
 #link a:link {
@@ -249,12 +260,14 @@ h5 {
   font-weight: normal;
   font-size: 24px;
   height: 65px;
-  position: bottom;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 #footer p {
   position: relative;
-  top: 30%;
+  top: 40%;
   transform: translateY(-30%);
 }
 
