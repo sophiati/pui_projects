@@ -6,10 +6,8 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
-  /* vertical-align: baseline; */
   width: 100%;
   height: 100%;
-  /* min-height: 100%; */
 }
 
 /*Breadcrumb Styles*/
@@ -19,12 +17,9 @@ body {
   gap: 15px;
   padding-top: 90px;
   padding-left: 30px;
-  /* margin: 300px auto 30px 30px; */
 }
 
 .breadcrumbs svg {
-  /* width: 6px;
-  height: 12px; */
   margin-top: 22px;
   margin-left: 3px;
 }
@@ -45,22 +40,9 @@ body {
   display: flex;
   justify-content: space-evenly;
   gap: 30px;
-  /* padding: 5px 0 0 0; */
   margin-left: 20px;
   margin-right: 20px;
-  /* margin: 50px;
-  padding-top: 30p; */
-  /* padding-left: 50px; */
 }
-
-/* .product_claims {
-  display: inline-block;
-  vertical-align: top;
-  width: 450px;
-  height: 350px;
-  padding: 50px;
-  text-align: left;
-} */
 
 #product_img {
   width: 547px;
@@ -100,13 +82,9 @@ label {
 
 #pieces {
   display: flex;
-  /* flex-direction: row; */
   justify-content: flex-start;
   gap: 10px;
-  /* align-content: left; */
-  /* padding: 10px 16px; */
   margin: 10px auto 10px auto;
-  /* width: 60px; */
 }
 
 button {
@@ -121,7 +99,6 @@ button {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  /* line-height: 20px; */
   text-align: center;
   color: #344054;
 }
@@ -161,13 +138,9 @@ select {
 
 #glaze {
   display: flex;
-  /* flex-direction: row; */
   justify-content: flex-start;
   gap: 10px;
-  /* align-content: left; */
-  /* padding: 10px 16px; */
   margin: 10px auto 10px auto;
-  /* width: 60px; */
 }
 
 #total {
