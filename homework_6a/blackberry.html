@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--Blackberry Product Detail Page-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bun Bun Bakeshop: Blackberry</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="product_style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="product_main">
+      <!-- Navigation Bar -->
+      <div id="nav_bar">
+        <a href="index.html"
+          ><img
+            id="small_logo"
+            src="images/bb_bakeshop_logo.png"
+            alt="bun bun bakeshop logo"
+        /></a>
+        <!--Logo created using Adobe Illustrator-->
+        <span class="nav_span"><a href="index.html">Home</a></span>
+        <span class="nav_span" id="current_page"
+          ><a href="menu.html">Menu</a></span
+        >
+        <span class="nav_span"><a href="about.html">About</a></span>
+        <span class="nav_span"
+          ><a href="cart.html"
+            ><img
+              id="shopping_cart"
+              src="images/shopping_cart.png"
+              alt="shopping cart" /></a
+        ></span>
+      </div>
+
+      <!--Breadcrumbs-->
+      <div class="breadcrumbs">
+        <p><a href="menu.html">Menu</a></p>
+        <svg
+          width="8"
+          height="14"
+          viewbox="0 0 8 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 13L7 7L1 1"
+            stroke="#5d3f0d"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <p>Blakcberry</p>
+      </div>
+
+      <!--Product Image-->
+      <div class="columns">
+        <div id="column_1" class="product_claims">
+          <h2>Blackberry</h2>
+
+          <img
+            id="product_img"
+            src="images/blackberry.jpg"
+            alt="blackberry bun"
+          />
+          <!-- Image from Unsplash: https://unsplash.com/photos/DnGGIffnjTY -->
+        </div>
+
+        <!--Description & Menu Items-->
+        <div id="column_2" class="pd_options">
+          <div id="detail_description">
+            <p>
+              Flaky original cinnamon bun dough infused with swirls of fresh
+              blackberries
+            </p>
+          </div>
+
+          <br />
+          <hr />
+          <br />
+
+          <div id="select_options">
+            <div class="menu-inputs">
+              <p class="option_label">Buns per Box</p>
+              <div id="pieces">
+                <button type="button">1pc</button>
+                <button type="button">3pc</button>
+                <button type="button">6pc</button>
+                <button type="button">12pc</button>
+              </div>
+            </div>
+
+            <div class="menu-inputs">
+              <p class="option_label">Glaze</p>
+              <div id="glaze">
+                <button type="button">None</button>
+                <button type="button">Sugar-Milk</button>
+                <button type="button">Vanilla-Milk</button>
+                <button type="button">Double-Chocolate</button>
+              </div>
+            </div>
+
+            <div class="menu-inputs">
+              <form>
+                <label for="qty">Quantity</label>
+                <br />
+                <br />
+                <div id="quantity">
+                  <select id="qty" name="qty">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10+">10+</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div id="total">
+            <h5>Price</h5>
+            <p class="detailed_price">$4.00</p>
+          </div>
+
+          <form id="submit_button">
+            <input type="submit" value="Add to Cart" class="submit" />
+          </form>
+        </div>
+      </div>
+
+      <div id="footer">
+        <p>
+          112 Spring Street, Pittsburgh, PA <span id="dot">&#183;</span> (555)
+          555-5555
+        </p>
+        <!--https://www.toptal.com/designers/htmlarrows/punctuation/middle-dot/-->
+      </div>
+    </div>
+  </body>
+</html>
