@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--Shopping Cart-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bun Bun Bakeshop: Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="cart_style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="about_main">
+      <!-- Navigation Bar -->
+      <div id="nav_bar">
+        <a href="index.html"
+          ><img
+            id="small_logo"
+            src="images/bb_bakeshop_logo.png"
+            alt="bun bun bakeshop logo"
+        /></a>
+        <!--Logo created using Adobe Illustrator-->
+        <span class="nav_span"><a href="index.html">Home</a></span>
+        <span class="nav_span"><a href="menu.html">Menu</a></span>
+        <span class="nav_span" id="current_page"
+          ><a href="about.html">About</a></span
+        >
+        <span class="nav_span"
+          ><a href="cart.html"
+            ><img
+              id="shopping_cart"
+              src="images/shopping_cart.png"
+              alt="shopping cart" /></a
+        ></span>
+      </div>
+
+      <!--Main Content-->
+      <div class="columns">
+        <div id="column_1" class="items">
+          <h2>Your Cart</h2>
+          <div id="item1">
+            <div class="summary_image">
+              <img
+                id="original_bun"
+                src="images/original.jpg"
+                alt="Original Bun"
+              />
+              <!-- Image from Unsplash: https://unsplash.com/photos/iEtcPCvEMDI -->
+            </div>
+            <div class="summary_txt">
+              <p>
+                <span class="summary_title">Original</span>
+                <span class="bold_text">Glaze:</span
+                ><span class="light_text">Sugar-milk</span>
+                <br />
+                <span class="bold_text">Buns per box:</span
+                ><span class="light_text">3</span>
+              </p>
+              <form>
+                <label for="qty">Qty</label>
+                <select id="item1_qty" name="qty">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10+">10+</option>
+                </select>
+              </form>
+            </div>
+            <div class="blue_text">
+              <p>$9.00</p>
+              <span class="edit">Edit</span><span class="delete">Delete</span>
+            </div>
+          </div>
+          <hr />
+          <div id="item2">
+            <div class="summary_image">
+              <img id="walnut_bun" src="images/walnut.jpg" alt="Walnut Bun" />
+              <!-- Image from Unsplash: https://unsplash.com/photos/WmpGRa898oU -->
+            </div>
+            <div class="summary_txt">
+              <p>
+                <span class="summary_title">Walnut</span>
+                <span class="bold_text">Glaze:</span
+                ><span class="light_text">Double-chocole</span>
+                <br />
+                <span class="bold_text">Buns per box:</span
+                ><span class="light_text">1</span>
+              </p>
+              <form>
+                <label for="qty">Qty</label>
+                <select id="item2_qty" name="qty">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10+">10+</option>
+                </select>
+              </form>
+            </div>
+            <div class="blue_text">
+              <p>$10.00</p>
+              <span class="edit">Edit</span><span class="delete">Delete</span>
+            </div>
+          </div>
+          <hr />
+        </div>
+
+        <!--Receipt-->
+        <div id="column_2" class="info">
+          <div id="receipt">
+            <p><span class="summary_title">Order Summary</span></p>
+            <br />
+            <div class="lines">
+              <p>
+                <span class="item_name">Original (3pc)</span
+                ><span class="multiplier"> x 1</span>
+              </p>
+              <p>$9.00</p>
+            </div>
+            <div class="lines">
+              <p>
+                <span class="item_name">Walnut (1pc)</span
+                ><span class="multiplier"> x 2</span>
+              </p>
+              <p>$10.00</p>
+            </div>
+            <hr />
+            <div class="lines">
+              <p><span class="item_name">Total (pre-tax)</span></p>
+              <p id="subtotal">$19.00</p>
+            </div>
+            <div class="lines">
+              <p><span class="item_name">Tax</span></p>
+              <p id="tax">$2.28</p>
+            </div>
+            <hr />
+            <div class="lines">
+              <p><span class="total_name">Total</span></p>
+              <p id="total">$21.28</p>
+            </div>
+          </div>
+
+          <form id="checkout_button">
+            <input type="submit" value="Checkout" class="checkout" />
+          </form>
+        </div>
+      </div>
+
+      <div id="footer">
+        <p>
+          112 Spring Street, Pittsburgh, PA <span id="dot">&#183;</span> (555)
+          555-5555
+        </p>
+        <!--https://www.toptal.com/designers/htmlarrows/punctuation/middle-dot/-->
+      </div>
+    </div>
+  </body>
+</html>
