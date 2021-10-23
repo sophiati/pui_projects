@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#cart_main {
+  padding-top: 30px;
+}
+
+.columns {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 30px;
+}
+
+/*Column 1*/
+h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  color: #f54572;
+}
+
+.cart_items {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 770px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.summary_image {
+  width: 250.45px;
+  height: 233px;
+}
+
+.summary_txt {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 500px;
+  padding-left: 20px;
+}
+
+.summary_title {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 28px;
+  color: black;
+}
+
+.bold_text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #b9b9b9;
+}
+
+.light_text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #b9b9b9;
+}
+
+select {
+  display: flex;
+  padding: 10px 14px;
+  width: 172px;
+  height: 44px;
+  background: #ffffff;
+  border: 2px solid #d0d5dd;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+
+.price {
+  font-family: Poppins;
+  font-weight: 700px;
+  font-size: 28px;
+  color: #42b5d9;
+}
+
+.edit {
+  font-family: Montserrat;
+  font-weight: 400px;
+  font-size: 18px;
+  color: #42b5d9;
+  text-decoration: underline;
+}
+
+.delete {
+  font-family: Montserrat;
+  font-weight: 400px;
+  font-size: 18px;
+  color: #42b5d9;
+  text-decoration: underline;
+}
+
+.right {
+  align-content: right;
+}
+
+hr {
+  stroke-width: 2px;
+}
+
+/*Column 2*/
+#column_2 {
+  margin-top: 165px;
+}
+
+#receipt {
+  background-color: white;
+  width: 400px;
+  height: 630px;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: left;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.lines {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item_name {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  color: black;
+}
+
+.multiplier {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  color: #b9b9b9;
+}
+
+.cost {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  color: black;
+}
+
+#subtotal {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+}
+
+.total_name {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 32px;
+  color: black;
+}
+
+#total {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 600;
+  color: #42b5d9;
+}
+
+.checkout {
+  background: #f54572;
+  border: 1px solid #f54572;
+  box-sizing: border-box;
+  border-radius: 28px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  height: 61px;
+  width: 247px;
+}
+
+#checkout_button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
