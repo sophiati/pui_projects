@@ -77,6 +77,14 @@ h2 {
   }
 }
 
+.item_labels {
+  display: flex;
+  justify-content: space-between;
+  width: 362px;
+  padding-top: 10px;
+  line-height: 5px;
+}
+
 .product_title {
   font-family: "Poppins", sans-serif;
   font-size: 28px;

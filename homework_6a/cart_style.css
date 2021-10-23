@@ -10,6 +10,22 @@ body {
   height: 100%;
 }
 
+#nav_bar svg {
+  width: 35px;
+  height: 35px;
+  stroke: white;
+  stroke-width: 2px;
+  left: 94.44%;
+  right: 3.26%;
+  padding: 5px;
+  background-color: #f54572;
+  border-radius: 3px;
+}
+
+#cart_item {
+  top: 20%;
+}
+
 #cart_main {
   padding-top: 30px;
 }
