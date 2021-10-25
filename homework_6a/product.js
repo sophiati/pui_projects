@@ -21,8 +21,8 @@ let cartCount = 0
 
 function addtoCart() {
   var newItem = document.getElementById("qty").value
-  alert(newItem + " boxes added to your cart")
   cartCount += Number(newItem)
   document.getElementById("shopper").style.display = "block"
   document.getElementById("shopper").innerHTML = cartCount
+  alert(newItem + " boxes added to your cart")
 }
