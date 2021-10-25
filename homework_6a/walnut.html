@@ -182,7 +182,7 @@
                 <br />
                 <br />
                 <div id="quantity">
-                  <select id="qty" name="qty">
+                  <select id="qty" name="qty" onchange="updatePrice()">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -192,7 +192,7 @@
                     <option value="7">7</option>
                     <option value="8">8</option>
                     <option value="9">9</option>
-                    <option value="10+">10+</option>
+                    <option value="10">10</option>
                   </select>
                 </div>
               </form>
@@ -201,7 +201,7 @@
 
           <div id="total">
             <h5>Price</h5>
-            <p class="detailed_price">$5.00</p>
+            <p class="detailed_price" id="item_price">$5.00</p>
           </div>
 
           <form id="submit_button">
