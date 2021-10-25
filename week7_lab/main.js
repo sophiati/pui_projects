@@ -2,21 +2,21 @@
 function Lion(name, age) {
   this.name = name
   this.age = age
-  this.image_alt = "This is a lion named" + this.name
+  this.image_alt = "This is a lion named " + this.name
   this.image = "lion.png"
 }
 
 function Bear(name, age) {
   this.name = name
   this.age = age
-  this.image_alt = "This is a bear named" + this.name
+  this.image_alt = "This is a bear named " + this.name
   this.image = "bear.png"
 }
 
 function Monkey(name, age) {
   this.name = name
   this.age = age
-  this.image_alt = "This is a monkey named" + this.name
+  this.image_alt = "This is a monkey named " + this.name
   this.image = "monkey.png"
 }
 
@@ -48,4 +48,22 @@ function generateRandomAge() {
 function generateRandomAnimal() {
   let randomIdx = generateRandomIndex(animals.length)
   let randomAnimal = animals[randomIdx]
+
+  if (randomAnimal instanceof Lion) {
+    return new Lion(generateRandomName(), generateRandomAge())
+  } else if (randomAnimal instanceof Bear) {
+    return new Bear(generateRandomName(), generateRandomAge())
+  } else if (randomAnimal instanceof Monkey) {
+    return new Monkey(generateRandomName(), generateRandomAge())
+  }
+}
+
+function onLoad() {
+  var animal = generateRandomAnimal()
+  console.log(animal)
+  document.getElementById("animal-properties").textContent =
+    animal.name + ", " + animal.age + " years old"
+  var imageTag = document.getElementById("animal-img")
+  imageTag.setAttribute("src", animal.image)
+  imageTag.setAttribute("alt", animal.image_alt)
 }

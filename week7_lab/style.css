@@ -1,17 +1,23 @@
 body {
-    font-family: 'Open Sans Condensed', sans-serif;
-    color: navy;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: navy;
 }
 
 #container {
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
 }
 
 h1 {
-    font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
+}
+
+#animal {
+  justify-content: center;
 }
 
 #animal-img {
+  width: 300px;
+  height: 300px;
 }
