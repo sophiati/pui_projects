@@ -1,4 +1,4 @@
-//Updating price by multiplying cost x # pieces per box x quantity of boxes
+//Updating price by multiplying cost x # pieces per box x qty of boxes
 
 function updatePrice() {
   if (document.getElementById("one").checked) {

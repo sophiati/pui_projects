@@ -13,7 +13,7 @@ function updatePrice() {
     var pieces = 1
   }
 
-  var cost = 4
+  var cost = 5
   var quantity = document.getElementById("qty").value
   var total = cost * pieces * quantity
   document.getElementById("item_price").innerHTML = "$" + total.toFixed(2)

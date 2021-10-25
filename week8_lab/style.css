@@ -21,3 +21,19 @@ h1 {
   width: 300px;
   height: 300px;
 }
+
+button {
+  width: 100px;
+  height: 40px;
+  justify-content: center;
+  color: white;
+  background-color: navy;
+  font-family: "Open Sans Condensed";
+  font-size: 18px;
+}
+
+p {
+  font-family: "Montserrat";
+  font-size: 18px;
+  justify-content: center;
+}

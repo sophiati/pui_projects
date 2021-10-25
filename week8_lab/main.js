@@ -58,7 +58,16 @@ function generateRandomAnimal() {
   }
 }
 
+var saveChecker = localStorage.getItem("savedAnimal")
+
 function onLoad() {
+  var animal = JSON.parse(localStorage.getItem("savedAnimal"))
+  if (animal === null) {
+    document.getElementById("storage-button").textContent = "Save Animal"
+    animal = generateRandomAnimal()
+  } else {
+    document.getElementById("storage-button").textContent = "Clear Animal"
+  }
   var animal = generateRandomAnimal()
   console.log(animal)
   document.getElementById("animal-properties").textContent =
@@ -66,4 +75,20 @@ function onLoad() {
   var imageTag = document.getElementById("animal-img")
   imageTag.setAttribute("src", animal.image)
   imageTag.setAttribute("alt", animal.image_alt)
+
+  var savedAnimal = { name: animal.name, age: animal.age }
+  localStorage.setItem("myAnimal", JSON.stringify(savedAnimal))
+  JSON.parse(localStorage.getItem("myAnimal"))
+}
+
+function onClick() {
+  if (saveChecker === null) {
+    localStorage.removeItem("savedAnimal")
+    document.getElementById("note").textContent = "Saved!"
+    localStorage.setItem("savedAnimal", "1")
+  } else {
+    localStorage.setItem("savedAnimal", JSON.stringify(animal))
+    document.getElementById("note").textContent = "Cleared!"
+    localStorage.removeItem("savedAnimal")
+  }
 }
