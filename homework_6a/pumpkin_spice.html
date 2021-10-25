@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
+    <script src="product.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -33,7 +34,7 @@
           ><a href="menu.html">Menu</a></span
         >
         <span class="nav_span"><a href="about.html">About</a></span>
-        <span class="nav_span"
+        <span class="nav_span" id="cart_item"
           ><a href="cart.html"
             ><svg
               width="27"
@@ -47,7 +48,10 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              /></svg></a
+              />
+            </svg>
+          </a>
+          <p id="shopper"></p
         ></span>
       </div>
 
@@ -100,23 +104,80 @@
 
           <div id="select_options">
             <div class="menu-inputs">
-              <p class="option_label">Buns per Box</p>
-              <div id="pieces">
-                <button type="button">1pc</button>
-                <button type="button">3pc</button>
-                <button type="button">6pc</button>
-                <button type="button">12pc</button>
-              </div>
+              <form>
+                <p class="option_label">Buns per Box</p>
+                <div id="pieces">
+                  <input
+                    type="radio"
+                    id="one"
+                    name="pieces-answer"
+                    value="1"
+                    class="pieces-answer"
+                    onclick="updatePrice()"
+                  />
+                  <label for="one">1pc</label>
+                  <br />
+                  <input
+                    type="radio"
+                    id="three"
+                    name="pieces-answer"
+                    value="3"
+                    class="pieces-answer"
+                    onclick="updatePrice()"
+                  />
+                  <label for="three">3pc</label>
+                  <br />
+                  <input
+                    type="radio"
+                    id="six"
+                    name="pieces-answer"
+                    value="6"
+                    class="pieces-answer"
+                    onclick="updatePrice()"
+                  />
+                  <label for="six">6pc</label>
+                  <br />
+                  <input
+                    type="radio"
+                    id="twelve"
+                    name="pieces-answer"
+                    class="pieces-answer"
+                    value="12"
+                    onclick="updatePrice()"
+                  />
+                  <label for="twelve">12pc</label>
+                </div>
+              </form>
             </div>
 
             <div class="menu-inputs">
-              <p class="option_label">Glaze</p>
-              <div id="glaze">
-                <button type="button">None</button>
-                <button type="button">Sugar-Milk</button>
-                <button type="button">Vanilla-Milk</button>
-                <button type="button">Double-Chocolate</button>
-              </div>
+              <form>
+                <p class="option_label">Glaze</p>
+                <div id="glaze">
+                  <input type="radio" id="none" name="answer" value="3" />
+                  <label for="none">None</label>
+                  <br />
+                  <input type="radio" id="sugar_milk" name="answer" value="3" />
+                  <label for="sugar_milk">Sugar-Milk</label>
+                  <br />
+                  <input
+                    type="radio"
+                    id="vanilla_milk"
+                    name="answer"
+                    value="3"
+                  />
+                  <label for="vanilla_milk">Vanilla-Milk</label>
+                  <br />
+                  <input
+                    type="radio"
+                    id="double-chocolate"
+                    name="answer"
+                    value="3"
+                  />
+                  <label for="double-chocolate">Double-Chocolate</label>
+                  <br />
+                </div>
+              </form>
             </div>
 
             <div class="menu-inputs">

@@ -79,7 +79,7 @@ hr {
   color: black;
 }
 
-label {
+.menu-inputs label {
   padding-bottom: 10px;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
@@ -95,7 +95,12 @@ label {
   margin: 10px auto 10px auto;
 }
 
-button {
+#pieces input[type="radio"] {
+  display: none;
+}
+
+#pieces label {
+  display: inline-block;
   background: white;
   height: 40px;
   width: 109px;
@@ -108,24 +113,49 @@ button {
   font-weight: normal;
   font-size: 16px;
   text-align: center;
+  padding-top: 1%;
   color: #344054;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-button:hover {
+#pieces input[type="radio"]:checked + label {
   background-color: #42b5d9;
-  font-weight: bold;
   color: white;
+  font-weight: bold;
   border: 0px;
 }
+/*Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/:checked*/
 
-#pieces button {
-  height: 40px;
-  width: 109px;
+#glaze input[type="radio"] {
+  display: none;
 }
 
-#glaze button {
+#glaze label {
+  display: inline-block;
+  background: white;
   height: 40px;
-  width: 149px;
+  width: 155px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 1%;
+  color: #344054;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#glaze input[type="radio"]:checked + label {
+  background-color: #42b5d9;
+  color: white;
+  font-weight: bold;
+  border: 0px;
 }
 
 select {
@@ -181,13 +211,17 @@ h5 {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
+  top: 5%;
+  text-align: center;
   color: white;
   height: 61px;
   width: 247px;
+  cursor: pointer;
 }
 
 #submit_button {
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
+  cursor: pointer;
 }

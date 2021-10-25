@@ -58,6 +58,26 @@ body {
   border-radius: 3px;
 }
 
+#shopper {
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 700;
+  left: 94.44%;
+  right: 3.26%;
+  /* padding: 1px; */
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  /* padding: 1px;*/
+  background-color: #f54572;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  /* top: 2px; */
+  bottom: 8px;
+  left: -4px;
+}
+
 #cart_item {
   top: 20%;
 }
