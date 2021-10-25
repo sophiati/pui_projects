@@ -1,3 +1,5 @@
+//Updating price by multiplying cost x # pieces per box x quantity of boxes
+
 function updatePrice() {
   if (document.getElementById("one").checked) {
     var pieces = document.getElementById("one").value
@@ -17,8 +19,10 @@ function updatePrice() {
   document.getElementById("item_price").innerHTML = "$" + total.toFixed(2)
 }
 
+//Set initial cart variable to hold 0 items
 let cartCount = 0
 
+//When item is added to cart, an alert shows with the quantity added and an icon displays and updates on the cart icon in the corner
 function addtoCart() {
   var newItem = document.getElementById("qty").value
   cartCount += Number(newItem)

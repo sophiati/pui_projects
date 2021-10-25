@@ -145,7 +145,7 @@ hr {
 #receipt {
   background-color: white;
   width: 400px;
-  height: 630px;
+  height: 675px;
   padding-top: 15px;
   padding-left: 25px;
   padding-right: 25px;
@@ -220,5 +220,20 @@ hr {
 #checkout_button {
   display: flex;
   justify-content: center;
+  padding-bottom: 15px;
+}
+
+#continue {
+  text-align: center;
   padding-bottom: 30px;
+  font-family: Montserrat;
+  font-size: 18px;
+}
+
+#continue a:link {
+  color: #5d3f0d;
+}
+
+#continue a:visited {
+  color: #5d3f0d;
 }
