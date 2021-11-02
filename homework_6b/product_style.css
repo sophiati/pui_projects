@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Breadcrumb Styles*/
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  padding-top: 90px;
+  padding-left: 30px;
+}
+
+.breadcrumbs svg {
+  margin-top: 22px;
+  margin-left: 3px;
+}
+
+.breadcrumbs p {
+  color: #5d3f0d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.breadcrumbs a {
+  font-weight: 400;
+  color: #5d3f0d;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#product_img {
+  width: 547px;
+  height: 499px;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 79px;
+  color: #f54572;
+}
+
+#column_2 {
+  margin-top: 150px;
+}
+
+hr {
+  stroke-width: 2px;
+}
+
+.menu-inputs {
+  padding-bottom: 30px;
+}
+
+.option_label {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28.13px;
+  color: black;
+}
+
+.menu-inputs label {
+  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28.13px;
+  color: black;
+}
+
+#pieces {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 10px auto 10px auto;
+}
+
+#pieces input[type="radio"] {
+  display: none;
+}
+
+#pieces label {
+  display: inline-block;
+  background: white;
+  height: 40px;
+  width: 109px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 1%;
+  color: #344054;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#pieces input[type="radio"]:checked + label {
+  background-color: #42b5d9;
+  color: white;
+  font-weight: bold;
+  border: 0px;
+}
+/*Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/:checked*/
+
+#glaze input[type="radio"] {
+  display: none;
+}
+
+#glaze label {
+  display: inline-block;
+  background: white;
+  height: 40px;
+  width: 155px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 1%;
+  color: #344054;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#glaze input[type="radio"]:checked + label {
+  background-color: #42b5d9;
+  color: white;
+  font-weight: bold;
+  border: 0px;
+}
+
+select {
+  background: white;
+  height: 40px;
+  width: 108px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #344054;
+}
+
+#glaze {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 10px auto 10px auto;
+}
+
+#total {
+  display: flex;
+  justify-content: space-between;
+}
+
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #b5b5b5;
+  line-height: 20px;
+}
+
+.detailed_price {
+  color: #5d3f0d;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.submit {
+  background: #f54572;
+  border: 1px solid #f54572;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 28px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  top: 5%;
+  text-align: center;
+  color: white;
+  height: 61px;
+  width: 247px;
+  cursor: pointer;
+}
+
+#submit_button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  cursor: pointer;
+}

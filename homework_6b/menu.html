@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--Home Page-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bun Bun Bakeshop: Menu</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="menu_style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="menu_main">
+      <!-- Navigation Bar -->
+      <div id="nav_bar">
+        <a href="index.html"
+          ><img
+            id="small_logo"
+            src="images/bb_bakeshop_logo.png"
+            alt="bun bun bakeshop logo"
+        /></a>
+        <!--Logo created using Adobe Illustrator-->
+        <span class="nav_span"><a href="index.html">Home</a></span>
+        <span class="nav_span" id="current_page"
+          ><a href="menu.html">Menu</a></span
+        >
+        <span class="nav_span"><a href="about.html">About</a></span>
+        <span class="nav_span" id="cart_item"
+          ><a href="cart.html"
+            ><svg
+              width="27"
+              height="31"
+              viewbox="0 0 27 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.125 7.25L5.25 1.75H21.75L25.875 7.25M1.125 7.25V26.5C1.125 27.2293 1.41473 27.9288 1.93046 28.4445C2.44618 28.9603 3.14565 29.25 3.875 29.25H23.125C23.8543 29.25 24.5538 28.9603 25.0695 28.4445C25.5853 27.9288 25.875 27.2293 25.875 26.5V7.25M1.125 7.25H25.875M19 12.75C19 14.2087 18.4205 15.6076 17.3891 16.6391C16.3576 17.6705 14.9587 18.25 13.5 18.25C12.0413 18.25 10.6424 17.6705 9.61091 16.6391C8.57946 15.6076 8 14.2087 8 12.75"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg> </a
+        ></span>
+      </div>
+
+      <!--Filters & Sort Features -->
+      <div class="filters">
+        <!--Filter by Occasion-->
+        <div class="dropdown" id="occasion_list">
+          <form>
+            <label for="occasion">Occasion</label>
+            <select id="occasion" name="occasion">
+              <option value="birthday">Birthday</option>
+              <option value="surprise">Make Their Day</option>
+              <option value="breakfast">Breakfast</option>
+            </select>
+          </form>
+        </div>
+
+        <!--Filter by Diet -->
+        <div class="dropdown" id="diet_list">
+          <form>
+            <label for="diet">Diet</label>
+            <select id="diet" name="diet">
+              <option value="vegan">Vegan</option>
+              <option value="gf">Gluten-Free (GF)</option>
+              <option value="nf">Nut-Free</option>
+              <option value="df">Dairy-Free</option>
+            </select>
+          </form>
+        </div>
+
+        <!--Sort By Functionality-->
+        <div class="sorting" id="sortby_list">
+          <form>
+            <label for="sortby">Sort By</label>
+            <select id="sortby" name="sortby">
+              <option value="price_lth">Price: low to high</option>
+              <option value="price_htl">Price: high to low</option>
+              <option value="alph">Alphabetical</option>
+            </select>
+          </form>
+        </div>
+
+        <!--Reset-->
+        <div class="reset">
+          <p id="filter_reset">Reset</p>
+        </div>
+      </div>
+      <div id="header">
+        <h2>Menu</h2>
+      </div>
+      <!--Menu Items-->
+      <!--https://www.w3schools.com/howto/howto_css_three_columns.asp-->
+      <div class="menu_items">
+        <div class="items" id="original">
+          <a href="product.html"
+            ><img
+              class="product_img"
+              src="images/original.jpg"
+              alt="original
+            bun"
+          /></a>
+          <!-- Image from Unsplash: https://unsplash.com/photos/iEtcPCvEMDI -->
+          <div class="item_labels">
+            <p class="product_title">Original</p>
+            <p class="cost">$3.00</p>
+          </div>
+          <p class="description">
+            Classic, gooey cinnamon bun with icing on top
+          </p>
+        </div>
+
+        <div class="items" id="blackberry">
+          <a href="blackberry.html"
+            ><img
+              class="product_img"
+              src="images/blackberry.jpg"
+              alt="blackberry bun"
+          /></a>
+          <!-- Image from Unsplash: https://unsplash.com/photos/DnGGIffnjTY -->
+          <div class="item_labels">
+            <p class="product_title">Blackberry</p>
+            <p class="cost">$4.00</p>
+          </div>
+          <p class="description">
+            Flaky original cinnamon bun dough infused with swirls of fresh
+            blackberries
+          </p>
+        </div>
+
+        <div class="items" id="walnut">
+          <a href="walnut.html"
+            ><img class="product_img" src="images/walnut.jpg" alt="walnut bun"
+          /></a>
+          <!-- Image from Unsplash: https://unsplash.com/photos/WmpGRa898oU -->
+          <div class="item_labels">
+            <p class="product_title">Walnut</p>
+            <p class="cost">$5.00</p>
+          </div>
+          <p class="description">
+            Ground walnut neaded into the dough and slivered walnuts dusted on
+            top
+          </p>
+        </div>
+
+        <div class="items" id="original_gf">
+          <a href="original_gf.html"
+            ><img
+              class="product_img"
+              src="images/original_gf.jpg"
+              alt="original gf bun"
+          /></a>
+          <!-- Image from Unsplash: https://unsplash.com/photos/DE-ZospqOqU -->
+          <div class="item_labels">
+            <p class="product_title">Original GF</p>
+            <p class="cost">$4.50</p>
+          </div>
+          <p class="description">
+            The same gooey goodness from the original classic bun, but without
+            gluten
+          </p>
+        </div>
+
+        <div class="items" id="pumpkin_spice">
+          <a href="pumpkin_spice.html"
+            ><img
+              class="product_img"
+              src="images/pumpkin_spice.jpg"
+              alt="pumpkin spice bun"
+          /></a>
+          <!-- Image from Unsplash: https://unsplash.com/photos/H6OBZaVveCA -->
+          <div class="item_labels">
+            <p class="product_title">Pumpkin Spice</p>
+            <p class="cost">$5.50</p>
+          </div>
+          <p class="description">
+            Bringing feelings of fall, the pumpkin spice bun tastes like a warm
+            latte
+          </p>
+        </div>
+
+        <div class="items" id="caramel_pecan">
+          <a href="caramel_pecan.html"
+            ><img
+              class="product_img"
+              src="images/caramel_pecan.jpg"
+              alt="caramel pecan bun"
+          /></a>
+          <!-- Image from Unsplash: https://unsplash.com/photos/pBSfYjplzBY -->
+          <div class="item_labels">
+            <p class="product_title">Caramel Pecan</p>
+            <p class="cost">$5.50</p>
+          </div>
+          <p class="description">
+            Original dough with swirls of candied caramel and ground pecans
+          </p>
+        </div>
+      </div>
+
+      <div id="footer">
+        <p>
+          112 Spring Street, Pittsburgh, PA <span id="dot">&#183;</span> (555)
+          555-5555
+        </p>
+        <!--https://www.toptal.com/designers/htmlarrows/punctuation/middle-dot/-->
+      </div>
+    </div>
+  </body>
+</html>
