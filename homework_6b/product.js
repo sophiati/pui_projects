@@ -23,10 +23,13 @@ function updatePrice() {
 let cartCount = 0
 
 //When item is added to cart, an alert shows with the quantity added and an icon displays and updates on the cart icon in the corner
-function addtoCart() {
+function showIcon() {
+  console.log("Dog")
   var newItem = document.getElementById("qty").value
   cartCount += Number(newItem)
   document.getElementById("shopper").style.display = "block"
   document.getElementById("shopper").innerHTML = cartCount
   alert(newItem + " boxes added to your cart")
+  localStorage.setItem("cartQuantity", JSON.stringify(cartCount))
+  const storedQty = JSON.parse(localStorage.getItem("cartQuantity"))
 }
