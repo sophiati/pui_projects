@@ -25,8 +25,31 @@ function clickToAdd() {
 // const myItem = new Item("Original", "Sugar-milk", "3pc", "2", "$18.00")
 
 //Create an array of objects for the cart
+//When item is added to cart, an alert shows with the quantity added and an icon displays and updates on the cart icon in the corner
 
-// let cartCount = 0
+// const storedQty = JSON.parse(localStorage.getItem("cartQuantity"))
+// console.log(storedQty)
+
+let storedQty = JSON.parse(localStorage.getItem("cartQuantity"))
+window.onload = function () {
+  document.getElementById("shopper").style.display = "block"
+  document.getElementById("shopper").innerHTML = storedQty.toString()
+}
+
+function showIcon() {
+  if (storedQty == null) {
+    cartCount = 0
+    console.log("Dog")
+  } else {
+    cartCount = storedQty
+    console.log("Cat")
+  }
+  var newItem = document.getElementById("qty").value
+  cartCount += Number(newItem)
+  document.getElementById("shopper").style.display = "block"
+  document.getElementById("shopper").innerHTML = cartCount.toString()
+  alert(newItem + " boxes added to your cart")
+}
 
 //2 - Function to add items to cart, display cart as array, and show numbers on cart
 function addToCart() {
@@ -58,23 +81,17 @@ function addToCart() {
   var total = cost * pieces * quantity
 
   const product = new Item(name, glaze, pieces, quantity, total)
-  console.log(product)
+  // alert(product.quantity + " boxes added to your cart")
+  // console.log(product)
   cart.push(product)
   localStorage.setItem("savedCart", JSON.stringify(cart))
 }
 
-// addToCart("Original", "Sugar-milk", "3pc", "2", "$18.00")
-
-// function showCart{
-//   //Show numbers on cart
-//   var newItem = document.getElementById("qty").value
-//   cartCount += Number(newItem)
-//   document.getElementById("shopper").style.display = "block"
-//   document.getElementById("shopper").innerHTML = cartCount
-//   alert(newItem + " boxes added to your cart")
-//   localStorage.setItem('cartQuantity', JSON.stringify(cartCount))
-//   const storedQty = JSON.parse(localStorage.getItem('cartQuantity'))
-// }
+// let cartCount += Number(product.quantity)
+// document.getElementById("shopper").style.display = "block"
+// document.getElementById("shopper").innerHTML = cartCount
+// localStorage.setItem("cartQuantity", JSON.stringify(cartCount))
+// const storedQty = JSON.parse(localStorage.getItem("cartQuantity"))
 
 //3 - Function to display products using templates & remove items from cart
 // const cartDiv = documentgetElementById("column-1")
@@ -102,8 +119,11 @@ function updateReceipt() {
   // receipt.push(product)
   // localStorage.setItem("savedReceipt", JSON.stringify(receipt))
 
-  const clone;
-  clone.querySelector('.item_name').innerText = product.name;
+  const clone = receiptTemplate.content.cloneNode(true)
+  clone.querySelector(".item_name").innerText = product.name
+  clone.querySelector(".multiplier").innerText = product.quantity
+  clone.querySelector(".cost").innerText = product.cost
+  receiptElement.appendChild(clone)
 
   //Display receipt as array of objects
   // const storedReceipt = JSON.parse(localStorage.getItem("savedReceipt"))
@@ -113,15 +133,14 @@ function updateReceipt() {
   //   const receipt = storedReceipt
   // }
 
-  //Subfunction to get subtotal
-  // function subtotal() {
-
-  // }
-  let subtotal = 0;
+  let subtotal = 0
   for (item of cart) {
     subtotal = subtotal + item.cost
   }
 
+  const tax = subtotal * 0.07
+  const grandTotal = subtotal + tax
+  console.log(grandTotal)
 }
 
 function onLoad() {
@@ -144,12 +163,12 @@ function onLoad() {
   }
 
   //5 - Function to clone & display receipts
-  const receiptDiv = documentgetElementById("receipt")
-  const receiptTemplate = document.getElementById("receipt-item")
+  // const receiptDiv = documentgetElementById("receipt")
+  // const receiptTemplate = document.getElementById("receipt-item")
 
-  function showReceipt(item) {
-    const clone = receiptTemplate.content.cloneNode(true)
-    clone.querySelector(".item_name").innerText = item.name
-    receiptElement.appendChild(clone)
-  }
+  // function showReceipt(item) {
+  //   // const clone = receiptTemplate.content.cloneNode(true)
+  //   // clone.querySelector(".item_name").innerText = item.name
+  //   receiptElement.appendChild(clone)
+  // }
 }
