@@ -8,28 +8,22 @@ if (storedValue == null) {
 }
 
 //1 - Function to create objects for each item
-function Item(itemName, itemGlaze, itemPieces, itemQty, itemCost) {
+function Item(itemName, itemGlaze, itemPieces, itemQty, itemTotal, itemImage) {
   this.name = itemName
   this.glaze = itemGlaze
   this.pieces = itemPieces
   this.quantity = itemQty
-  this.cost = itemCost
+  this.total = itemTotal
+  this.image = itemImage
 }
 
 function clickToAdd() {
   showIcon()
   addToCart()
-  updateReceipt()
+  // updateReceipt()
 }
 
-// const myItem = new Item("Original", "Sugar-milk", "3pc", "2", "$18.00")
-
-//Create an array of objects for the cart
 //When item is added to cart, an alert shows with the quantity added and an icon displays and updates on the cart icon in the corner
-
-// const storedQty = JSON.parse(localStorage.getItem("cartQuantity"))
-// console.log(storedQty)
-
 let storedQty = JSON.parse(localStorage.getItem("cartQuantity"))
 window.onload = function () {
   document.getElementById("shopper").style.display = "block"
@@ -39,19 +33,20 @@ window.onload = function () {
 function showIcon() {
   if (storedQty == null) {
     cartCount = 0
-    console.log("Dog")
   } else {
     cartCount = storedQty
-    console.log("Cat")
   }
   var newItem = document.getElementById("qty").value
   cartCount += Number(newItem)
   document.getElementById("shopper").style.display = "block"
   document.getElementById("shopper").innerHTML = cartCount.toString()
   alert(newItem + " boxes added to your cart")
+  localStorage.setItem("cartQuantity", JSON.stringify(cartCount))
 }
 
 //2 - Function to add items to cart, display cart as array, and show numbers on cart
+const cartDiv = document.getElementById("items")
+
 function addToCart() {
   var name = document.getElementById("item-name").innerText
   if (document.getElementById("one").checked) {
@@ -64,6 +59,25 @@ function addToCart() {
     var pieces = document.getElementById("twelve").value
   } else {
     var pieces = 1
+  }
+
+  // Gets Image
+  if (document.getElementById("item-name").innerHTML == "Original") {
+    var image = "images/original.jpg"
+  } else if (document.getElementById("item-name").innerHTML == "Walnut") {
+    var image = "images/walnut.jpg"
+  } else if (document.getElementById("item-name").innerHTML == "Blackberry") {
+    var image = "images/blackberry.jpg"
+  } else if (
+    document.getElementById("item-name").innerHTML == "Caramel Pecan"
+  ) {
+    var image = "images/caramel_pecan.jpg"
+  } else if (document.getElementById("item-name").innerHTML == "Original GF") {
+    var image = "images/original_gf.jpg"
+  } else if (
+    document.getElementById("item-name").innerHTML == "Pumpkin Spice"
+  ) {
+    var image = "images/pumpkin_spice.jpg"
   }
 
   if (document.getElementById("none").checked) {
@@ -80,21 +94,16 @@ function addToCart() {
   var cost = 3
   var total = cost * pieces * quantity
 
-  const product = new Item(name, glaze, pieces, quantity, total)
-  // alert(product.quantity + " boxes added to your cart")
-  // console.log(product)
+  const product = new Item(name, glaze, pieces, quantity, total, image)
+  console.log(product)
   cart.push(product)
   localStorage.setItem("savedCart", JSON.stringify(cart))
 }
 
-// let cartCount += Number(product.quantity)
-// document.getElementById("shopper").style.display = "block"
-// document.getElementById("shopper").innerHTML = cartCount
-// localStorage.setItem("cartQuantity", JSON.stringify(cartCount))
-// const storedQty = JSON.parse(localStorage.getItem("cartQuantity"))
+console.log(cart)
 
 //3 - Function to display products using templates & remove items from cart
-// const cartDiv = documentgetElementById("column-1")
+// const cartDiv = document.getElementById("column-1")
 // const template = document.getElementById("cart-item-template")
 
 // function showProductInCart(item) {
@@ -112,63 +121,83 @@ function addToCart() {
 // }
 
 //4 - Function to Update Receipt & display receipt as array of objects
-const receipt = []
+// const receipt = []
 
-function updateReceipt() {
-  const product = cart[cart.length - 1]
-  // receipt.push(product)
-  // localStorage.setItem("savedReceipt", JSON.stringify(receipt))
+// function updateReceipt() {
+//   const receiptDiv = document.getElementById("lines")
+//   const receiptTemplate = document.getElementById("receipt-item")
+//   let r = 0
+//   for (let r = 0; r < cart.length; r++) {
+//     console.log(r)
+//     const product = cart[r]
+//     const clone = receiptTemplate.content.cloneNode(true)
+//     clone.querySelector(".item_name").innerText = product.name
+//     clone.querySelector(".multiplier").innerText = "x" + product.quantity
+//     clone.querySelector(".cost").innerText = "$" + product.total.toFixed(2)
+//     receiptDiv.appendChild(clone)
+//   }
 
-  const clone = receiptTemplate.content.cloneNode(true)
-  clone.querySelector(".item_name").innerText = product.name
-  clone.querySelector(".multiplier").innerText = product.quantity
-  clone.querySelector(".cost").innerText = product.cost
-  receiptElement.appendChild(clone)
+//   receiptDiv.style.visibility = "visible"
 
-  //Display receipt as array of objects
-  // const storedReceipt = JSON.parse(localStorage.getItem("savedReceipt"))
-  // if (storedReceipt == null) {
-  //   const receipt = []
-  // } else {
-  //   const receipt = storedReceipt
-  // }
+////////
+// const product = cart[cart.length - 1]
+// const receiptDiv = document.getElementById("line-items")
+// const receiptTemplate = document.getElementById("receipt-item")
+// receipt.push(product)
+// localStorage.setItem("savedReceipt", JSON.stringify(receipt))
+// const clone = receiptTemplate.content.cloneNode(true)
+// const clone = receiptTemplate.content.cloneNode(true)
+// clone.querySelector(".item_name").innerText = product.name
+// clone.querySelector(".multiplier").innerText = "x" + product.quantity
+// clone.querySelector(".cost").innerText = "$" + product.total
+// receiptElement.appendChild(clone)
 
-  let subtotal = 0
-  for (item of cart) {
-    subtotal = subtotal + item.cost
-  }
+//Display receipt as array of objects
+// const storedReceipt = JSON.parse(localStorage.getItem("savedReceipt"))
+// if (storedReceipt == null) {
+//   const receipt = []
+// } else {
+//   const receipt = storedReceipt
+// }
 
-  const tax = subtotal * 0.07
-  const grandTotal = subtotal + tax
-  console.log(grandTotal)
-}
+//   let subtotal = 0
+//   for (item of cart) {
+//     subtotal = subtotal + product.cost
+//   }
 
-function onLoad() {
-  //3 - Function to display products using templates & remove items from cart
-  const cartDiv = documentgetElementById("column-1")
-  const template = document.getElementById("cart-item-template")
+//   const tax = subtotal * 0.07
+//   const grandTotal = subtotal + tax
+//   console.log(grandTotal)
+// }
 
-  function showProductInCart(item) {
-    const clone = template.content.cloneNode(true)
-    clone.querySelector(".summary_title").innerText = item.name
+// function onLoad() {
+//   //3 - Function to display products using templates & remove items from cart
+//   const cartDiv = document.getElementById("items")
+//   const template = document.getElementById("cart-item-template")
 
-    //Function to remove items from cart
-    const remove = clone.querySelector(".delete")
-    remove.addEventListener("click", function removeItem() {
-      document.getElementById("cart-item-template")
-      localStorage.removeItem("savedCart")
-    })
+//   function showProductInCart(product) {
+//     const clone = template.content.cloneNode(true)
+//     clone.querySelector(".summary_title").innerText = product.name
+//     clone.querySelector(".glaze-option").innerText = product.glaze
+//     clone.querySelector(".pieces-option").innerText = product.pieces
 
-    cartElement.appendChild(clone)
-  }
+//     //Function to remove items from cart
+//     const remove = clone.querySelector(".delete")
+//     remove.addEventListener("click", function removeItem() {
+//       document.getElementById("cart-item-template")
+//       localStorage.removeItem("savedCart")
+//     })
 
-  //5 - Function to clone & display receipts
-  // const receiptDiv = documentgetElementById("receipt")
-  // const receiptTemplate = document.getElementById("receipt-item")
+//     cartElement.appendChild(clone)
+//   }
 
-  // function showReceipt(item) {
-  //   // const clone = receiptTemplate.content.cloneNode(true)
-  //   // clone.querySelector(".item_name").innerText = item.name
-  //   receiptElement.appendChild(clone)
-  // }
-}
+//5 - Function to clone & display receipts
+// const receiptDiv = documentgetElementById("receipt")
+// const receiptTemplate = document.getElementById("receipt-item")
+
+// function showReceipt(item) {
+//   // const clone = receiptTemplate.content.cloneNode(true)
+//   // clone.querySelector(".item_name").innerText = item.name
+//   receiptElement.appendChild(clone)
+// }
+// }

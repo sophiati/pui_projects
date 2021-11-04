@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <script src="main.js" type="text/javascript"></script>
+    <script src="cart.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -55,33 +56,77 @@
     <!--Main Content-->
     <div id="cart_main">
       <div class="columns">
-        <div id="column_1" class="items">
+        <div id="column_1">
           <h2>Your Cart</h2>
-          <div id="item1" class="cart_items">
+          <div id="items">
             <template id="cart-item-template">
+              <div id="item-container" class="cart_items">
+                <div class="cart_image">
+                  <img id="cart_photo" src=" " alt="Photo of bun" />
+                </div>
+                <div class="summary_txt">
+                  <div class="left">
+                    <p class="summary_title"></p>
+                    <p>
+                      <span class="bold_text">Glaze: </span
+                      ><span class="glaze-option"></span>
+                    </p>
+                    <p>
+                      <span class="bold_text">Buns per box: </span
+                      ><span class="pieces-option"></span>
+                    </p>
+                    <br />
+                    <form>
+                      <label for="qty">Qty</label>
+                      <select id="item1_qty" name="qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    </form>
+                  </div>
+                  <div class="right">
+                    <p class="price"></p>
+                    <p>
+                      <span class="edit">Edit&nbsp;</span
+                      ><span class="delete">&nbsp;Delete</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </template>
+            <!-- <div id="item2" class="cart_items">
               <div class="cart_image">
                 <img
                   class="summary_image"
-                  src="images/original.jpg"
-                  alt="Original Bun"
-                />
-                <!-- Image from Unsplash: https://unsplash.com/photos/iEtcPCvEMDI -->
-              </div>
-              <div class="summary_txt">
+                  src="images/walnut.jpg"
+                  alt="Walnut Bun"
+                />-->
+            <!-- Image from Unsplash: https://unsplash.com/photos/WmpGRa898oU -->
+            <!-- </div>  -->
+            <!-- <div class="summary_txt">
                 <div class="left">
-                  <p class="summary_title">Original</p>
+                  <p class="summary_title">Walnut</p>
                   <p>
                     <span class="bold_text">Glaze: </span
-                    ><span class="light_text"> Sugar-milk</span>
+                    ><span class="light_text"> Double-chocolate</span>
                   </p>
                   <p>
                     <span class="bold_text">Buns per box: </span
-                    ><span class="light_text"> 3</span>
-                  </p>
-                  <br />
+                    ><span class="light_text"> 1</span>
+                  </p> -->
+            <!-- <br />
                   <form>
                     <label for="qty">Qty</label>
-                    <select id="item1_qty" name="qty">
+                    <select id="item2_qty" name="qty">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -94,65 +139,18 @@
                       <option value="10+">10+</option>
                     </select>
                   </form>
-                </div>
-                <div class="right">
-                  <p class="price">$9.00</p>
+                </div> -->
+            <!-- <div class="right">
+                  <p class="price">$10.00</p>
                   <p>
                     <span class="edit">Edit&nbsp;</span
                     ><span class="delete">&nbsp;Delete</span>
                   </p>
                 </div>
               </div>
-            </template>
+            </div> -->
           </div>
-          <hr />
-          <div id="item2" class="cart_items">
-            <div class="cart_image">
-              <img
-                class="summary_image"
-                src="images/walnut.jpg"
-                alt="Walnut Bun"
-              />
-              <!-- Image from Unsplash: https://unsplash.com/photos/WmpGRa898oU -->
-            </div>
-            <div class="summary_txt">
-              <div class="left">
-                <p class="summary_title">Walnut</p>
-                <p>
-                  <span class="bold_text">Glaze: </span
-                  ><span class="light_text"> Double-chocolate</span>
-                </p>
-                <p>
-                  <span class="bold_text">Buns per box: </span
-                  ><span class="light_text"> 1</span>
-                </p>
-                <br />
-                <form>
-                  <label for="qty">Qty</label>
-                  <select id="item2_qty" name="qty">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10+">10+</option>
-                  </select>
-                </form>
-              </div>
-              <div class="right">
-                <p class="price">$10.00</p>
-                <p>
-                  <span class="edit">Edit&nbsp;</span
-                  ><span class="delete">&nbsp;Delete</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <hr />
+          <!-- <hr /> -->
         </div>
 
         <!--Receipt-->
@@ -160,35 +158,39 @@
           <div id="receipt">
             <p><span class="summary_title">Order Summary</span></p>
             <!-- <br /> -->
-            <div class="lines">
-              <template id="receipt-item">
+            <div id="line-items">
+              <div id="receipt-item">
+                <template id="receipt-item-template">
+                  <div class="lines">
+                    <p>
+                      <span class="item_name"></span
+                      ><span class="multiplier"></span>
+                    </p>
+                    <p class="cost"></p>
+                  </div>
+                </template>
+              </div>
+              <!-- <div class="lines">
                 <p>
-                  <span class="item_name">Original (3pc)</span
-                  ><span class="multiplier"> x 1</span>
+                  <span class="item_name">Walnut (1pc)</span
+                  ><span class="multiplier"> x 2</span>
                 </p>
-                <p class="cost">$9.00</p>
-              </template>
-            </div>
-            <div class="lines">
-              <p>
-                <span class="item_name">Walnut (1pc)</span
-                ><span class="multiplier"> x 2</span>
-              </p>
-              <p class="cost">$10.00</p>
+                <p class="cost">$10.00</p>
+              </div> -->
             </div>
             <hr />
             <div class="lines">
               <p><span class="item_name">Total (pre-tax)</span></p>
-              <p id="subtotal">$19.00</p>
+              <p id="subtotal"></p>
             </div>
             <div class="lines">
               <p><span class="item_name">Tax</span></p>
-              <p class="cost">$2.28</p>
+              <p class="cost" id="tax"></p>
             </div>
             <hr />
             <div class="lines">
               <p><span class="total_name">Total</span></p>
-              <p id="total">$21.28</p>
+              <p id="grand-total">$21.28</p>
             </div>
             <form id="checkout_button">
               <input type="submit" value="Checkout" class="checkout" />

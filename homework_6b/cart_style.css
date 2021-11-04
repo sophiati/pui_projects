@@ -94,6 +94,22 @@ h2 {
   color: #b9b9b9;
 }
 
+.glaze-option {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #b9b9b9;
+}
+
+.pieces-option {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #b9b9b9;
+}
+
 select {
   display: flex;
   padding: 10px 14px;
@@ -196,7 +212,7 @@ hr {
   color: black;
 }
 
-#total {
+#grand-total {
   font-family: Poppins;
   font-size: 32px;
   font-weight: 600;
