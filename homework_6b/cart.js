@@ -6,8 +6,13 @@
 // } else {
 //   cart = storedValue
 // }
+// localStorage.clear()
 
 window.onload = function () {
+  updatePage()
+}
+
+function updatePage() {
   document.getElementById("shopper").style.display = "block"
   document.getElementById("shopper").innerHTML = storedQty.toString()
   //3 - Function to display products using templates & remove items from cart
@@ -22,8 +27,29 @@ window.onload = function () {
     clone.querySelector(".summary_title").innerText = product.name
     clone.querySelector(".glaze-option").innerText = product.glaze
     clone.querySelector(".pieces-option").innerText = product.pieces
-
+    clone.querySelector("#item_qty").value = product.quantity
     clone.querySelector(".price").innerText = "$" + product.total.toFixed(2)
+    product.id = i
+    const button = clone.querySelector(".delete")
+    button.addEventListener("click", function () {
+      var cartItemsString = localStorage.getItem("savedCart")
+      var cartQtyString = localStorage.getItem("cartQuantity")
+      if (cartItemsString !== null) {
+        var savedCart = JSON.parse(cartItemsString)
+        console.log(savedCart)
+        var storedQty = JSON.parse(cartQtyString)
+
+        var ind = product.id
+        console.log(ind)
+        if (ind !== -1) {
+          savedCart.splice(ind, 1)
+          storedQty.splice(ind, 1)
+          localStorage.setItem("savedCart", JSON.stringify(savedCart))
+          localStorage.setItem("cartQuantity", JSON.stringify(cartCount))
+          updatePage()
+        }
+      }
+    })
     cartDiv.appendChild(clone)
     console.log(cartDiv)
   }
@@ -39,7 +65,7 @@ window.onload = function () {
     const clone = receiptTemplate.content.cloneNode(true)
     clone.querySelector(".item_name").innerText = product.name
     clone.querySelector(".multiplier").innerText =
-      " (x " + product.quantity + ")"
+      " (x" + product.quantity + ")"
     clone.querySelector(".cost").innerText = "$" + product.total.toFixed(2)
     receiptDiv.appendChild(clone)
   }
@@ -47,34 +73,66 @@ window.onload = function () {
 
   let subtotal = 0
   for (product of cart) {
-    subtotal = subtotal + parseInt(product.cost)
+    subtotal = subtotal + parseInt(product.total)
   }
   document.getElementById("subtotal").style.display = "block"
-  document.getElementById("subtotal").innerHTML = "$" + subtotal
+  document.getElementById("subtotal").innerHTML = "$" + subtotal.toFixed(2)
 
   const tax = subtotal * 0.07
   const grandTotal = subtotal + tax
   console.log(grandTotal)
   document.getElementById("subtotal").style.display = "block"
-  document.getElementById("tax").innerHTML = "$" + tax
-  document.getElementById("grand-total").innerHTML = "$" + grandTotal
+  document.getElementById("tax").innerHTML = "$" + tax.toFixed(2)
+  document.getElementById("grand-total").innerHTML = "$" + grandTotal.toFixed(2)
 }
 
-//Function to remove items from cart
-// const remove = clone.querySelector(".delete")
-// remove.addEventListener("click", function removeItem() {
-//   document.getElementById("cart-item-template")
-//   localStorage.removeItem("savedCart")
-// })
+// function removeItem() {
+//   var cartItemsString = localStorage.getItem("savedCart")
+//   if (cartItemsString !== null) {
+//     var savedCart = JSON.parse(cartItemsString)
+//     console.log(savedCart)
+
+//     var ind = savedCart.findIndex(function (item) {
+//       return item.id
+//       // item.name === self.name &&
+//       // item.glaze === self.glaze &&
+//       // item.quantity === self.quantity &&
+//       // item.pieces === self.pieces &&
+//       // item.total === self.total
+//     })
+
+//     console.log(item.id)
+
+//     // let ind = product.id
+//     // savedCart.splice(ind, 1)
+//     // localStorage.setItem("savedCart", JSON.stringify(cart))
+//     // console.log(savedCart)
+//     console.log("ind " + ind)
+//     if (ind !== -1) {
+//       savedCart.splice(ind, 1)
+//       localStorage.setItem("savedCart", JSON.stringify(cart))
+//       updatePage()
+//     }
+//   }
 // }
 
-//5 - Function to clone & display receipts
-// const receiptDiv = documentgetElementById("receipt")
-// const receiptTemplate = document.getElementById("receipt-item")
+// function removeItem(obj) {
+//   // retrieve the stored value of the cart items so that we can modify it
+//   var cartItemsString = localStorage.getItem("cartItems")
+//   if (cartItemsString !== null) {
+//     var cartItems = JSON.parse(cartItemsString) // successfully loaded in the cart items
 
-// function showReceipt(item) {
-//   // const clone = receiptTemplate.content.cloneNode(true)
-//   // clone.querySelector(".item_name").innerText = item.name
-//   receiptElement.appendChild(clone)
-// }
-// }
+//     // find the index of the input object in the list
+//     var ind = cartItems.findIndex(function (item) {
+//       return item.glaze === obj.glaze && item.quantity === obj.quantity
+//     })
+//     console.log("ind " + ind)
+//     if (ind !== -1) {
+//       // remove item from the list
+//       cartItems.splice(ind, 1)
+//       // update the stored value
+//       localStorage.setItem("cartItems", JSON.stringify(cartItems))
+//       // re-render the page to reflect changes
+//       updatePage()
+//     }
+//   }
