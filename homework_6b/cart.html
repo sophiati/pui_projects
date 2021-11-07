@@ -49,8 +49,8 @@
             />
           </svg>
         </a>
-        <p id="shopper" style="display: none"></p
-      ></span>
+        <p id="shopper">0</p></span
+      >
     </div>
 
     <!--Main Content-->
@@ -105,6 +105,12 @@
               <hr />
             </template>
           </div>
+          <div id="no-items">
+            <p>There are no items in your cart!</p>
+          </div>
+          <div id="clear">
+            <p onclick="clearCart()">Clear Cart</p>
+          </div>
         </div>
 
         <!--Receipt-->
@@ -144,7 +150,7 @@
             <hr />
             <div class="lines">
               <p><span class="total_name">Total</span></p>
-              <p id="grand-total">$21.28</p>
+              <p id="grand-total">$0.00</p>
             </div>
             <form id="checkout_button">
               <input type="submit" value="Checkout" class="checkout" />

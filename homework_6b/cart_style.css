@@ -162,6 +162,24 @@ hr {
   stroke-width: 2px;
 }
 
+#clear {
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: Montserrat;
+  font-size: 18px;
+  text-decoration: underline;
+  color: #5d3f0d;
+  cursor: pointer;
+}
+
+#no-items {
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: "Poppins";
+  font-size: 24px;
+  color: #5d3f0d;
+}
+
 /*Column 2*/
 #column_2 {
   margin-top: 165px;

@@ -9,8 +9,17 @@
 // localStorage.clear()
 
 window.onload = function () {
-  updatePage()
-  // showIcon()
+  const storedValue = JSON.parse(localStorage.getItem("savedCart"))
+  console.log(storedValue)
+  if (storedValue === null) {
+    document.getElementById("clear").style.display = "none"
+    document.getElementById("no-items").style.display = "block"
+  } else if (storedValue !== null) {
+    document.getElementById("no-items").style.display = "none"
+    document.getElementById("clear").style.display = "block"
+    updatePage()
+    // showIcon()
+  }
 }
 
 function updatePage() {
@@ -45,7 +54,8 @@ function updatePage() {
         console.log(ind)
         if (ind !== -1) {
           savedCart.splice(ind, 1)
-          storedQty = storedQty - 1
+          let itemQty = product.quantity
+          storedQty = storedQty - itemQty
           console.log("storedQty 2: " + storedQty)
           localStorage.setItem("savedCart", JSON.stringify(savedCart))
           localStorage.setItem("cartQuantity", JSON.stringify(storedQty))
@@ -87,6 +97,15 @@ function updatePage() {
   document.getElementById("subtotal").style.display = "block"
   document.getElementById("tax").innerHTML = "$" + tax.toFixed(2)
   document.getElementById("grand-total").innerHTML = "$" + grandTotal.toFixed(2)
+}
+
+function clearCart() {
+  console.log("clear")
+  localStorage.clear()
+  window.location.reload()
+  // document.getElementById("clear").style.display = "hidden"
+  // document.getElementById("shopper").innerHTML =
+  //   "There are no items in your cart!"
 }
 
 // function removeItem() {
@@ -139,3 +158,4 @@ function updatePage() {
 //       updatePage()
 //     }
 //   }
+// }

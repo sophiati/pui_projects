@@ -34,6 +34,7 @@ window.onload = function () {
 }
 
 function showIcon() {
+  let storedQty = JSON.parse(localStorage.getItem("cartQuantity"))
   if (storedQty == null) {
     cartCount = 0
   } else {
