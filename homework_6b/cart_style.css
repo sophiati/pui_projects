@@ -123,8 +123,8 @@ select {
 }
 
 .price {
-  font-family: Poppins;
-  font-weight: 700px;
+  font-family: "Poppins";
+  font-weight: 600;
   font-size: 28px;
   color: #42b5d9;
 }
@@ -212,35 +212,35 @@ hr {
 }
 
 .multiplier {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 24px;
   font-weight: 400;
   color: #b9b9b9;
 }
 
 .cost {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 24px;
   font-weight: 400;
   color: black;
 }
 
 #subtotal {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 24px;
   font-weight: 700;
   color: black;
 }
 
 .total_name {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-weight: 600;
   font-size: 32px;
   color: black;
 }
 
 #grand-total {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-size: 32px;
   font-weight: 600;
   color: #42b5d9;
