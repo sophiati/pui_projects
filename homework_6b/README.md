@@ -1,9 +1,9 @@
-Included in homework_6a repo:
+Included in homework_6b repo:
 
-Additional page (HTML & CSS) for the shopping cart - cart.html and cart_style.css
+Shopping Cart Functionality - adding items to cart, displaying them in the cart, removing items from cart, totaling the receipt, and clearing the cart
 
-JavaScript updates for the product.html and other product pages, which gives an alert, changes the price, and updates the cart icon - product.js
+Shopping Cart Counter Icon - displays on all pages and holds the value across pages
 
-PDFs showing low-fi and high-fi mock-ups - low-fi.pdf and high-fi. pdf
+Bonus - shopping cart functionality, updating price, and adding to cart works across all product page types with varying costs for each bun type
 
-PDF reflection file showing descriptions for mock-ups - reflection.pdf
+PDF reflection file with debugging reflection and five techniques used with example images of the website and snippets of code - reflection.pdf
