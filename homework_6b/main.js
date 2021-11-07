@@ -1,3 +1,5 @@
+// localStorage.clear()
+
 //Display cart as array of objects
 const storedValue = JSON.parse(localStorage.getItem("savedCart"))
 let cart
@@ -94,11 +96,13 @@ function addToCart() {
   var quantity = document.getElementById("qty").value
   var cost = 3
   var total = cost * pieces * quantity
+  var id = 0
 
   const product = new Item(name, glaze, pieces, quantity, total, image, id)
   console.log(product)
   cart.push(product)
   localStorage.setItem("savedCart", JSON.stringify(cart))
+  console.log(cart)
 }
 
 // console.log(cart)

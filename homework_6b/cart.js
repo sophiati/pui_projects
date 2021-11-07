@@ -10,6 +10,7 @@
 
 window.onload = function () {
   updatePage()
+  // showIcon()
 }
 
 function updatePage() {
@@ -33,20 +34,22 @@ function updatePage() {
     const button = clone.querySelector(".delete")
     button.addEventListener("click", function () {
       var cartItemsString = localStorage.getItem("savedCart")
-      var cartQtyString = localStorage.getItem("cartQuantity")
+      var cartQty = localStorage.getItem("cartQuantity")
       if (cartItemsString !== null) {
         var savedCart = JSON.parse(cartItemsString)
         console.log(savedCart)
-        var storedQty = JSON.parse(cartQtyString)
+        var storedQty = JSON.parse(cartQty)
+        console.log("stored Qty: " + storedQty)
 
         var ind = product.id
         console.log(ind)
         if (ind !== -1) {
           savedCart.splice(ind, 1)
-          storedQty.splice(ind, 1)
+          storedQty = storedQty - 1
+          console.log("storedQty 2: " + storedQty)
           localStorage.setItem("savedCart", JSON.stringify(savedCart))
-          localStorage.setItem("cartQuantity", JSON.stringify(cartCount))
-          updatePage()
+          localStorage.setItem("cartQuantity", JSON.stringify(storedQty))
+          window.location.reload()
         }
       }
     })
