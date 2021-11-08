@@ -14,17 +14,17 @@
     />
     <script src="index.js"></script>
     <!-- #3: Import external libraries here -->
-
-
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
 
   <body>
-    <header>
-      COVID Cases at US Universities
-    </header>
+    <header>COVID Cases at US Universities</header>
     <main>
-      <div id="notice">
+      <div id="notice" class="animate__animated animate__bounce">
         <span id="case-date-update">
           Case data updated as of October 22, 2020
         </span>
@@ -32,7 +32,7 @@
           <svg
             role="button"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
+            viewbox="0 0 20 20"
           >
             <title>Close</title>
             <path
