@@ -20,6 +20,90 @@
     <!-- <script defer src="main.js" type="text/javascript"></script> -->
   </head>
   <body>
+    <div id="Question">
+      <div class="progress">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="content">
+        <h2>Let's start with your research question.</h2>
+        <h5>Input your research question here:</h5>
+        <section class="question">
+          <label for="question">Research Question</label>
+          <br />
+          <textarea id="question" name="question" rows="3" cols="40"></textarea>
+        </section>
+      </div>
+      <div class="footer">
+        <button type="button" class="btn btn-light">Previous</button>
+        <button type="button" class="btn btn-secondary">Next</button>
+      </div>
+    </div>
+
+    <div id="Goals">
+      <div class="progress">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 20%"
+          aria-valuenow="20"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+        <div class="content">
+          <h2>Goals</h2>
+          <h5>My main project goal is to...</h5>
+          <div class="inputs">
+            <form>
+              <div id="goal">
+                <input
+                  type="radio"
+                  id="strategize"
+                  name="strategize-answer"
+                  value="strategize"
+                />
+                <label for="strategize"
+                  >Strategize - Inspire, explore, and choose new directions and
+                  opportunities
+                </label>
+                <br />
+                <input
+                  type="radio"
+                  id="execute"
+                  name="execute-answer"
+                  value="execute"
+                />
+                <label for="execute"
+                  >Execute - Inform and optimize designs in order to reduce risk
+                  and improve usability
+                </label>
+                <br />
+                <input
+                  type="radio"
+                  id="assess"
+                  name="assess-answer"
+                  value="assess"
+                />
+                <label for="assess"
+                  >Assess - Measure product performance against itself or
+                  competition
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer">
+          <button type="button" class="btn btn-light">Previous</button>
+          <button type="button" class="btn btn-secondary">Next</button>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
