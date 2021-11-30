@@ -12,7 +12,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.scss" type="text/scss" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto"
       rel="stylesheet"
@@ -21,47 +21,59 @@
   </head>
   <body>
     <div id="top">
-      <div id="intro_text">
-        <h1>UX Research Methods</h1>
-        <h3>Have a project you need help with?</h3>
-        <button type="button" class="btn btn-secondary">
-          <a href="quiz.html">Start Here</a>
-        </button>
-      </div>
-      <div id="arrow">
-        <svg
-          width="105"
-          height="37"
-          viewbox="0 0 105 37"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 3L52.5 34L102 3"
-            stroke="black"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+      <div class="container">
+        <div id="intro_text">
+          <h1>UX Research Methods</h1>
+          <h5>Have a project you need help with?</h5>
+          <!-- <button type="button" class="btn btn-secondary start-button">
+            <a href="quiz.html">Start Here</a>
+          </button> -->
+          <a href="quiz.html" class="btn btn-secondary start-button"
+            >Start Here</a
+          >
+        </div>
+        <div id="arrow">
+          <svg
+            width="105"
+            height="37"
+            viewbox="0 0 105 37"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 3L52.5 34L102 3"
+              stroke="white"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
       </div>
     </div>
 
     <div id="overview">
+      <h3>Overview of Methodologies</h3>
+      <p>
+        Below are some examples of how the different methodologies break down
+        ranging from attitudinal (testing users' perceptions) to behavioral
+        (understanding users' actions) and from what they seek to understand
+        from "What a user is doing" and "Why they are doing it"
+      </p>
       <div
-        id="carouselExampleFade"
-        class="carousel slide carousel-fade"
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" data-bs-interval="10000">
             <img
               src="images/methods.jpg"
               class="d-block w-100"
               alt="Interpretation of a matrix from behavioral to attitudinal on y-axis and what to why on x-axis mapping out different UX research methods"
             />
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="2000">
             <img
               src="images/nn_methods.png"
               class="d-block w-100"
@@ -96,235 +108,295 @@
 
     <div id="methods">
       <h3>Methods</h3>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">A/B Testing</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Quantitative, Behavioral
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">A/B Testing</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">A/B Testing</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Quantitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
               </div>
-              <div class="modal-body">
-                <p>Modal body text goes here.</p>
+            </div>
+          </div>
+          <!-- <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+          >
+            <div class="modal" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">A/B Testing</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Heuristic Analysis</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Quantitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Data Tracking</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Quantitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Heuristic Analysis</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Quantitative, Behavioral
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Web Analytics</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Quantitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Benchmark Usability</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Usability Testing</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Data Tracking</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Quantitative, Behavioral
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Ethnography</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Think Aloud Protocol</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Contextual Inquiry</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Behavioral
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Web Analytics</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Quantitative, Behavioral
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Digital Diary Studies</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Attitudinal
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Co-Design Sessions</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Attitudinal
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Semi-Structured Interviews</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Attitudinal
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Benchmark Usability</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Qualitative, Behavioral</h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Focus Groups</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Qualitative, Attitudinal
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Speed Dating</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Quantitative, Attitudinal
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Concept Testing</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Quantitative, Attitudinal
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Usability Testing</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Qualitative, Behavioral</h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Ethnography</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Qualitative, Behavioral</h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Think Aloud Protocol</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Qualitative, Behavioral</h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Contextual Inquiry</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Qualitative, Behavioral</h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Digital Diary Studies</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Qualitative, Attitudinal
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Co-Design Sessions</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Qualitative, Attitudinal
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Semi-Structured Interviews</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Qualitative, Attitudinal
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Focus Groups</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Qualitative, Attitudinal
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Speed Dating</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Quantitative, Attitudinal
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Concept Testing</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Quantitative, Attitudinal
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Card Sorting</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Quantitative, Attitudinal
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Survey</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            Quantitative, Attitudinal
-          </h6>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="card-link">Learn More</a>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Card Sorting</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Quantitative, Attitudinal
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Survey</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Quantitative, Attitudinal
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
