@@ -13,10 +13,13 @@ function updatePage() {
   clone.querySelector("#question-input").innerText = research.question
   clone.querySelector("#goal-input").innerText = research.goal
   if (research.methods == 1) {
+    // const card_template = document.getElementById("m1-card")
+    // const card_clone = card_template.content.cloneNode(true)
+    // card_clone.replaceWith(document.getElementById("#ab-testing"))
     console.log(1)
-    clone
-      .querySelector("#m1-card")
-      .replaceWith(document.querySelector("#ab-testing"))
+    // clone
+    //   .querySelector("#m1-card")
+    //   .replaceWith(document.querySelector("#ab-testing"))
     clone
       .querySelector("#m2-card")
       .replaceWith(document.querySelector("#heuristic"))
@@ -34,6 +37,9 @@ function updatePage() {
       .querySelector("#m3-card")
       .replaceWith(document.querySelector("#contextual-inquiry"))
   } else if (research.methods == 3) {
+    // const card_template = document.getElementById("m3-card")
+    // const card_clone = card_template.content.cloneNode(true)
+    // card_clone.replaceWith(document.getElementById("#diaries"))
     console.log(3)
     clone
       .querySelector("#m1-card")

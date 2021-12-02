@@ -103,6 +103,29 @@ function submitQuiz() {
   window.location.href = "fake_results.html"
 }
 
+let i = 0
+document.getElementById("goals").style.visibility = "hidden"
+document.getElementById("focus").style.visibility = "hidden"
+document.getElementById("question-bucket").style.visibility = "visible"
+
+function nextPage() {
+  let page = ["question-bucket", "goals"]
+  if ((i = 0)) {
+    document.getElementById("goals").style.visibility = "none"
+    document.getElementById("focus").style.visibility = "none"
+    document.getElementById("question-bucket").style.display = "block"
+  } else if ((i = 1)) {
+    document.getElementById("focus").style.display = "hidden"
+    document.getElementById("question-bucket").style.display = "hidden"
+    document.getElementById("goals").style.display = "block"
+  } else if ((i = 2)) {
+    document.getElementById("question-bucket").style.display = "hidden"
+    document.getElementById("goals").style.display = "hidden"
+    document.getElementById("focus").style.display = "block"
+  }
+  i++
+}
+
 // //Open Modals
 // $(function () {
 //   $("#exampleModalCenter").modal({
