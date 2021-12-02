@@ -20,10 +20,10 @@ body {
 }
 
 /*Progress Bar Styles*/
-#question-container {
+#quiz-container {
   width: 80%;
   justify-items: center;
-  /* margin: auto; */
+  margin: auto;
 }
 
 .progress {
@@ -33,12 +33,14 @@ body {
   margin: auto;
   margin-top: 5%;
 }
-/* 
+
+#result .progress {
+  width: 87%;
+}
+
 .progress-bar {
-  padding: 10%;
-  width: 70%;
-  margin-top: 5%;
-} */
+  background-color: #41bfe7;
+}
 
 .content {
   /* display: flex; */
@@ -48,6 +50,15 @@ body {
   color: #2b3b4b;
   margin: auto;
   width: 70%;
+}
+
+#result .content {
+  width: 87%;
+  padding-bottom: 3%;
+}
+
+#result .row {
+  padding-bottom: 5%;
 }
 
 h2 {
@@ -66,6 +77,155 @@ h5 {
   font-weight: 400;
 }
 
+.start-text {
+  font-weight: 700;
+}
+
+#goal label {
+  padding-bottom: 2%;
+}
+
+#goal {
+  margin-bottom: 10%;
+}
+
+#question-bucket .footer {
+  width: 70%;
+}
+
+#goals .footer {
+  width: 100%;
+}
+
+#focus .inputs {
+  padding-bottom: 5%;
+}
+
+#abc {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 10px auto 10px auto;
+}
+
+#abc input[type="radio"] {
+  display: none;
+}
+
+#abc label {
+  display: inline-block;
+  background: white;
+  height: 80px;
+  width: 230px;
+  border: 1px solid #99a2ad;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  color: #2b3b4b;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#abc input[type="radio"]:checked + label {
+  background-color: #004a8e;
+  color: white;
+  font-weight: 700;
+  border: 0px;
+}
+
+#ww {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 10px auto 10px auto;
+}
+
+#ww input[type="radio"] {
+  display: none;
+}
+
+#ww label {
+  display: inline-block;
+  background: white;
+  height: 80px;
+  width: 230px;
+  border: 1px solid #99a2ad;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  color: #2b3b4b;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#abc input[type="radio"]:checked + label {
+  background-color: #004a8e;
+  color: white;
+  font-weight: 700;
+  border: 0px;
+}
+
+#focus-container {
+  padding-bottom: 10%;
+}
+
+/* #result-methods {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+} */
+
+#result-question {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 22px;
+  width: 80%;
+}
+
+h4 {
+  color: #004a8e;
+}
+
+#result-goal {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 22px;
+  width: 80%;
+}
+
+#result-methods p {
+  font-size: 22px;
+}
+
+.return {
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  cursor: pointer;
+}
+
+.return a {
+  color: #2b3b4b;
+  font-size: 18px;
+}
+
 .footer {
   /* padding-top: 10%;
   padding-bottom: 10%; */
@@ -74,7 +234,6 @@ h5 {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: 70%;
 }
 
 .nxt-btn {
@@ -87,14 +246,18 @@ h5 {
   padding: 1%;
   width: 120px;
 }
+/* 
+.nxt-btn:hover {
+  background-color: ;
+} */
 
 .prev-btn {
   background-color: white;
   border: 2px solid #e5e5e5;
-  color: 667085;
+  color: #667085;
   border-radius: 8px;
   font-size: 24px;
   font-weight: 400;
   padding: 1%;
-  width: 120px;
+  width: 150px;
 }

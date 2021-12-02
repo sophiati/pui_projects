@@ -21,7 +21,7 @@
     <!-- <script defer src="main.js" type="text/javascript"></script> -->
   </head>
   <body>
-    <div id="question-container">
+    <!-- <div class="quiz-container" id="question-bucket">
       <div class="progress">
         <div
           class="progress-bar"
@@ -37,16 +37,16 @@
         <section class="question">
           <label for="question">Enter your question...</label>
           <br />
-          <textarea id="question" name="question" rows="3" cols="70"></textarea>
+          <textarea id="question" name="question" rows="5" cols="80"></textarea>
         </section>
       </div>
       <div class="footer">
         <button type="button" class="btn btn-light prev-btn">Previous</button>
         <button type="button" class="btn btn-secondary nxt-btn">Next</button>
       </div>
-    </div>
+    </div> -->
 
-    <!-- <div id="goals">
+    <!-- <div class="quiz-container" id="goals">
       <div class="progress">
         <div
           class="progress-bar"
@@ -56,56 +56,56 @@
           aria-valuemin="0"
           aria-valuemax="100"
         ></div>
-        <div class="content">
-          <h2>Goals</h2>
-          <h5>My main project goal is to...</h5>
-          <div class="inputs">
-            <form>
-              <div id="goal">
-                <input
-                  type="radio"
-                  id="strategize"
-                  name="strategize-answer"
-                  value="strategize"
-                />
-                <label for="strategize"
-                  ><span class="start-text">Strategize</span> - Inspire,
-                  explore, and choose new directions and opportunities
-                </label>
-                <br />
-                <input
-                  type="radio"
-                  id="execute"
-                  name="execute-answer"
-                  value="execute"
-                />
-                <label for="execute"
-                  ><span class="start-text">Execute</span> - Inform and optimize
-                  designs in order to reduce risk and improve usability
-                </label>
-                <br />
-                <input
-                  type="radio"
-                  id="assess"
-                  name="assess-answer"
-                  value="assess"
-                />
-                <label for="assess"
-                  ><span class="start-text">Assess</span> - Measure product
-                  performance against itself or competition
-                </label>
-              </div>
-            </form>
-          </div>
+      </div>
+      <div class="content">
+        <h2>Goals</h2>
+        <h5>My main project goal is to...</h5>
+        <div class="inputs">
+          <form>
+            <div id="goal">
+              <input
+                type="radio"
+                id="strategize"
+                name="strategize-answer"
+                value="strategize"
+              />
+              <label for="strategize"
+                ><span class="start-text">Strategize</span> - Inspire, explore,
+                and choose new directions and opportunities
+              </label>
+              <br />
+              <input
+                type="radio"
+                id="execute"
+                name="execute-answer"
+                value="execute"
+              />
+              <label for="execute"
+                ><span class="start-text">Execute</span> - Inform and optimize
+                designs in order to reduce risk and improve usability
+              </label>
+              <br />
+              <input
+                type="radio"
+                id="assess"
+                name="assess-answer"
+                value="assess"
+              />
+              <label for="assess"
+                ><span class="start-text">Assess</span> - Measure product
+                performance against itself or competition
+              </label>
+            </div>
+          </form>
         </div>
         <div class="footer">
-          <button type="button" class="btn btn-light">Previous</button>
-          <button type="button" class="btn btn-secondary">Next</button>
+          <button type="button" class="btn btn-light prev-btn">Previous</button>
+          <button type="button" class="btn btn-secondary nxt-btn">Next</button>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div id="focus">
+    <!-- <div class="quiz-container" id="focus">
       <div class="progress">
         <div
           class="progress-bar"
@@ -115,8 +115,10 @@
           aria-valuemin="0"
           aria-valuemax="100"
         ></div>
-        <div class="content">
-          <h2>Focus</h2>
+      </div>
+      <div class="content">
+        <h2>Focus</h2>
+        <div id="focus-container">
           <h5>I want to understand users'...</h5>
           <div class="inputs">
             <form>
@@ -157,12 +159,12 @@
         </div>
 
         <div class="footer">
-          <button type="button" class="btn btn-light">Previous</button>
-          <button type="button" class="btn btn-secondary">Next</button>
+          <button type="button" class="btn btn-light prev-btn">Previous</button>
+          <button type="button" class="btn btn-secondary nxt-btn">Next</button>
         </div>
       </div>
     </div> -->
-    <!-- 
+
     <div id="result">
       <div class="progress">
         <div
@@ -173,69 +175,76 @@
           aria-valuemin="0"
           aria-valuemax="100"
         ></div>
-        <div class="content">
-          <h2>Selected Research Methods</h2>
-          <h5>We recommend exploring using these research methods:</h5>
+      </div>
+      <div class="content">
+        <h2>Your Research Plan</h2>
+
+        <div id="result-question">
+          <h4>Research Question</h4>
+          <p>
+            How might we foster collaboration in everyday auditing of
+            algorithmic biases to amplify impact?
+          </p>
         </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="card" style="width: 18rem">
-                <div class="card-body qual-b">
-                  <h5 class="card-title">Contextual Inquiry</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Behavioral
-                  </h6>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="card-link">Learn More</a>
-                </div>
-              </div>
-            </div>
+        <hr />
+        <div id="result-goal">
+          <h4>Research Goal</h4>
+          <p>
+            <span class="start-text">Strategize</span> - Inspire, explore, and
+            choose new directions and opportunities
+          </p>
+        </div>
 
-            <div class="col">
-              <div class="card" style="width: 18rem">
-                <div class="card-body quant-b">
-                  <h5 class="card-title">Web Analytics</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Behavioral
-                  </h6>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="card-link">Learn More</a>
+        <hr />
+        <div id="result-methods">
+          <h4>Research Methods</h4>
+          <p>We recommend exploring using these research methods:</p>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="card" style="width: 18rem">
+                  <div class="card-body qual-b">
+                    <h5 class="card-title">Contextual Inquiry</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Behavioral
+                    </h6>
+                    <a href="#" class="card-link">Learn More</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 18rem">
-                <div class="card-body quant-a">
-                  <h5 class="card-title">Survey</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Attitudinal
-                  </h6>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="card-link">Learn More</a>
+
+              <div class="col">
+                <div class="card" style="width: 18rem">
+                  <div class="card-body quant-b">
+                    <h5 class="card-title">Web Analytics</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Behavioral
+                    </h6>
+                    <a href="#" class="card-link">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="width: 18rem">
+                  <div class="card-body quant-a">
+                    <h5 class="card-title">Survey</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Attitudinal
+                    </h6>
+                    <a href="#" class="card-link">Learn More</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <hr />
-
         <div class="return">
           <a href="index.html">Return to Home</a>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
