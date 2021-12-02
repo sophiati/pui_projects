@@ -156,6 +156,11 @@ body {
   padding-bottom: 2%;
 }
 
+.card button {
+  background: none;
+  border: none;
+}
+
 .card-link {
   color: white;
   text-decoration: underline;
@@ -166,8 +171,42 @@ body {
   color: white;
 }
 
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  justify-content: left;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.quant-b .flip-card-back {
+  background-color: #9bc700;
+  border-color: #9bc700;
+  transform: rotateY(-180deg);
+  text-align: left;
+  display: block;
+  padding-left: 0px !important;
+}
+
+.quant-b .flip-card-back p {
+  padding-left: 0px !important;
+}
+
 /*Modals*/
-.modal {
+/* .modal {
   display: block;
   position: fixed;
   left: 60%;
@@ -182,7 +221,7 @@ body {
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
-}
+} */
 
 /*Quiz Styles*/
 

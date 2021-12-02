@@ -172,7 +172,7 @@ h5 {
   cursor: pointer;
 }
 
-#abc input[type="radio"]:checked + label {
+#ww input[type="radio"]:checked + label {
   background-color: #004a8e;
   color: white;
   font-weight: 700;
