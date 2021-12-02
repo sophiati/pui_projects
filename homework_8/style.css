@@ -158,11 +158,30 @@ body {
 
 .card-link {
   color: white;
+  text-decoration: underline;
   align-content: bottom;
 }
 
 .card-link:hover {
   color: white;
+}
+
+/*Modals*/
+.modal {
+  display: block;
+  position: fixed;
+  left: 60%;
+  height: 88%;
+  width: 28%;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 0px;
+  z-index: 1072;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /*Quiz Styles*/
