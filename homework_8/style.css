@@ -85,17 +85,17 @@ body {
 
 /*Methods Styles*/
 #methods {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 5%;
 }
 
 #methods h3 {
-  padding-bottom: 5%;
+  padding-bottom: 2%;
 }
 
 .row {
-  padding-top: 5%;
+  padding-top: 1%;
 }
 
 .card-body {
@@ -125,6 +125,10 @@ body {
   border-color: #f0cc08;
 }
 
+.card {
+  margin-top: 10%;
+}
+
 .card-subtitle {
   color: white !important;
   font-style: italic;
@@ -134,3 +138,11 @@ body {
 .card-link {
   color: white;
 }
+
+.card-link:hover {
+  color: white;
+}
+
+/*Quiz Styles*/
+
+/*Result Page Styles*/
