@@ -28,7 +28,7 @@ body {
   background-image: url("images/background.jpg");
   background-size: cover;
   height: 100%;
-  padding-top: 20%;
+  padding-top: 10%;
   align-items: center;
   background-color: #ffffff;
   /* align-content: space-between; */
@@ -63,8 +63,7 @@ body {
   justify-items: center;
   margin: auto;
   width: 10px;
-  padding-top: 15%;
-
+  padding-top: 5%;
   animation: slide 2s linear infinite;
 }
 
