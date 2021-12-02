@@ -29,9 +29,9 @@ html {
   position: relative;
 }
 
-.finish {
+/* .finish {
   text-align: center;
-}
+} */
 
 #progress-form fieldset:not(:first-of-type) {
   display: none;
@@ -388,28 +388,36 @@ h5 {
   padding-bottom: 10%;
 }
 
-/* #result-methods {
-  margin-left: 10%;
-  margin-right: 10%;
+#results-container {
+  width: 100% !important;
+}
+
+#result-methods {
   margin-top: 5%;
-} */
+}
 
 #result-question {
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 22px;
-  width: 80%;
+  /* width: 80%; */
 }
 
 h4 {
-  color: #004a8e;
+  color: #3b3f42;
+  padding-bottom: 2%;
+  font-size: 22px;
 }
 
 #result-goal {
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 22px;
-  width: 80%;
+  /* width: 80%; */
+}
+
+#result-methods {
+  padding-top: 5%;
 }
 
 #result-methods p {
