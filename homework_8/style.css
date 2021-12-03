@@ -231,6 +231,29 @@ body {
   border-color: #f0cc08;
 }
 
+.modal-body figure {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.modal-body img {
+  padding-bottom: 6px;
+}
+
+figcaption {
+  font-size: 12px;
+  font-style: italic;
+  width: 460px;
+}
+
+.outline {
+  text-decoration: underline;
+}
+
+.list-start {
+  font-weight: 700;
+}
+
 /*Modals*/
 /* .modal {
   display: block;
