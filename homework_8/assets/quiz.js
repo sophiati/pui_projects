@@ -1,3 +1,6 @@
+//jQuery function to display quiz content progressively and move through the progress bar
+//Source: https://www.geeksforgeeks.org/how-to-create-multi-step-progress-bar-using-bootstrap/
+
 $(document).ready(function () {
   var currentGfgStep, nextGfgStep, previousGfgStep
   var opacity

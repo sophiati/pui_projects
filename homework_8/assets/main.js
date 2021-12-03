@@ -1,4 +1,15 @@
-//Check localStorage on each page to create an empty Plan array or a Plan array from localStorage savedPlan
+//1-Function to Start Quiz & Clear Local Storage
+function startQuiz() {
+  clearQuiz()
+  window.location.href = "quiz.html"
+}
+
+//2-Clears local storage when new quiz starts
+function clearQuiz() {
+  localStorage.clear()
+}
+
+//3-Check localStorage on each page to create an empty Plan array or a Plan array from localStorage savedPlan
 const storedValue = JSON.parse(localStorage.getItem("savedPlan"))
 let plan
 if (storedValue == null) {
@@ -7,20 +18,7 @@ if (storedValue == null) {
   plan = storedValue
 }
 
-function homePage() {
-  window.location.href = "index.html"
-}
-
-function startQuiz() {
-  clearQuiz()
-  window.location.href = "quiz.html"
-}
-
-function clearQuiz() {
-  localStorage.clear()
-}
-
-//1 - Function to create objects for each item
+//4 - Function to create objects for each research plan, which is an object
 function Item(itemQuestion, itemGoal, itemABC, itemWW, itemMethods) {
   this.question = itemQuestion
   this.goal = itemGoal
@@ -29,11 +27,13 @@ function Item(itemQuestion, itemGoal, itemABC, itemWW, itemMethods) {
   this.methods = itemMethods
 }
 
+//5-Wrapper Function to display results after quiz has been submitted
 function getResults() {
   submitQuiz()
   displayResults()
 }
 
+//6-Submit Quiz Function gathers all of inputs from the quiz to create a new research plan object and saves this in local storage
 function submitQuiz() {
   var question = document.getElementById("question").value
 
@@ -79,16 +79,18 @@ function submitQuiz() {
   } else if (abc == "attitudes" && ww == "what") {
     var methods = 4
   }
-  console.log(methods)
 
+  //Creates an object called research with the inputs
   const research = new Item(question, goal, abc, ww, methods)
-  console.log(research)
 
+  //Adds that object to the array
   plan.push(research)
 
+  //Saves the array in local storage
   localStorage.setItem("savedPlan", JSON.stringify(plan))
 }
 
+//7-Displays results by retrieving value from local storage and calls updatePage function to display cloned template of the research plan
 function displayResults() {
   const storedValue = JSON.parse(localStorage.getItem("savedPlan"))
   console.log(storedValue)
@@ -96,13 +98,18 @@ function displayResults() {
   updatePage()
 }
 
+//8-Creates a cloned template of the research plan with customized methods
 function updatePage() {
   const resultDiv = document.getElementById("results-container")
   const template = document.getElementById("results-template")
   const research = plan[0]
+  //Clones the template of the plan
   const clone = template.content.cloneNode(true)
+  //Inputs the user's inputs into the research plan
   clone.querySelector("#question-input").innerText = research.question
   clone.querySelector("#goal-input").innerText = research.goal
+
+  //Checks which inputs were selected to assign three methods based on the matrix framework from the home page, 3 methods per 4 quadrants
   if (research.methods == 1) {
     clone.querySelector("#m1-title").innerText = abTesting.title
     clone.querySelector("#m1-subtitle").innerText = abTesting.subtitle
@@ -159,7 +166,14 @@ function updatePage() {
     clone.querySelector("#m3-description").innerText = survey.description
     clone.querySelector("#m3-body").style.background = "#f0cc08"
   }
+  //Appends clones to the resultDiv
   resultDiv.appendChild(clone)
 
+  //Displays resultDiv
   resultDiv.style.visibility = "visible"
+}
+
+//9-Function to link back to homePage from the 'Return to Home' link and the 'Previous' button on quiz page 1
+function homePage() {
+  window.location.href = "index.html"
 }

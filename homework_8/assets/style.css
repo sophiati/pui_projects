@@ -1,5 +1,4 @@
 /*Index Styles*/
-@import "variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /*Overall Styles*/
@@ -24,11 +23,6 @@ header {
   height: 100%;
 }
 
-/* #main {
-  min-height: 100%;
-  padding-top: 100px;
-} */
-
 /*Top Part*/
 #top {
   background-image: url("images/background.jpg");
@@ -37,7 +31,6 @@ header {
   padding-top: 10%;
   align-items: center;
   background-color: #ffffff;
-  /* align-content: space-between; */
   font-family: "Roboto";
   display: flex;
 }
@@ -47,16 +40,8 @@ header {
   color: black;
   margin: auto;
   width: 400px;
-
-  /* margin-left: 30%;
-  margin-right: 30%; */
-  /* padding-top: 10%;
-  padding-bottom: 10%; */
 }
 
-#nng {
-  height: 50%;
-}
 #intro_text h2 {
   font-weight: 400;
   font-size: 20px;
@@ -74,6 +59,9 @@ header {
   background-color: #004a8e;
   border-color: #004a8e;
 }
+
+/*Arrow CSS Animation*/
+/*Source: https://css-tricks.com/using-multi-step-animations-transitions/*/
 
 #arrow {
   justify-items: center;
@@ -113,7 +101,13 @@ header {
   justify-content: center;
 }
 
-/*Methods Styles*/
+.caption {
+  font-size: 8px;
+  font-style: italic;
+  color: #667085;
+}
+
+/*Methods Cards Styles*/
 #methods {
   margin-left: 10%;
   margin-right: 10%;
@@ -193,6 +187,9 @@ header {
   color: black;
 }
 
+/*Flip Card CSS Animation*/
+/*Source: https://www.w3tweaks.com/css-flip-cards.html*/
+
 .flip-card {
   perspective: 1000px;
 }
@@ -243,6 +240,7 @@ header {
   border-color: #f0cc08;
 }
 
+/*Modal Styles*/
 .modal-body h5 {
   font-size: 18px;
   font-weight: 300;
@@ -262,12 +260,6 @@ figcaption {
   font-size: 12px;
   font-style: italic;
   width: 460px;
-}
-
-.caption {
-  font-size: 8px;
-  font-style: italic;
-  color: #667085;
 }
 
 #methods .caption {
@@ -322,21 +314,3 @@ figcaption {
 .list-start {
   font-weight: 700;
 }
-
-/*Modals*/
-/* .modal {
-  display: block;
-  position: fixed;
-  left: 60%;
-  height: 88%;
-  width: 28%;
-  overflow-y: auto;
-  overflow-x: auto;
-  border-radius: 0px;
-  z-index: 1072;
-}
-
-.modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
-} */

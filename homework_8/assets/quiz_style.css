@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/*Global Page Styles*/
 * {
   margin: 0;
   padding: 0;
@@ -11,22 +12,13 @@ html {
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  /* width: 100%; */
   height: 100%;
   min-height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
-/* body {
-  margin: auto;
-  width: 100%;
-} */
-
-/* .content {
-  color: #2b3b4b;
-} */
+/*Progress Form Styles for All Quiz Content*/
 #progress-form {
-  /* position: relative; */
   margin-top: 20px;
 }
 
@@ -34,28 +26,18 @@ html {
   background: white;
   border: 0 none;
   border-radius: 0.5rem;
-  /* box-sizing: border-box; */
   width: 70%;
   margin: auto;
   padding-bottom: 20px;
-  /* position: relative; */
 }
-
-/* .finish {
-  text-align: center;
-} */
 
 #progress-form fieldset:not(:first-of-type) {
   display: none;
 }
 
+/*Previous & Next Button Styles*/
 #progress-form .previous-step,
 .next-step {
-  /* width: 100px;
-  font-weight: bold; */
-  /* color: white;
-  border: 0 none;
-  border-radius: 0px; */
   cursor: pointer;
   padding: 10px 5px;
   margin: 10px 5px 10px 0px;
@@ -91,39 +73,6 @@ html {
   margin-right: 2%;
 }
 
-/* .nxt-btn {
-  background-color: #41bfe7;
-  border-color: #41bfe7;
-  color: white;
-  border-radius: 8px;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 1%;
-  width: 120px;
-}
-
-.prev-btn {
-  background-color: white;
-  border: 2px solid #e5e5e5;
-  color: #667085;
-  border-radius: 8px;
-  font-size: 24px;
-  font-weight: 400;
-  padding: 1%;
-  width: 150px;
-} */
-
-/* .footer {
-  padding-top: 10%;
-  padding-bottom: 10%;
-  justify-items: center;
-  align-content: bottom;
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  margin: auto;
-} */
-
 #progress-form .previous-step:hover,
 #progress-form .previous-step:focus {
   background-color: #757575;
@@ -137,6 +86,7 @@ html {
   color: white;
 }
 
+/*Progress Bar Styles*/
 .text {
   color: #004a8e;
   font-weight: normal;
@@ -215,135 +165,13 @@ html {
   background-color: #004a8e;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.card {
-  margin-top: 10%;
-  border: 0px;
-}
-
-.card p {
-  font-size: 16px;
-}
-
-.card h3 {
-  font-size: 36px;
-  font-weight: 400;
-  padding-top: 8%;
-  padding-left: 5%;
-}
-
-.card-subtitle {
-  color: black !important;
-  font-style: italic;
-  padding-bottom: 2%;
-  padding-top: 8%;
-  padding-left: 5%;
-}
-
-.card h4 {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.card-link {
-  padding-top: 8px;
-  color: white;
-  text-decoration: underline;
-  align-content: bottom;
-  font-weight: 300;
-  font-size: 20px;
-}
-
-.card-link:hover {
-  color: white;
-  cursor: pointer;
-}
-
-.flip-card-back {
-  border-radius: 8px;
-  padding-top: 5%;
-}
-
-#m1-description,
-#m2-description,
-#m3-description {
-  font-size: 18px !important;
-}
-
-.note p {
-  padding-bottom: 5%;
-  font-size: 22px;
-}
-
-/*Quiz*/
-/*Quiz Styles*/
-/* @import "variables.scss";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
-
-/* html,
-body {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  margin: auto;
-  width: 100%;
-} */
-
-/*Progress Bar Styles*/
-/* #quiz-container { */
-/* width: 80%; */
-/* justify-items: center;
-  margin: auto; */
-/* } */
-
-/* .progress { */
-/* padding: 10%; */
-/* width: 70%;
-  justify-items: center;
-  margin: auto;
-  margin-top: 5%; */
-/* } */
-
-/* #result .progress {
-  width: 87%;
-}
-
-.progress-bar {
-  background-color: #41bfe7;
-} */
-
+/*Quiz Content*/
 .content {
-  /* display: flex; */
   padding-top: 3%;
   padding-bottom: 3%;
   justify-items: center;
   color: #2b3b4b;
   margin: auto;
-  /* width: 70%;*/
-}
-
-#result .content {
-  width: 87%;
-  padding-bottom: 3%;
-}
-
-#result .row {
-  padding-bottom: 5%;
 }
 
 h1 {
@@ -359,6 +187,8 @@ h2 {
   font-size: 18px;
 }
 
+/*Styling for Question Page*/
+
 .question label {
   color: #667085;
   font-size: 16px;
@@ -369,6 +199,8 @@ h2 {
   font-weight: 700;
 }
 
+/*Styling for Goals Page*/
+
 #goal label {
   margin-bottom: 5%;
 }
@@ -377,14 +209,7 @@ h2 {
   margin-bottom: 6%;
 }
 
-#question-bucket .footer {
-  width: 70%;
-}
-
-#goals .footer {
-  width: 100%;
-}
-
+/*Styling for Focus Page*/
 #focus .inputs {
   padding-bottom: 3%;
 }
@@ -467,6 +292,12 @@ h2 {
   border: 0px;
 }
 
+/*Result Content*/
+#result .content {
+  width: 87%;
+  padding-bottom: 3%;
+}
+
 #results-container {
   width: 100% !important;
 }
@@ -479,15 +310,82 @@ h2 {
   display: block;
 }
 
-/* #result-methods .row {
+#result .row {
+  padding-bottom: 5%;
+}
+
+.row {
   display: flex;
-} */
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/*Card Styles*/
+.card {
+  margin-top: 10%;
+  border: 0px;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+.card h3 {
+  font-size: 36px;
+  font-weight: 400;
+  padding-top: 8%;
+  padding-left: 5%;
+}
+
+.card-subtitle {
+  color: black !important;
+  font-style: italic;
+  padding-bottom: 2%;
+  padding-top: 8%;
+  padding-left: 5%;
+}
+
+.card h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card-link {
+  padding-top: 8px;
+  color: white;
+  text-decoration: underline;
+  align-content: bottom;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.card-link:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.flip-card-back {
+  border-radius: 8px;
+  padding-top: 5%;
+}
+
+#m1-description,
+#m2-description,
+#m3-description {
+  font-size: 18px !important;
+}
+
+.note p {
+  padding-bottom: 5%;
+  font-size: 22px;
+}
 
 #result-question {
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 22px;
-  /* width: 80%; */
 }
 
 h4 {
@@ -500,7 +398,6 @@ h4 {
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 22px;
-  /* width: 80%; */
 }
 
 #result-methods {
@@ -511,12 +408,15 @@ h4 {
   font-size: 22px;
 }
 
+/*Results Card Template*/
+
 #results-template {
   color: #004a8e !important;
   font-size: 22px;
   font-weight: 600;
 }
 
+/*Return Link*/
 .return {
   justify-content: center;
   margin: auto;
@@ -531,13 +431,3 @@ h4 {
   color: #004a8e;
   font-size: 18px;
 }
-
-/* .footer { */
-/* padding-top: 10%;
-  padding-bottom: 10%; */
-/* justify-items: center; */
-/* align-content: bottom; */
-/* display: flex;
-  justify-content: space-between;
-  margin: auto;
-} */

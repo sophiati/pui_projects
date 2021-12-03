@@ -1,3 +1,5 @@
+//Javascript file containing objects for all method cards to input the information into the 'Research Plan' when the inputs match the method
+
 function Method(title, subtitle, description, target) {
   this.title = title
   this.subtitle = subtitle
