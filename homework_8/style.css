@@ -18,6 +18,10 @@ body {
   width: 100%;
 }
 
+header {
+  height: 100%;
+}
+
 /* #main {
   min-height: 100%;
   padding-top: 100px;
@@ -48,6 +52,9 @@ body {
   padding-bottom: 10%; */
 }
 
+#nng {
+  height: 50%;
+}
 #intro_text h2 {
   font-weight: 400;
   font-size: 20px;
@@ -103,10 +110,6 @@ body {
   width: 90%;
   justify-content: center;
 }
-
-/* .carousel-item img {
-  width: 50%;
-} */
 
 /*Methods Styles*/
 #methods {

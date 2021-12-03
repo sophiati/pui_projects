@@ -22,1846 +22,1900 @@
   </head>
   <body>
     <!--Cover Page-->
-    <div id="top">
-      <div class="container">
-        <div id="intro_text">
-          <h1>UX Research Methods</h1>
-          <h2>Have a project you need help with?</h2>
-          <button class="btn btn-secondary start-button" onclick="startQuiz()">
-            Start Here
-          </button>
-        </div>
-        <div id="arrow">
-          <svg
-            width="105"
-            height="37"
-            viewbox="0 0 105 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3 3L52.5 34L102 3"
-              stroke="black"
-              stroke-width="5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+    <header>
+      <div id="top">
+        <div class="container">
+          <div id="intro_text">
+            <h1>UX Research Methods</h1>
+            <h2>Have a project you need help with?</h2>
+            <button
+              class="btn btn-secondary start-button"
+              onclick="startQuiz()"
+            >
+              Start Here
+            </button>
+          </div>
+          <div id="arrow">
+            <svg
+              width="105"
+              height="37"
+              viewbox="0 0 105 37"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 3L52.5 34L102 3"
+                stroke="black"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
 
     <!--Overview of Methods-->
-    <div id="overview">
-      <h3>Overview of Methodologies</h3>
-      <p>
-        Below are some examples of how the different methodologies break down
-        ranging from attitudinal (testing users' perceptions) to behavioral
-        (understanding users' actions) and from what they seek to understand
-        from "What a user is doing" to"Why they are doing it."
-      </p>
-      <div
-        id="carouselExampleDark"
-        class="carousel carousel-dark slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="images/methods.jpg"
-              class="d-block w-100"
-              alt="Interpretation of a matrix mapping out different UX research methods"
-            />
+    <main>
+      <div id="overview">
+        <h3>Overview of Methodologies</h3>
+        <p>
+          Below are some examples of how the different methodologies break down
+          ranging from attitudinal (testing users' perceptions) to behavioral
+          (understanding users' actions) and from what they seek to understand
+          from "What a user is doing" to"Why they are doing it."
+        </p>
+        <div
+          id="carouselExampleDark"
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="images/methods.jpg"
+                class="d-block w-100"
+                alt="Interpretation of a matrix mapping out different UX research methods"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/nn_methods.png"
+                class="d-block w-100"
+                alt="Nielsen Norman Group's matrix mapping out different UX research methods with additional notations"
+              />
+              <p class="caption">
+                Source:
+                https://www.nngroup.com/articles/which-ux-research-methods/
+              </p>
+            </div>
           </div>
-          <div class="carousel-item">
-            <img
-              src="images/nn_methods.png"
-              class="d-block w-100"
-              alt="Nielsen Norman Group's matrix mapping out different UX research methods with additional notations"
-            />
-            <p class="caption">
-              Source:
-              https://www.nngroup.com/articles/which-ux-research-methods/
-            </p>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <!-- Method Cards-->
+      <div id="methods">
+        <h3>Methods</h3>
+        <p id="method-intro">
+          Below are a number of common UX research methods used in a variety of
+          contexts that span the
+          <span class="discover-text">Discover</span>,
+          <span class="explore-text">Explore</span>,
+          <span class="test-text">Test</span>, and
+          <span class="listen-text">Listen</span> phases of the design process.
+        </p>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card flip-card" id="interviews" style="width: 18rem">
+                <div class="card-body flip-card-inner discover">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Semi-Structured Interviews</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Attitudinal
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Direct contact with participants one-on-one to collect
+                      firsthand personal accounts of experience, opinions,
+                      attitudes, and perceptions
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#interviews-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card flip-card" id="ethnography" style="width: 18rem">
+                <div class="card-body flip-card-inner discover">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Ethnography</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Behavioral
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Attentive observation of people, artifacts, environments,
+                      events, behaviors, and interactions
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#ethnography-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card flip-card"
+                id="contextual-inquiry"
+                style="width: 18rem"
+              >
+                <div class="card-body flip-card-inner discover">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Contextual Inquiry</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Behavioral
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      An immersive, contextual method of observing and
+                      interviewing that reveals underlying (and invisible) work
+                      structure
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#contextual-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card flip-card" id="diaries" style="width: 18rem">
+                <div class="card-body flip-card-inner discover">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Diary Studies</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Attitudinal
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Guiding artifacts and activities that allow users to
+                      provide snapshots into their daily lives and events
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#diaries-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card flip-card" id="competitive" style="width: 18rem">
+                <div class="card-body flip-card-inner explore">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Competitive Analysis</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Behavioral
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Testing the usability, learnability, and desirability of
+                      competitors' products as benchmarks
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#competitive-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card flip-card"
+                id="card-sorting"
+                style="width: 18rem"
+              >
+                <div class="card-body flip-card-inner explore">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Card Sorting</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Attitudinal
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Asking users to sort components into different buckets
+                      based on their comprehension and expected categorization
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#cs-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card flip-card" id="codesign" style="width: 18rem">
+                <div class="card-body flip-card-inner explore">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Co-Design Sessions</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Attitudinal
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      A human-centered approach incorporating active user and
+                      stakeholder engagement in participatory design exercises
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#codesign-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card flip-card"
+                id="focus-groups"
+                style="width: 18rem"
+              >
+                <div class="card-body flip-card-inner explore">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Focus Groups</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Attitudinal
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Convening multiple users to provide insight into themes,
+                      patterns, and trends experienced collectively by groups
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#fg-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card flip-card"
+                id="speed-dating"
+                style="width: 18rem"
+              >
+                <div class="card-body flip-card-inner explore">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Speed Dating</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Attitudinal
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Comparing multiple design concepts in quick succession to
+                      learn how people react while also validating user needs
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#sd-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card flip-card" id="think-aloud" style="width: 18rem">
+                <div class="card-body flip-card-inner test">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Think Aloud Protocol</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Behavioral
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      A method where participants verbalize what they are doing
+                      and thinking while completing a task, revealing interface
+                      aspects that delight, confuse, and frustrate
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#thinkaloud-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card flip-card"
+                id="usability-testing"
+                style="width: 18rem"
+              >
+                <div class="card-body flip-card-inner test">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Usability Testing</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Qualitative, Behavioral
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Focuses on people and their tasks and seeks empirical
+                      evidence about how to improve the usability of an
+                      interface
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#usability-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card flip-card" id="heuristic" style="width: 18rem">
+                <div class="card-body flip-card-inner test">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Heuristic Analysis</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Behavioral
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Analyzing interfaces with respect to a set of usability
+                      best practices to detect usability problems before actual
+                      users engage with the interface
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#heuristic-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card flip-card" id="ab-testing" style="width: 18rem">
+                <div class="card-body flip-card-inner test">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">A/B Testing</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Behavioral
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Comparing two versions of the same design to see which
+                      performs statistically better against a predetermined goal
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#ab-testing-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card flip-card"
+                id="web-analytics"
+                style="width: 18rem"
+              >
+                <div class="card-body flip-card-inner listen">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Web Analytics</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Behavioral
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Measurement, collection, analysis, and reporting of
+                      internet data to understand and optimize usage and
+                      usability
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#analytics-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card flip-card" id="survey" style="width: 18rem">
+                <div class="card-body flip-card-inner listen">
+                  <div class="flip-card-front">
+                    <h4 class="card-title">Survey</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">
+                      Quantitative, Attitudinal
+                    </h5>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Collecting self-reported information from people about
+                      their characteristics, thoughts, feelings, perceptions,
+                      behaviors, and attitudes
+                    </p>
+                    <button
+                      type="button"
+                      class="card-link"
+                      data-bs-toggle="modal"
+                      data-bs-target="#survey-modal"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+        <p class="caption">
+          Much of the content in these cards was inspired and informed by Bruce
+          Hanington's and Bella Martin's book
+          <a
+            href="https://www.amazon.com/dp/B007WRCRH8/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1"
+            >Universal Methods of Design</a
+          >. Martin, B., & Hanington, B. M. (2012). Universal methods of design:
+          100 ways to research complex problems, develop innovative ideas, and
+          design effective solutions. Beverly, MA: Rockport Publishers.
+        </p>
 
-    <br />
-    <hr />
-    <br />
-
-    <!-- Method Cards-->
-    <div id="methods">
-      <h3>Methods</h3>
-      <p id="method-intro">
-        Below are a number of common UX research methods used in a variety of
-        contexts that span the
-        <span class="discover-text">Discover</span>,
-        <span class="explore-text">Explore</span>,
-        <span class="test-text">Test</span>, and
-        <span class="listen-text">Listen</span> phases of the design process.
-      </p>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="card flip-card" id="interviews" style="width: 18rem">
-              <div class="card-body flip-card-inner discover">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Semi-Structured Interviews</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Attitudinal
-                  </h5>
+        <!-- Modal Section -->
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="interviews-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Semi-Structured Interviews</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Direct contact with participants one-on-one to collect
                     firsthand personal accounts of experience, opinions,
                     attitudes, and perceptions
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/interviews.png"
+                      alt="Two people in an interview session with post-it notes on the table"
+                      width="460"
+                    />
+                    <!--Image Source: https://www.testingtime.com/en/blog/questions-in-user-interviews/-->
+                    <figcaption>
+                      An 1:1 interview session. Source:
+                      https://www.testingtime.com/en/blog/questions-in-user-interviews/
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Interviews are most suitable for exploratory research at the
+                    beginning of a research project where the problem space
+                    needs to be further defined. Because of the self-report bias
+                    that comes with interviews, it is best when this method can
+                    be triangulated with other methods that offer more insight
+                    into user behaviors. Interviews can be either structured
+                    with a set list of questions or unstructured, where the
+                    interviewer comes with a list of themes or topics to guide
+                    the conversation, but leaves room for deeper probing.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#interviews-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">Steps for Conducting Interviews:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Define your general research question and problem
+                        space.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Identify who would be best to interview. </span
+                      >Are these stakeholder interviews? User interviews? Are
+                      there subsets of users? Aim for 4-8 interviewees within
+                      each subset or category that you identify.
+                    </li>
+                    <li>
+                      <span class="list-start">Develop an interview guide.</span
+                      >For semi-structured interviews, begin by outlining topics
+                      or themes you want to explore with the participant. Once
+                      you’ve narrowed down 3-4 themes, draft 3-6 questions for
+                      each theme. Don’t forget to add introduction and
+                      conclusion sections to your interview guide where you give
+                      an overview of the project, ask for consent, and wrap-up
+                      the conversation.
+                    </li>
+                    <li>
+                      <span class="list-start">Conduct the interviews.</span
+                      >Come with your interview guide handy and a system for
+                      taking notes. Use a software that will record audio and/or
+                      video of the conversation (after receiving participant
+                      consent to be recorded). It is best to conduct interviews
+                      with a teammate where one person can moderate and the
+                      other can capture notes.
+                    </li>
+                    <li>
+                      <span class="list-start">Debrief the interview. </span
+                      >Take 15-20 minutes after the interview to debrief with
+                      your teammate top takeaways and key findings from the
+                      interview while it’s fresh in your minds.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card flip-card" id="ethnography" style="width: 18rem">
-              <div class="card-body flip-card-inner discover">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Ethnography</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Behavioral
-                  </h5>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="ethnography-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Ethnography</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Attentive observation of people, artifacts, environments,
                     events, behaviors, and interactions
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/ethnography.jpg"
+                      alt="Artifacts from ethnography including a photo of a girl walking and map of observed area"
+                      width="460"
+                    />
+                    <!--Image Source: Personal Project-->
+                    <figcaption>Artifacts of ethnographic analysis.</figcaption>
+                  </figure>
+                  <p>
+                    Ethnography involves semi-structured observation in the
+                    exploratory phase of the design process. Observing users in
+                    their natural environments is ideal to get an honest
+                    understanding of users’ behaviors. Generally, ethnographic
+                    methods enable researchers to observe with an open mind, but
+                    they may come with certain items they are looking for to
+                    structure the process to codify certain behaviors.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#ethnography-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">Steps for Conducting Ethnography:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Identify the problem space you’re working in and your
+                        research question.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Identify where the activities you’re interested in
+                        studying naturally take place. </span
+                      >(i.e. If you’re interested in people’s grocery shopping
+                      behaviors, conduct ethnography at a grocery store.)
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Find a location and time that will be ideal for your
+                        observation.</span
+                      >Consider when the place is likely to be more or less
+                      populated depending on your research question.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Develop an observation guide.
+                      </span>
+                      Consider what types of activities or areas of the
+                      environment you’re hoping to observe. Are there certain
+                      behaviors you can codify and look out for?
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Gather the necessary equipment. </span
+                      >Bring your observation guide, a camera to document your
+                      observations, and a way to take notes about what you are
+                      observing.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Go to the location and conduct observations. </span
+                      >Spend a few hours observing user behavior in this space
+                      and documenting what you see. Pay attention to cues beyond
+                      visual ones such as what you’re hearing or smelling.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Debrief the observation session </span
+                      >After completing an observation session, debrief top
+                      takeaways with your team.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div
-              class="card flip-card"
-              id="contextual-inquiry"
-              style="width: 18rem"
-            >
-              <div class="card-body flip-card-inner discover">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Contextual Inquiry</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Behavioral
-                  </h5>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="contextual-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Contextual Inquiry</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     An immersive, contextual method of observing and
                     interviewing that reveals underlying (and invisible) work
                     structure
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/contextual.jpeg"
+                      alt="Man observing a user while he performs a task and taking notes"
+                      width="460"
+                    />
+                    <!--Image Source: https://uxdesign.cc/how-to-conduct-contextual-inquiry-sessions-tips-for-design-researchers-231a95111029-->
+                    <figcaption>
+                      An example of conducting a contextual inquiry. Source:UX
+                      Collective article by Leonel Foggia
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Contextual inquiry is an immersive method, which allows the
+                    researcher to probe while also observing the participant in
+                    the context in which they typically perform the activity
+                    they want to study. Unlike a typical interview where the
+                    interviewer is moderating, contextual inquiry adopts a
+                    master/apprentice model where the interviewee is the master
+                    and the interviewer is the apprentice. This enables the
+                    interviewer to truly be immersed in the user’s daily
+                    routine, learning from the “master” about how they do things
+                    while observing and asking probing questions.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#contextual-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">
+                    Steps for Conducting Contextual Inquiry:
+                  </p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Define your research questions and problem space.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Identify and recruit users who fit the profile for
+                        users you’re interested in studying within the problem
+                        space.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Develop a guide for contextual inquiry.</span
+                      >Consider when the place is likely to be more or less
+                      populated depending on your research question.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Develop an observation guide.
+                      </span>
+                      Plan a clear introduction where you ask for the
+                      participant’s consent and give an overview of your
+                      project. Note any exploratory questions you are interested
+                      in asking about. Include a conclusion to wrap-up the
+                      session.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Conduct the contextual inquiry. </span
+                      >Go to the user’s environment, introduce yourself, and let
+                      them carry out their typical activities while you observe
+                      and ask questions at unobtrusive times. Record the session
+                      with audio and/or visual recording devices. Note
+                      observations and capture images of the user’s environment.
+                    </li>
+                    <li>
+                      <span class="list-start">Interpret your notes. </span
+                      >After the contextual inquiries, conduct interpretation
+                      sessions with your teammates where you share back your raw
+                      observations. Use these interpretation notes for an
+                      affinity diagramming exercise to identify key themes.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="card flip-card" id="diaries" style="width: 18rem">
-              <div class="card-body flip-card-inner discover">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Diary Studies</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Attitudinal
-                  </h5>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="diaries-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Diary Studies</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Guiding artifacts and activities that allow users to provide
                     snapshots into their daily lives and events
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/diaries.png"
+                      alt="Example interface from dscout for digital diary prompts"
+                      width="460"
+                    />
+                    <!--Image Source: https://help.dscout.com/hc/en-us/articles/360037283191-Analyzing-your-Diary-mission-->
+                    <figcaption>
+                      An example of a digital diary prompt on dscout, a digital
+                      diary platform. Source: dscout Help website.
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Diary studies are beneficial for capturing information from
+                    users across a longer period of time, sampling their
+                    thoughts, feelings, and behaviors at key moments.
+                    Traditionally, diary studies have involved sending
+                    participants diaries with activities written in them for the
+                    participant to complete at certain points throughout their
+                    days. Each page entry in the diary is guided with a question
+                    or prompt, and creativity is encouraged for participants to
+                    include images, drawing, or text. A reflection space is also
+                    typically included.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#diaries-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p>
+                    With the rise of digital tools, many platforms now exist to
+                    support conducting diary studies online. These enable the
+                    researcher to set up activities for a user and release new
+                    prompts each day or week for the duration of the study.
+                    Users can record audio and video of certain moments, upload
+                    images, and respond to tasks. Some of these platforms
+                    include
+                    <a href="dscout.com">dscout</a>,
+                    <a href="recollective.com">Recollective</a>, and
+                    <a href="https://www.lookback.com/">Lookback</a>.
+                  </p>
+                  <p class="outline">Steps for Conducting Diary Studies:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Define your research question and what you hope to
+                        learn.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Identify and recruit users who fit the profiles you
+                        hope to study. </span
+                      >The amount of users you recruit will depend on your
+                      research question, time, and budget. However, diary
+                      studies can be expensive due to their length and can
+                      potentially result in attrition over time. Consider these
+                      aspects when deciding how many users to recruit.
+                    </li>
+                    <li>
+                      <span class="list-start">Develop the diary. </span>Either
+                      on a digital platform or with a paper diary, break the
+                      time frame of the study down to determine what topics you
+                      want to focus on at which point during the study. Also
+                      determine when you want participants to complete the
+                      diary. Daily? Weekly? Retrospectively at the end of each
+                      day? Each time they complete said activity?
+                    </li>
+                    <li>
+                      <span class="list-start">Create the activities. </span>
+                      When you’ve decided when you want participants to complete
+                      the diary each day and which topics you want to explore at
+                      which parts of the duration of the study, craft activities
+                      related to each topic. For each entry, make sure to start
+                      with a guide or prompt for the user and balance how
+                      time-intensive tasks are for each day. Include any
+                      clarifying or probing questions as needed.
+                    </li>
+                    <li>
+                      <span class="list-start">Deploy your diary study. </span
+                      >Either send the paper diaries or the link to the digital
+                      diary to participants. Be on hand to answer any questions
+                      as participants get onboarded. Set the time frame for when
+                      activities will be released for digital studies.
+                    </li>
+                    <li>
+                      <span class="list-start">Track responses. </span>If using
+                      a digital platform, track participant diary entries
+                      throughout the study, so you can probe more deeply if you
+                      have a question about a response.
+                    </li>
+                    <li>
+                      <span class="list-start">Synthesize the data. </span>At
+                      checkpoints throughout your study and at the end, begin
+                      sifting through the data to identify patterns, themes and
+                      key takeaways.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card flip-card" id="competitive" style="width: 18rem">
-              <div class="card-body flip-card-inner explore">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Competitive Analysis</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Behavioral
-                  </h5>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="competitive-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Competitive Analysis</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Testing the usability, learnability, and desirability of
                     competitors' products as benchmarks
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/competitive.png"
+                      alt="Four competitor user interfaces from UberEats, DoorDash, Grubhub, and Postmates."
+                      width="460"
+                    />
+                    <!--Image Source: https://www.appsrhino.com/doordash-v-s-grubhub-v-s-ubereats-v-s-postmates/-->
+                    <figcaption>
+                      An example of competitive analysis for the design of meal
+                      delivery apps such as UberEats, DoorDash, Grubhub, and
+                      Postmates. Source:
+                      https://www.appsrhino.com/doordash-v-s-grubhub-v-s-ubereats-v-s-postmates/
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Competitive analysis is an exploratory research method that
+                    enables researchers to keep track of competition’s business
+                    activity. When exploring a new problem space, research teams
+                    can see what similar products or services currently exist.
+                    To understand their strengths and weaknesses, researchers
+                    can conduct usability tests or other research methods using
+                    competitor tools to better gauge where their competition
+                    stands.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#competitive-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">
+                    Steps for Conducting Competitive Analysis:
+                  </p>
+                  <ol>
+                    <li>
+                      <span class="list-start">Define your problem space.</span>
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Explore who else is offering similar products or
+                        services. </span
+                      >If possible, test out those products and services
+                      yourself, noting key features, strengths, and weaknesses.
+                      Identify and recruit users who fit the population your
+                      project caters to.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Conduct competitive testing. </span
+                      >Schedule sessions with recruited users where you explore
+                      competitor products. Potentially conduct a usability test
+                      on competitor products, noting points of delight,
+                      confusion, or frustration.
+                    </li>
+                    <li>
+                      <span class="list-start">Debrief sessions. </span>
+                      After each competing testing session, debrief findings and
+                      key takeaways with your teammates.
+                    </li>
+                    <li>
+                      <span class="list-start">Synthesize information. </span
+                      >Compile information gathered about competitors to help
+                      inform your company’s competitive advantage and
+                      differentiator, as well as areas of improvement to match
+                      competition.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card flip-card" id="card-sorting" style="width: 18rem">
-              <div class="card-body flip-card-inner explore">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Card Sorting</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Attitudinal
-                  </h5>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="cs-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Card Sorting</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Asking users to sort components into different buckets based
                     on their comprehension and expected categorization
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/cardsort.png"
+                      alt="An example digital card sorting interface from Optimal Workshop"
+                      width="460"
+                    />
+                    <!--Image Source: https://signalinc.com/create-a-better-user-experience-with-card-sorting//-->
+                    <figcaption>
+                      The Optimal Workshop interface for digital card sorting.
+                      Source:
+                      https://signalinc.com/create-a-better-user-experience-with-card-sorting/
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Card sorting is beneficial when trying to understand users’
+                    comprehension and expected organization of content. While
+                    the exact categories and format of card sorting may vary
+                    depending on the research question, card sorting involves
+                    providing users with many cards containing concepts, terms,
+                    or features and asking them to sort them into categories.
+                    Card sorts can either be structured, where the categories
+                    are predefined by the researcher, or unstructured, where
+                    participants can label categories for each grouping of cards
+                    as they see fit. This method is often used when determining
+                    the navigation of a website or application, the organization
+                    of content on a site, or prioritizing hierarchy of features.
+                    Many digital tools now enable card sorting such as
+                    <a href="optimalworkshop.com">Optimal Workshop</a>,
+                    <a href="recollective.com">Recollective</a>, and
+                    <a href="userzoom.com">User Zoom</a>.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#cs-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">Steps for Conducting Card Sorting:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Define your problem space and research question.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Decide if you will do a digital or in-person card sort. </span
+                      >Select a digital platform to use if you opt for a digital
+                      card sort.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Identify and recruit users that fit the profile you’re
+                        studying.
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Develop cards and categories if conducting a structured
+                        card sort.
+                      </span>
+                      List only one category, concept, term, or feature on each
+                      card. Cards can include images, sketches, and text, but
+                      keep the text pithy.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Conduct the card sorting sessions. </span
+                      >Work iteratively with individual participants or small
+                      groups of participants (no more than 3-5 people) according
+                      to the book Universal Methods of Design. Conduct no more
+                      than 15 card sorting sessions.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Prompt the users to sort the cards. </span
+                      >Provide instructions for users to sort the cards and
+                      leave them time to work through all the cards (~30-100).
+                      Ask them to think aloud while sorting so you understand
+                      their thought processes.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Include the option to add additional cards where
+                        needed.
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-start">Synthesize data. </span>Notice
+                      patterns in which categories participated sorted different
+                      cards into. Online tools will create graphs and
+                      visualizations of how participants categorized the cards.
+                      Use this information to inform your experience design
+                      project.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="card flip-card" id="codesign" style="width: 18rem">
-              <div class="card-body flip-card-inner explore">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Co-Design Sessions</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Attitudinal
-                  </h5>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="codesign-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Co-Design Sessions</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     A human-centered approach incorporating active user and
                     stakeholder engagement in participatory design exercises
-                  </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#codesign-modal"
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card flip-card" id="focus-groups" style="width: 18rem">
-              <div class="card-body flip-card-inner explore">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Focus Groups</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Attitudinal
-                  </h5>
-                </div>
-                <div class="flip-card-back">
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/codesign.png"
+                      alt="People sitting around table drawing collectively and with post-its to create a design together"
+                      width="460"
+                    />
+                    <!--Image Source: https://medium.com/@gyngyifekete/designing-a-co-design-workshop-7686eaf4bf0f-->
+                    <figcaption>
+                      A co-design session where a group of users is drawing and
+                      designing together. Source:
+                      https://medium.com/@gyngyifekete/designing-a-co-design-workshop-7686eaf4bf0f
+                    </figcaption>
+                  </figure>
                   <p>
-                    Convening multiple users to provide insight into themes,
-                    patterns, and trends experienced collectively by groups
+                    Co-design sessions bring users and stakeholders into the
+                    design process as collaborators. Using interactive
+                    activities such as cultural probes, diary studies, collages,
+                    and design workshops, users can create design concepts
+                    alongside the design team.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#fg-modal"
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card flip-card" id="speed-dating" style="width: 18rem">
-              <div class="card-body flip-card-inner explore">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Speed Dating</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Attitudinal
-                  </h5>
-                </div>
-                <div class="flip-card-back">
-                  <p>
-                    Comparing multiple design concepts in quick succession to
-                    learn how people react while also validating user needs
+                  <p class="outline">
+                    Steps for Conducting Co-Design Sessions:
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#sd-modal"
-                  >
-                    Learn More
-                  </button>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Identify and recruit users who fit the profile you’re
+                        studying.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Plan participatory design activities such as cultural
+                        probes, collages, or design workshops. </span
+                      >Prep any materials needed such as large papers, markers,
+                      pre-cut collage items. Define instructions for the
+                      workshop.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Conduct co-design sessions. </span
+                      >Invite a small group of participants to the session if
+                      conducting a design workshop and provide the creative
+                      toolkits. As they work through their designs, probe around
+                      why they are designing things certain ways.
+                    </li>
+                    <li>
+                      <span class="list-start">Collect the designs. </span>
+                      Bring back the materials from the co-design sessions and
+                      identify similarities and differences across the examples
+                      with your team. Use these insights to inform your design
+                      process.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="card flip-card" id="think-aloud" style="width: 18rem">
-              <div class="card-body flip-card-inner test">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Think Aloud Protocol</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Behavioral
-                  </h5>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="fg-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Focus Groups</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
+                <div class="modal-body">
+                  <h6>
+                    Convening multiple users to provide insight into themes,
+                    patterns, and trends experienced collectively by groups
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/focusgroups.png"
+                      alt="A group of people attending a focus group"
+                      width="460"
+                    />
+                    <!--Image Source: https://themeangel.com/wonderful-ways-to-conduct-ux-research-focus-group/-->
+                    <figcaption>
+                      An example of an interactive focus group. Source:
+                      https://themeangel.com/wonderful-ways-to-conduct-ux-research-focus-group/
+                    </figcaption>
+                  </figure>
                   <p>
+                    Focus groups are less commonly used as a user research
+                    method as participants in focus groups can be susceptible to
+                    groupthink, where they change their real views to match what
+                    the rest of the crowd thinks or says. Focus groups are a
+                    successful user research method for studying user experience
+                    with activities typically performed or experienced in group
+                    settings such as redesigning a workplace environment used by
+                    many employees. This method can also be used by market
+                    researchers to understand opinions or perceptions of a group
+                    potentially about a brand or product.
+                  </p>
+                  <p class="outline">Steps for Conducting Focus Groups:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Define your research question and what you hope to
+                        answer through conducting a focus group.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Identify and recruit participants that fit in the
+                        problem space you are studying.
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Prepare a guide and materials for the focus
+                        groups.</span
+                      >Identify 3-4 topics you want to discuss with participants
+                      and 4-5 questions per each topic. Consider bringing in
+                      interactive activities, such as voting where something
+                      fits on a spectrum or on a mood board, postcards from the
+                      future exercise where participants envision the future
+                      state of an experience, or a homework exercise asking
+                      participants to bring an image of an experience.
+                    </li>
+                    <li>
+                      <span class="list-start">Conduct the focus groups. </span>
+                      At the set time, gather the participants in a room. Bring
+                      equipment to record audio and video of the session as well
+                      as all your materials and name cards for the participants.
+                      It’s ideal to conduct the session with one moderator and a
+                      teammate who can help pass out materials and take notes.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Synthesize data from the focus groups.
+                      </span>
+                      Watch through recordings and note key themes and takeaways
+                      from the sessions.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="sd-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Speed Dating</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <h6>
+                    Comparing multiple design concepts in quick succession to
+                    learn how people react while also validating user needs
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/speeddating.jpg"
+                      alt="An example cover page and two storyboards from a speed dating session"
+                      width="460"
+                    />
+                    <!--Image Source: Personal Project-->
+                    <figcaption>
+                      Example materials from a speed dating session including a
+                      cover page and two storyboards.
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Taken from its real-life counterpart, speed dating is a
+                    method where researchers rapidly test design opportunities
+                    with potential users. Users are exposed in rapid succession
+                    to potential design ideas in the form of storyboards or
+                    simulated environments to validate the need that the
+                    proposed concepts solve. This method is typically used after
+                    conducting other contextual field methods and beginning to
+                    ideate around potential design opportunities.
+                  </p>
+                  <p class="outline">
+                    Steps for Conducting Speed Dating Sessions:
+                  </p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Ideate potential design opportunities as a team and
+                        vote on the most successful ones.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Create storyboards for each scenario. </span
+                      >Include humans in the storyboards and don’t focus on
+                      technical features of the design. Scenarios should be
+                      centered around solving specific user needs.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Create a cover page for each storyboard. </span
+                      >Cover pages should be used by the researcher and not
+                      shown to participants. The cover page serves as a guide to
+                      summarize the user's needs and follow-up questions.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >“Speed date” storyboards in a session.
+                      </span>
+                      Present each storyboard to an individual or small group in
+                      a series fashion followed by focused follow-up questions.
+                      Ask the users to rank how accurately the storyboards
+                      represent their needs and the effectiveness of the
+                      proposed opportunity.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Debrief the speed dating sessions.
+                      </span>
+                      Discuss findings and takeaways from the storyboard
+                      sessions. Refocus needs as were validated by the sessions,
+                      refine scenarios, and consider additional design
+                      opportunities.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="thinkaloud-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Think Aloud Protocol</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <h6>
                     A method where participants verbalize what they are doing
                     and thinking while completing a task, revealing interface
                     aspects that delight, confuse, and frustrate
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/thinkaloud.jpg"
+                      alt="Two pages from an example of a think aloud protocol outlining tasks"
+                      width="460"
+                    />
+                    <!--Image Source: Personal Project-->
+                    <figcaption>
+                      Example of a think aloud protocol outlining tasks for
+                      users to complete.
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Think aloud protocol is a technique that can be used in a
+                    range of user research methods including usability testing,
+                    contextual inquiries, and card sorting. The technique
+                    involves asking users to think aloud as they complete a task
+                    or activity whether that task was prompted by the moderator
+                    as in a usability test or is one they are doing organically
+                    as in a contextual inquiry.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#thinkaloud-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">
+                    Steps for Conducting a Think Aloud Study:
+                  </p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Identify and recruit users that fit your target
+                        audience.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Develop a guide of tasks you want them to complete
+                        while thinking aloud.
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Ask the user to think aloud. </span
+                      >Begin the session by prefacing that thinking aloud is
+                      unfamiliar for most participants, but it will help you
+                      gain insight into their thought processes and reactions.
+                      Don’t be afraid to prompt users if they stop thinking
+                      aloud at any point during the session.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Debrief the studies with your team.
+                      </span>
+                      Identify key themes and takeaways from the study.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div
-              class="card flip-card"
-              id="usability-testing"
-              style="width: 18rem"
-            >
-              <div class="card-body flip-card-inner test">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Usability Testing</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Qualitative, Behavioral
-                  </h5>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="usability-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Usability Testing</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Focuses on people and their tasks and seeks empirical
                     evidence about how to improve the usability of an interface
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/usability.png"
+                      alt="An example of a rainbow analysis spreadsheet used to track usability issues"
+                      width="460"
+                    />
+                    <!--Image Source: Personal Project-->
+                    <figcaption>
+                      A rainbow analysis spreadsheet used to track usability
+                      issues. Read this article about
+                      <a
+                        href="https://www.smashingmagazine.com/2013/04/rainbow-spreadsheet-collaborative-ux-research-tool/"
+                        >rainbow spreadsheets</a
+                      >
+                      for more information.
+                    </figcaption>
+                  </figure>
+                  <p>
+                    A method which employs the think aloud protocol, usability
+                    testing occurs later in the design process after a working
+                    prototype has been developed. Usability testing sessions are
+                    one-on-one engagements where participants are asking to use
+                    an interface to complete a series of tasks and think aloud
+                    while doing so. The moderator may ask probing follow-up
+                    questions. This method helps design teams identify what
+                    might be delightful, confusing, or frustrating about a
+                    design before the product is formally launched.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#usability-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">Steps for Conducting Usability Testing:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Develop a working prototype. </span
+                      >Create a functional prototype of your design that at
+                      least captures the scenarios you want to test. To do this,
+                      you can use design tools such as Figma, Sketch, or
+                      InVision, or use programming languages such as HTML, CSS,
+                      and Javascript.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Develop a usability testing guide. </span
+                      >Select which tasks you want to have users complete. Write
+                      out detailed tasks, scenarios, and follow-up questions for
+                      each. Also, formulate a system for taking notes and noting
+                      usability issues, potentially using a rainbow spreadsheet.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Conduct the usability test. </span
+                      >Prompt participants with the tasks and time how long it
+                      takes for them to complete each. Have them think aloud
+                      while completing. Ask additional follow-up questions and
+                      have them rate the usability of the product to accomplish
+                      each task after they’ve completed it.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Synthesize information from the usability tests.
+                      </span>
+                      Capture recurring usability issues that happened across
+                      participants to prioritize which features to fix first.
+                      Make these updates in the design and implementation.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card flip-card" id="heuristic" style="width: 18rem">
-              <div class="card-body flip-card-inner test">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Heuristic Analysis</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Behavioral
-                  </h5>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="heuristic-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Heuristic Analysis</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Analyzing interfaces with respect to a set of usability best
                     practices to detect usability problems before actual users
                     engage with the interface
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/heuristic.png"
+                      alt="Examples of Nielsen's 10 heuristics shown on mobile devices"
+                      width="460"
+                    />
+                    <!--Image Source: Universal Methods of Design by Bella Martin and Bruce Hanington-->
+                    <figcaption>
+                      Examples of Nielsen's 1994 Heuristics as shown in mobile
+                      app design. Source:
+                      <a
+                        href="https://www.amazon.com/dp/B007WRCRH8/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1"
+                        >Universal Methods of Design by Bella Martin and Bruce
+                        Hanington</a
+                      >
+                    </figcaption>
+                  </figure>
+                  <p>
+                    An informal usability method, heuristic analysis is an
+                    evaluation of interfaces before deployment to identify
+                    usability issues as defined by a set of usability standards,
+                    Nielsen’s 1994 Heuristics. Unlike usability testing, this
+                    method of interface evaluation is conducted by a design team
+                    rather than actual users.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#heuristic-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">
+                    Steps for Conducting Heuristic Analysis:
+                  </p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Gather team members to conduct heuristic analysis. </span
+                      >Around five teammates is an ideal number for capturing
+                      the bulk of usability issues. Team members should range
+                      from novices to experts in UX and programming.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Provide evaluators with materials. </span
+                      >Evaluators should have the link to the prototype as well
+                      as a reference of Nielsen’s 1994 Heuristics.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Conduct heuristic evaluation. </span
+                      >Have evaluators complete tasks on the interface while
+                      noting instances in violation of the heuristics and
+                      marking those down.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Prioritize heuristic issues.
+                      </span>
+                      Triage the severity of violations to address the most
+                      important issues first before launching.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="card flip-card" id="ab-testing" style="width: 18rem">
-              <div class="card-body flip-card-inner test">
-                <div class="flip-card-front">
-                  <h4 class="card-title">A/B Testing</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Behavioral
-                  </h5>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="ab-testing-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">A/B Testing</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Comparing two versions of the same design to see which
                     performs statistically better against a predetermined goal
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/ab-test.png"
+                      alt="An image of two designs on mobile devices for an A/B test"
+                      width="460"
+                    />
+                    <!--Image Source: https://www.theasoproject.com/blog/ab-testing-app-optimization/-->
+                    <figcaption>
+                      A and B versions of a mobile interface. Source:
+                      https://www.theasoproject.com/blog/ab-testing-app-optimization/
+                    </figcaption>
+                  </figure>
+                  <p>
+                    A/B testing is a quantitative, optimization method enabling
+                    researchers to gather statistically significant information
+                    about which versions of a design perform better. These are
+                    often used for design questions that are not intuitive as to
+                    which would perform better for a user. Participants are
+                    randomly assigned to an “A” test or “B” test to determine
+                    which design performs better.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#ab-testing-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">Steps for Conducting A/B Testing:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Define your research question. </span
+                      >Which two versions are you hoping to test? Are you
+                      testing color? Text or copy? Hierarchy? Plac
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Develop two versions of your design. </span
+                      >Create an “A” test and a “B” test.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Randomly assign participants. </span
+                      >Participants either receive test “A” or test “B”.
+                    </li>
+                    <li>
+                      <span class="list-start">Analyze the results. </span>
+                      Look at certain metrics such as click-through rates,
+                      purchase rates, or completion time, among others, to
+                      determine which test performed better.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card flip-card" id="web-analytics" style="width: 18rem">
-              <div class="card-body flip-card-inner listen">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Web Analytics</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Behavioral
-                  </h5>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="analytics-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Web Analytics</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Measurement, collection, analysis, and reporting of internet
                     data to understand and optimize usage and usability
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/analytics.png"
+                      alt="A screenshot of Fullstory Analytics, a web analytics tracking site"
+                      width="460"
+                    />
+                    <!--Image Source: https://www.softwareadvice.com/customer-experience/fullstory-profile/-->
+                    <figcaption>
+                      An example FullStory analytics dashboard for a website.
+                      Source:
+                      https://www.softwareadvice.com/customer-experience/fullstory-profile/
+                    </figcaption>
+                  </figure>
+                  <p>
+                    A form of digital trace data, web analytics are used to
+                    capture real quantitative information about how users are
+                    interacting with a specific product, website, or service.
+                    Using tools such as
+                    <a
+                      href="https://admin.google.com/a/cpanel/andrew.cmu.edu/ServiceNotAllowed?service=analytics&continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F%23"
+                      >Google Analytics</a
+                    >, <a href="fullstory.com">FullStory</a>,
+                    <a href="https://heap.io/">Heap Analytics</a>, or others,
+                    teams can track user engagement and activity on the site.
+                    This informs product teams about potential business issues
+                    or opportunities and potentially challenges in the usability
+                    of the site.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#analytics-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">Steps for Working with Web Analytics:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start">Implement analytics tools. </span
+                      >A range of analytics tools are available for
+                      implementation in your digital site. Install these on the
+                      back-end before deploying your product.
+                    </li>
+                    <li>
+                      <span class="list-start">Define metrics. </span>Identify
+                      key business and product metrics you want to track.
+                      Business metrics relate to click-through rates and
+                      purchases while product metrics related to user experience
+                      and activity such as # of active users, # of new users, or
+                      time spent on the site. These metrics are highly
+                      intertwined.
+                    </li>
+                    <li>
+                      <span class="list-start">Analyze the data. </span>Look at
+                      the analytics platform you installed to either view or
+                      download data to explore your identified metrics.
+                      Synthesize this information to identify its implications
+                      for your business or product.
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card flip-card" id="survey" style="width: 18rem">
-              <div class="card-body flip-card-inner listen">
-                <div class="flip-card-front">
-                  <h4 class="card-title">Survey</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                    Quantitative, Attitudinal
-                  </h5>
+        </div>
+        <div class="modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal" tabindex="-1" id="survey-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Survey</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="flip-card-back">
-                  <p>
+                <div class="modal-body">
+                  <h6>
                     Collecting self-reported information from people about their
                     characteristics, thoughts, feelings, perceptions, behaviors,
                     and attitudes
+                  </h6>
+                  <figure>
+                    <img
+                      src="images/survey.jpeg"
+                      alt="A screenshot of an Apple online support survey"
+                      width="460"
+                    />
+                    <!--Image Source: https://uxpamagazine.org/writing-usable-survey-questions/-->
+                    <figcaption>
+                      Example of an Apple Online Support Survey. Source:
+                      https://uxpamagazine.org/writing-usable-survey-questions/
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Surveys are a way to collect information from a larger
+                    sample of participants. Because of their ability to collect
+                    large amounts of data in a short amount of time, they are an
+                    efficient tool. Unlike other self-report methods such as
+                    interviews, surveys enable the collection of attitudinal
+                    information from a broader and more diverse range of
+                    participants. However, they often do not enable researchers
+                    to answer questions about why they answered a certain way
+                    and ask follow-up questions. Popular platforms for deploying
+                    surveys range in sophistication with
+                    <a href="docs.google.com/forms">Google Forms</a> and
+                    <a href="https://forms.office.com/">Microsoft Forms</a>
+                    providing relatively simple functionality, but available to
+                    all email account holders, to
+                    <a href="https://www.surveymonkey.com/">Survey Monkey</a>,
+                    which provides a medium amount of functionality, and
+                    <a href="https://www.qualtrics.com/">Qualtrics</a>, which is
+                    highly sophisticated and customizable.
                   </p>
-                  <button
-                    type="button"
-                    class="card-link"
-                    data-bs-toggle="modal"
-                    data-bs-target="#survey-modal"
-                  >
-                    Learn More
-                  </button>
+                  <p class="outline">Steps for Conducting a Survey:</p>
+                  <ol>
+                    <li>
+                      <span class="list-start"
+                        >Define your overarching research question.
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-start">Develop the survey. </span>Define
+                      key topics you hope to explore in your survey to break the
+                      survey into sections. Within each topic, identify tangible
+                      survey questions and intended formats (i.e. radio buttons,
+                      sliders, rating buttons, dropdowns, matrices, etc.) to ask
+                      respondents. Avoid too many free response questions as
+                      they lead to survey fatigue and open-ended questions,
+                      which will make data analysis difficult later on.
+                    </li>
+                    <li>
+                      <span class="list-start"
+                        >Recruit survey respondents. </span
+                      >Many online platforms such as
+                      <a href="https://www.mturk.com/"
+                        >Amazon Mechanical Turk</a
+                      >
+                      or
+                      <a href="https://www.surveymonkey.com/"
+                        >Survey Monkey's</a
+                      >
+                      built-in recruiting platform can assist in helping you
+                      screen and identify participants that fit your criteria.
+                    </li>
+                    <li>
+                      <span class="list-start">Deploy the survey. </span>Set the
+                      survey to be open and collecting responses for a set
+                      amount of time.
+                    </li>
+                    <li>
+                      <span class="list-start">Analyze the survey data. </span
+                      >Once the survey is closed, analyze the survey data.
+                      Online tools provide initial visualizations of the data,
+                      but data can also be downloaded for further analysis and
+                      examination of statistical significance in Excel, Tableau,
+                      Python, SPSS, or R.
+                    </li>
+                    <li>
+                      <span class="list-start">Interpret survey results. </span
+                      >What did you learn from your survey? What insights can
+                      you include?
+                    </li>
+                  </ol>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <p class="caption">
-        Much of the content in these cards was inspired and informed by Bruce
-        Hanington's and Bella Martin's book
-        <a
-          href="https://www.amazon.com/dp/B007WRCRH8/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1"
-          >Universal Methods of Design</a
-        >. Martin, B., & Hanington, B. M. (2012). Universal methods of design:
-        100 ways to research complex problems, develop innovative ideas, and
-        design effective solutions. Beverly, MA: Rockport Publishers.
-      </p>
-
-      <!-- Modal Section -->
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="interviews-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Semi-Structured Interviews</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Direct contact with participants one-on-one to collect
-                  firsthand personal accounts of experience, opinions,
-                  attitudes, and perceptions
-                </h6>
-                <figure>
-                  <img
-                    src="images/interviews.png"
-                    alt="Two people in an interview session with post-it notes on the table"
-                    width="460"
-                  />
-                  <!--Image Source: https://www.testingtime.com/en/blog/questions-in-user-interviews/-->
-                  <figcaption>
-                    An 1:1 interview session. Source:
-                    https://www.testingtime.com/en/blog/questions-in-user-interviews/
-                  </figcaption>
-                </figure>
-                <p>
-                  Interviews are most suitable for exploratory research at the
-                  beginning of a research project where the problem space needs
-                  to be further defined. Because of the self-report bias that
-                  comes with interviews, it is best when this method can be
-                  triangulated with other methods that offer more insight into
-                  user behaviors. Interviews can be either structured with a set
-                  list of questions or unstructured, where the interviewer comes
-                  with a list of themes or topics to guide the conversation, but
-                  leaves room for deeper probing.
-                </p>
-                <p class="outline">Steps for Conducting Interviews:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Define your general research question and problem
-                      space.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Identify who would be best to interview. </span
-                    >Are these stakeholder interviews? User interviews? Are
-                    there subsets of users? Aim for 4-8 interviewees within each
-                    subset or category that you identify.
-                  </li>
-                  <li>
-                    <span class="list-start">Develop an interview guide.</span
-                    >For semi-structured interviews, begin by outlining topics
-                    or themes you want to explore with the participant. Once
-                    you’ve narrowed down 3-4 themes, draft 3-6 questions for
-                    each theme. Don’t forget to add introduction and conclusion
-                    sections to your interview guide where you give an overview
-                    of the project, ask for consent, and wrap-up the
-                    conversation.
-                  </li>
-                  <li>
-                    <span class="list-start">Conduct the interviews.</span>Come
-                    with your interview guide handy and a system for taking
-                    notes. Use a software that will record audio and/or video of
-                    the conversation (after receiving participant consent to be
-                    recorded). It is best to conduct interviews with a teammate
-                    where one person can moderate and the other can capture
-                    notes.
-                  </li>
-                  <li>
-                    <span class="list-start">Debrief the interview. </span>Take
-                    15-20 minutes after the interview to debrief with your
-                    teammate top takeaways and key findings from the interview
-                    while it’s fresh in your minds.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="ethnography-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Ethnography</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Attentive observation of people, artifacts, environments,
-                  events, behaviors, and interactions
-                </h6>
-                <figure>
-                  <img
-                    src="images/ethnography.jpg"
-                    alt="Artifacts from ethnography including a photo of a girl walking and map of observed area"
-                    width="460"
-                  />
-                  <!--Image Source: Personal Project-->
-                  <figcaption>Artifacts of ethnographic analysis.</figcaption>
-                </figure>
-                <p>
-                  Ethnography involves semi-structured observation in the
-                  exploratory phase of the design process. Observing users in
-                  their natural environments is ideal to get an honest
-                  understanding of users’ behaviors. Generally, ethnographic
-                  methods enable researchers to observe with an open mind, but
-                  they may come with certain items they are looking for to
-                  structure the process to codify certain behaviors.
-                </p>
-                <p class="outline">Steps for Conducting Ethnography:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Identify the problem space you’re working in and your
-                      research question.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Identify where the activities you’re interested in
-                      studying naturally take place. </span
-                    >(i.e. If you’re interested in people’s grocery shopping
-                    behaviors, conduct ethnography at a grocery store.)
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Find a location and time that will be ideal for your
-                      observation.</span
-                    >Consider when the place is likely to be more or less
-                    populated depending on your research question.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Develop an observation guide.
-                    </span>
-                    Consider what types of activities or areas of the
-                    environment you’re hoping to observe. Are there certain
-                    behaviors you can codify and look out for?
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Gather the necessary equipment. </span
-                    >Bring your observation guide, a camera to document your
-                    observations, and a way to take notes about what you are
-                    observing.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Go to the location and conduct observations. </span
-                    >Spend a few hours observing user behavior in this space and
-                    documenting what you see. Pay attention to cues beyond
-                    visual ones such as what you’re hearing or smelling.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Debrief the observation session </span
-                    >After completing an observation session, debrief top
-                    takeaways with your team.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="contextual-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Contextual Inquiry</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  An immersive, contextual method of observing and interviewing
-                  that reveals underlying (and invisible) work structure
-                </h6>
-                <figure>
-                  <img
-                    src="images/contextual.jpeg"
-                    alt="Man observing a user while he performs a task and taking notes"
-                    width="460"
-                  />
-                  <!--Image Source: https://uxdesign.cc/how-to-conduct-contextual-inquiry-sessions-tips-for-design-researchers-231a95111029-->
-                  <figcaption>
-                    An example of conducting a contextual inquiry. Source:UX
-                    Collective article by Leonel Foggia
-                  </figcaption>
-                </figure>
-                <p>
-                  Contextual inquiry is an immersive method, which allows the
-                  researcher to probe while also observing the participant in
-                  the context in which they typically perform the activity they
-                  want to study. Unlike a typical interview where the
-                  interviewer is moderating, contextual inquiry adopts a
-                  master/apprentice model where the interviewee is the master
-                  and the interviewer is the apprentice. This enables the
-                  interviewer to truly be immersed in the user’s daily routine,
-                  learning from the “master” about how they do things while
-                  observing and asking probing questions.
-                </p>
-                <p class="outline">Steps for Conducting Contextual Inquiry:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Define your research questions and problem space.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Identify and recruit users who fit the profile for users
-                      you’re interested in studying within the problem
-                      space.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Develop a guide for contextual inquiry.</span
-                    >Consider when the place is likely to be more or less
-                    populated depending on your research question.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Develop an observation guide.
-                    </span>
-                    Plan a clear introduction where you ask for the
-                    participant’s consent and give an overview of your project.
-                    Note any exploratory questions you are interested in asking
-                    about. Include a conclusion to wrap-up the session.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Conduct the contextual inquiry. </span
-                    >Go to the user’s environment, introduce yourself, and let
-                    them carry out their typical activities while you observe
-                    and ask questions at unobtrusive times. Record the session
-                    with audio and/or visual recording devices. Note
-                    observations and capture images of the user’s environment.
-                  </li>
-                  <li>
-                    <span class="list-start">Interpret your notes. </span>After
-                    the contextual inquiries, conduct interpretation sessions
-                    with your teammates where you share back your raw
-                    observations. Use these interpretation notes for an affinity
-                    diagramming exercise to identify key themes.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="diaries-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Diary Studies</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Guiding artifacts and activities that allow users to provide
-                  snapshots into their daily lives and events
-                </h6>
-                <figure>
-                  <img
-                    src="images/diaries.png"
-                    alt="Example interface from dscout for digital diary prompts"
-                    width="460"
-                  />
-                  <!--Image Source: https://help.dscout.com/hc/en-us/articles/360037283191-Analyzing-your-Diary-mission-->
-                  <figcaption>
-                    An example of a digital diary prompt on dscout, a digital
-                    diary platform. Source: dscout Help website.
-                  </figcaption>
-                </figure>
-                <p>
-                  Diary studies are beneficial for capturing information from
-                  users across a longer period of time, sampling their thoughts,
-                  feelings, and behaviors at key moments. Traditionally, diary
-                  studies have involved sending participants diaries with
-                  activities written in them for the participant to complete at
-                  certain points throughout their days. Each page entry in the
-                  diary is guided with a question or prompt, and creativity is
-                  encouraged for participants to include images, drawing, or
-                  text. A reflection space is also typically included.
-                </p>
-                <p>
-                  With the rise of digital tools, many platforms now exist to
-                  support conducting diary studies online. These enable the
-                  researcher to set up activities for a user and release new
-                  prompts each day or week for the duration of the study. Users
-                  can record audio and video of certain moments, upload images,
-                  and respond to tasks. Some of these platforms include
-                  <a href="dscout.com">dscout</a>,
-                  <a href="recollective.com">Recollective</a>, and
-                  <a href="https://www.lookback.com/">Lookback</a>.
-                </p>
-                <p class="outline">Steps for Conducting Diary Studies:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Define your research question and what you hope to
-                      learn.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Identify and recruit users who fit the profiles you hope
-                      to study. </span
-                    >The amount of users you recruit will depend on your
-                    research question, time, and budget. However, diary studies
-                    can be expensive due to their length and can potentially
-                    result in attrition over time. Consider these aspects when
-                    deciding how many users to recruit.
-                  </li>
-                  <li>
-                    <span class="list-start">Develop the diary. </span>Either on
-                    a digital platform or with a paper diary, break the time
-                    frame of the study down to determine what topics you want to
-                    focus on at which point during the study. Also determine
-                    when you want participants to complete the diary. Daily?
-                    Weekly? Retrospectively at the end of each day? Each time
-                    they complete said activity?
-                  </li>
-                  <li>
-                    <span class="list-start">Create the activities. </span>
-                    When you’ve decided when you want participants to complete
-                    the diary each day and which topics you want to explore at
-                    which parts of the duration of the study, craft activities
-                    related to each topic. For each entry, make sure to start
-                    with a guide or prompt for the user and balance how
-                    time-intensive tasks are for each day. Include any
-                    clarifying or probing questions as needed.
-                  </li>
-                  <li>
-                    <span class="list-start">Deploy your diary study. </span
-                    >Either send the paper diaries or the link to the digital
-                    diary to participants. Be on hand to answer any questions as
-                    participants get onboarded. Set the time frame for when
-                    activities will be released for digital studies.
-                  </li>
-                  <li>
-                    <span class="list-start">Track responses. </span>If using a
-                    digital platform, track participant diary entries throughout
-                    the study, so you can probe more deeply if you have a
-                    question about a response.
-                  </li>
-                  <li>
-                    <span class="list-start">Synthesize the data. </span>At
-                    checkpoints throughout your study and at the end, begin
-                    sifting through the data to identify patterns, themes and
-                    key takeaways.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="competitive-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Competitive Analysis</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Testing the usability, learnability, and desirability of
-                  competitors' products as benchmarks
-                </h6>
-                <figure>
-                  <img
-                    src="images/competitive.png"
-                    alt="Four competitor user interfaces from UberEats, DoorDash, Grubhub, and Postmates."
-                    width="460"
-                  />
-                  <!--Image Source: https://www.appsrhino.com/doordash-v-s-grubhub-v-s-ubereats-v-s-postmates/-->
-                  <figcaption>
-                    An example of competitive analysis for the design of meal
-                    delivery apps such as UberEats, DoorDash, Grubhub, and
-                    Postmates. Source:
-                    https://www.appsrhino.com/doordash-v-s-grubhub-v-s-ubereats-v-s-postmates/
-                  </figcaption>
-                </figure>
-                <p>
-                  Competitive analysis is an exploratory research method that
-                  enables researchers to keep track of competition’s business
-                  activity. When exploring a new problem space, research teams
-                  can see what similar products or services currently exist. To
-                  understand their strengths and weaknesses, researchers can
-                  conduct usability tests or other research methods using
-                  competitor tools to better gauge where their competition
-                  stands.
-                </p>
-                <p class="outline">
-                  Steps for Conducting Competitive Analysis:
-                </p>
-                <ol>
-                  <li>
-                    <span class="list-start">Define your problem space.</span>
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Explore who else is offering similar products or
-                      services. </span
-                    >If possible, test out those products and services yourself,
-                    noting key features, strengths, and weaknesses. Identify and
-                    recruit users who fit the population your project caters to.
-                  </li>
-                  <li>
-                    <span class="list-start">Conduct competitive testing. </span
-                    >Schedule sessions with recruited users where you explore
-                    competitor products. Potentially conduct a usability test on
-                    competitor products, noting points of delight, confusion, or
-                    frustration.
-                  </li>
-                  <li>
-                    <span class="list-start">Debrief sessions. </span>
-                    After each competing testing session, debrief findings and
-                    key takeaways with your teammates.
-                  </li>
-                  <li>
-                    <span class="list-start">Synthesize information. </span
-                    >Compile information gathered about competitors to help
-                    inform your company’s competitive advantage and
-                    differentiator, as well as areas of improvement to match
-                    competition.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="cs-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Card Sorting</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Asking users to sort components into different buckets based
-                  on their comprehension and expected categorization
-                </h6>
-                <figure>
-                  <img
-                    src="images/cardsort.png"
-                    alt="An example digital card sorting interface from Optimal Workshop"
-                    width="460"
-                  />
-                  <!--Image Source: https://signalinc.com/create-a-better-user-experience-with-card-sorting//-->
-                  <figcaption>
-                    The Optimal Workshop interface for digital card sorting.
-                    Source:
-                    https://signalinc.com/create-a-better-user-experience-with-card-sorting/
-                  </figcaption>
-                </figure>
-                <p>
-                  Card sorting is beneficial when trying to understand users’
-                  comprehension and expected organization of content. While the
-                  exact categories and format of card sorting may vary depending
-                  on the research question, card sorting involves providing
-                  users with many cards containing concepts, terms, or features
-                  and asking them to sort them into categories. Card sorts can
-                  either be structured, where the categories are predefined by
-                  the researcher, or unstructured, where participants can label
-                  categories for each grouping of cards as they see fit. This
-                  method is often used when determining the navigation of a
-                  website or application, the organization of content on a site,
-                  or prioritizing hierarchy of features. Many digital tools now
-                  enable card sorting such as
-                  <a href="optimalworkshop.com">Optimal Workshop</a>,
-                  <a href="recollective.com">Recollective</a>, and
-                  <a href="userzoom.com">User Zoom</a>.
-                </p>
-                <p class="outline">Steps for Conducting Card Sorting:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Define your problem space and research question.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Decide if you will do a digital or in-person card sort. </span
-                    >Select a digital platform to use if you opt for a digital
-                    card sort.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Identify and recruit users that fit the profile you’re
-                      studying.
-                    </span>
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Develop cards and categories if conducting a structured
-                      card sort.
-                    </span>
-                    List only one category, concept, term, or feature on each
-                    card. Cards can include images, sketches, and text, but keep
-                    the text pithy.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Conduct the card sorting sessions. </span
-                    >Work iteratively with individual participants or small
-                    groups of participants (no more than 3-5 people) according
-                    to the book Universal Methods of Design. Conduct no more
-                    than 15 card sorting sessions.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Prompt the users to sort the cards. </span
-                    >Provide instructions for users to sort the cards and leave
-                    them time to work through all the cards (~30-100). Ask them
-                    to think aloud while sorting so you understand their thought
-                    processes.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Include the option to add additional cards where needed.
-                    </span>
-                  </li>
-                  <li>
-                    <span class="list-start">Synthesize data. </span>Notice
-                    patterns in which categories participated sorted different
-                    cards into. Online tools will create graphs and
-                    visualizations of how participants categorized the cards.
-                    Use this information to inform your experience design
-                    project.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="codesign-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Co-Design Sessions</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  A human-centered approach incorporating active user and
-                  stakeholder engagement in participatory design exercises
-                </h6>
-                <figure>
-                  <img
-                    src="images/codesign.png"
-                    alt="People sitting around table drawing collectively and with post-its to create a design together"
-                    width="460"
-                  />
-                  <!--Image Source: https://medium.com/@gyngyifekete/designing-a-co-design-workshop-7686eaf4bf0f-->
-                  <figcaption>
-                    A co-design session where a group of users is drawing and
-                    designing together. Source:
-                    https://medium.com/@gyngyifekete/designing-a-co-design-workshop-7686eaf4bf0f
-                  </figcaption>
-                </figure>
-                <p>
-                  Co-design sessions bring users and stakeholders into the
-                  design process as collaborators. Using interactive activities
-                  such as cultural probes, diary studies, collages, and design
-                  workshops, users can create design concepts alongside the
-                  design team.
-                </p>
-                <p class="outline">Steps for Conducting Co-Design Sessions:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Identify and recruit users who fit the profile you’re
-                      studying.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Plan participatory design activities such as cultural
-                      probes, collages, or design workshops. </span
-                    >Prep any materials needed such as large papers, markers,
-                    pre-cut collage items. Define instructions for the workshop.
-                  </li>
-                  <li>
-                    <span class="list-start">Conduct co-design sessions. </span
-                    >Invite a small group of participants to the session if
-                    conducting a design workshop and provide the creative
-                    toolkits. As they work through their designs, probe around
-                    why they are designing things certain ways.
-                  </li>
-                  <li>
-                    <span class="list-start">Collect the designs. </span>
-                    Bring back the materials from the co-design sessions and
-                    identify similarities and differences across the examples
-                    with your team. Use these insights to inform your design
-                    process.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="fg-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Focus Groups</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Convening multiple users to provide insight into themes,
-                  patterns, and trends experienced collectively by groups
-                </h6>
-                <figure>
-                  <img
-                    src="images/focusgroups.png"
-                    alt="A group of people attending a focus group"
-                    width="460"
-                  />
-                  <!--Image Source: https://themeangel.com/wonderful-ways-to-conduct-ux-research-focus-group/-->
-                  <figcaption>
-                    An example of an interactive focus group. Source:
-                    https://themeangel.com/wonderful-ways-to-conduct-ux-research-focus-group/
-                  </figcaption>
-                </figure>
-                <p>
-                  Focus groups are less commonly used as a user research method
-                  as participants in focus groups can be susceptible to
-                  groupthink, where they change their real views to match what
-                  the rest of the crowd thinks or says. Focus groups are a
-                  successful user research method for studying user experience
-                  with activities typically performed or experienced in group
-                  settings such as redesigning a workplace environment used by
-                  many employees. This method can also be used by market
-                  researchers to understand opinions or perceptions of a group
-                  potentially about a brand or product.
-                </p>
-                <p class="outline">Steps for Conducting Focus Groups:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Define your research question and what you hope to answer
-                      through conducting a focus group.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Identify and recruit participants that fit in the problem
-                      space you are studying.
-                    </span>
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Prepare a guide and materials for the focus groups.</span
-                    >Identify 3-4 topics you want to discuss with participants
-                    and 4-5 questions per each topic. Consider bringing in
-                    interactive activities, such as voting where something fits
-                    on a spectrum or on a mood board, postcards from the future
-                    exercise where participants envision the future state of an
-                    experience, or a homework exercise asking participants to
-                    bring an image of an experience.
-                  </li>
-                  <li>
-                    <span class="list-start">Conduct the focus groups. </span>
-                    At the set time, gather the participants in a room. Bring
-                    equipment to record audio and video of the session as well
-                    as all your materials and name cards for the participants.
-                    It’s ideal to conduct the session with one moderator and a
-                    teammate who can help pass out materials and take notes.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Synthesize data from the focus groups.
-                    </span>
-                    Watch through recordings and note key themes and takeaways
-                    from the sessions.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="sd-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Speed Dating</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Comparing multiple design concepts in quick succession to
-                  learn how people react while also validating user needs
-                </h6>
-                <figure>
-                  <img
-                    src="images/speeddating.jpg"
-                    alt="An example cover page and two storyboards from a speed dating session"
-                    width="460"
-                  />
-                  <!--Image Source: Personal Project-->
-                  <figcaption>
-                    Example materials from a speed dating session including a
-                    cover page and two storyboards.
-                  </figcaption>
-                </figure>
-                <p>
-                  Taken from its real-life counterpart, speed dating is a method
-                  where researchers rapidly test design opportunities with
-                  potential users. Users are exposed in rapid succession to
-                  potential design ideas in the form of storyboards or simulated
-                  environments to validate the need that the proposed concepts
-                  solve. This method is typically used after conducting other
-                  contextual field methods and beginning to ideate around
-                  potential design opportunities.
-                </p>
-                <p class="outline">
-                  Steps for Conducting Speed Dating Sessions:
-                </p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Ideate potential design opportunities as a team and vote
-                      on the most successful ones.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Create storyboards for each scenario. </span
-                    >Include humans in the storyboards and don’t focus on
-                    technical features of the design. Scenarios should be
-                    centered around solving specific user needs.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Create a cover page for each storyboard. </span
-                    >Cover pages should be used by the researcher and not shown
-                    to participants. The cover page serves as a guide to
-                    summarize the user's needs and follow-up questions.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >“Speed date” storyboards in a session.
-                    </span>
-                    Present each storyboard to an individual or small group in a
-                    series fashion followed by focused follow-up questions. Ask
-                    the users to rank how accurately the storyboards represent
-                    their needs and the effectiveness of the proposed
-                    opportunity.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Debrief the speed dating sessions.
-                    </span>
-                    Discuss findings and takeaways from the storyboard sessions.
-                    Refocus needs as were validated by the sessions, refine
-                    scenarios, and consider additional design opportunities.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="thinkaloud-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Think Aloud Protocol</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  A method where participants verbalize what they are doing and
-                  thinking while completing a task, revealing interface aspects
-                  that delight, confuse, and frustrate
-                </h6>
-                <figure>
-                  <img
-                    src="images/thinkaloud.jpg"
-                    alt="Two pages from an example of a think aloud protocol outlining tasks"
-                    width="460"
-                  />
-                  <!--Image Source: Personal Project-->
-                  <figcaption>
-                    Example of a think aloud protocol outlining tasks for users
-                    to complete.
-                  </figcaption>
-                </figure>
-                <p>
-                  Think aloud protocol is a technique that can be used in a
-                  range of user research methods including usability testing,
-                  contextual inquiries, and card sorting. The technique involves
-                  asking users to think aloud as they complete a task or
-                  activity whether that task was prompted by the moderator as in
-                  a usability test or is one they are doing organically as in a
-                  contextual inquiry.
-                </p>
-                <p class="outline">Steps for Conducting a Think Aloud Study:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Identify and recruit users that fit your target
-                      audience.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Develop a guide of tasks you want them to complete while
-                      thinking aloud.
-                    </span>
-                  </li>
-                  <li>
-                    <span class="list-start">Ask the user to think aloud. </span
-                    >Begin the session by prefacing that thinking aloud is
-                    unfamiliar for most participants, but it will help you gain
-                    insight into their thought processes and reactions. Don’t be
-                    afraid to prompt users if they stop thinking aloud at any
-                    point during the session.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Debrief the studies with your team.
-                    </span>
-                    Identify key themes and takeaways from the study.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="usability-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Usability Testing</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Focuses on people and their tasks and seeks empirical evidence
-                  about how to improve the usability of an interface
-                </h6>
-                <figure>
-                  <img
-                    src="images/usability.png"
-                    alt="An example of a rainbow analysis spreadsheet used to track usability issues"
-                    width="460"
-                  />
-                  <!--Image Source: Personal Project-->
-                  <figcaption>
-                    A rainbow analysis spreadsheet used to track usability
-                    issues. Read this article about
-                    <a
-                      href="https://www.smashingmagazine.com/2013/04/rainbow-spreadsheet-collaborative-ux-research-tool/"
-                      >rainbow spreadsheets</a
-                    >
-                    for more information.
-                  </figcaption>
-                </figure>
-                <p>
-                  A method which employs the think aloud protocol, usability
-                  testing occurs later in the design process after a working
-                  prototype has been developed. Usability testing sessions are
-                  one-on-one engagements where participants are asking to use an
-                  interface to complete a series of tasks and think aloud while
-                  doing so. The moderator may ask probing follow-up questions.
-                  This method helps design teams identify what might be
-                  delightful, confusing, or frustrating about a design before
-                  the product is formally launched.
-                </p>
-                <p class="outline">Steps for Conducting Usability Testing:</p>
-                <ol>
-                  <li>
-                    <span class="list-start">Develop a working prototype. </span
-                    >Create a functional prototype of your design that at least
-                    captures the scenarios you want to test. To do this, you can
-                    use design tools such as Figma, Sketch, or InVision, or use
-                    programming languages such as HTML, CSS, and Javascript.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Develop a usability testing guide. </span
-                    >Select which tasks you want to have users complete. Write
-                    out detailed tasks, scenarios, and follow-up questions for
-                    each. Also, formulate a system for taking notes and noting
-                    usability issues, potentially using a rainbow spreadsheet.
-                  </li>
-                  <li>
-                    <span class="list-start">Conduct the usability test. </span
-                    >Prompt participants with the tasks and time how long it
-                    takes for them to complete each. Have them think aloud while
-                    completing. Ask additional follow-up questions and have them
-                    rate the usability of the product to accomplish each task
-                    after they’ve completed it.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Synthesize information from the usability tests.
-                    </span>
-                    Capture recurring usability issues that happened across
-                    participants to prioritize which features to fix first. Make
-                    these updates in the design and implementation.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="heuristic-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Heuristic Analysis</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Analyzing interfaces with respect to a set of usability best
-                  practices to detect usability problems before actual users
-                  engage with the interface
-                </h6>
-                <figure>
-                  <img
-                    src="images/heuristic.png"
-                    alt="Examples of Nielsen's 10 heuristics shown on mobile devices"
-                    width="460"
-                  />
-                  <!--Image Source: Universal Methods of Design by Bella Martin and Bruce Hanington-->
-                  <figcaption>
-                    Examples of Nielsen's 1994 Heuristics as shown in mobile app
-                    design. Source:
-                    <a
-                      href="https://www.amazon.com/dp/B007WRCRH8/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1"
-                      >Universal Methods of Design by Bella Martin and Bruce
-                      Hanington</a
-                    >
-                  </figcaption>
-                </figure>
-                <p>
-                  An informal usability method, heuristic analysis is an
-                  evaluation of interfaces before deployment to identify
-                  usability issues as defined by a set of usability standards,
-                  Nielsen’s 1994 Heuristics. Unlike usability testing, this
-                  method of interface evaluation is conducted by a design team
-                  rather than actual users.
-                </p>
-                <p class="outline">Steps for Conducting Heuristic Analysis:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Gather team members to conduct heuristic analysis. </span
-                    >Around five teammates is an ideal number for capturing the
-                    bulk of usability issues. Team members should range from
-                    novices to experts in UX and programming.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Provide evaluators with materials. </span
-                    >Evaluators should have the link to the prototype as well as
-                    a reference of Nielsen’s 1994 Heuristics.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Conduct heuristic evaluation. </span
-                    >Have evaluators complete tasks on the interface while
-                    noting instances in violation of the heuristics and marking
-                    those down.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Prioritize heuristic issues.
-                    </span>
-                    Triage the severity of violations to address the most
-                    important issues first before launching.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="ab-testing-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">A/B Testing</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Comparing two versions of the same design to see which
-                  performs statistically better against a predetermined goal
-                </h6>
-                <figure>
-                  <img
-                    src="images/ab-test.png"
-                    alt="An image of two designs on mobile devices for an A/B test"
-                    width="460"
-                  />
-                  <!--Image Source: https://www.theasoproject.com/blog/ab-testing-app-optimization/-->
-                  <figcaption>
-                    A and B versions of a mobile interface. Source:
-                    https://www.theasoproject.com/blog/ab-testing-app-optimization/
-                  </figcaption>
-                </figure>
-                <p>
-                  A/B testing is a quantitative, optimization method enabling
-                  researchers to gather statistically significant information
-                  about which versions of a design perform better. These are
-                  often used for design questions that are not intuitive as to
-                  which would perform better for a user. Participants are
-                  randomly assigned to an “A” test or “B” test to determine
-                  which design performs better.
-                </p>
-                <p class="outline">Steps for Conducting A/B Testing:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Define your research question. </span
-                    >Which two versions are you hoping to test? Are you testing
-                    color? Text or copy? Hierarchy? Plac
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Develop two versions of your design. </span
-                    >Create an “A” test and a “B” test.
-                  </li>
-                  <li>
-                    <span class="list-start"
-                      >Randomly assign participants. </span
-                    >Participants either receive test “A” or test “B”.
-                  </li>
-                  <li>
-                    <span class="list-start">Analyze the results. </span>
-                    Look at certain metrics such as click-through rates,
-                    purchase rates, or completion time, among others, to
-                    determine which test performed better.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="analytics-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Web Analytics</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Measurement, collection, analysis, and reporting of internet
-                  data to understand and optimize usage and usability
-                </h6>
-                <figure>
-                  <img
-                    src="images/analytics.png"
-                    alt="A screenshot of Fullstory Analytics, a web analytics tracking site"
-                    width="460"
-                  />
-                  <!--Image Source: https://www.softwareadvice.com/customer-experience/fullstory-profile/-->
-                  <figcaption>
-                    An example FullStory analytics dashboard for a website.
-                    Source:
-                    https://www.softwareadvice.com/customer-experience/fullstory-profile/
-                  </figcaption>
-                </figure>
-                <p>
-                  A form of digital trace data, web analytics are used to
-                  capture real quantitative information about how users are
-                  interacting with a specific product, website, or service.
-                  Using tools such as
-                  <a
-                    href="https://admin.google.com/a/cpanel/andrew.cmu.edu/ServiceNotAllowed?service=analytics&continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F%23"
-                    >Google Analytics</a
-                  >, <a href="fullstory.com">FullStory</a>,
-                  <a href="https://heap.io/">Heap Analytics</a>, or others,
-                  teams can track user engagement and activity on the site. This
-                  informs product teams about potential business issues or
-                  opportunities and potentially challenges in the usability of
-                  the site.
-                </p>
-                <p class="outline">Steps for Working with Web Analytics:</p>
-                <ol>
-                  <li>
-                    <span class="list-start">Implement analytics tools. </span>A
-                    range of analytics tools are available for implementation in
-                    your digital site. Install these on the back-end before
-                    deploying your product.
-                  </li>
-                  <li>
-                    <span class="list-start">Define metrics. </span>Identify key
-                    business and product metrics you want to track. Business
-                    metrics relate to click-through rates and purchases while
-                    product metrics related to user experience and activity such
-                    as # of active users, # of new users, or time spent on the
-                    site. These metrics are highly intertwined.
-                  </li>
-                  <li>
-                    <span class="list-start">Analyze the data. </span>Look at
-                    the analytics platform you installed to either view or
-                    download data to explore your identified metrics. Synthesize
-                    this information to identify its implications for your
-                    business or product.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal" tabindex="-1" id="survey-modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Survey</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <h6>
-                  Collecting self-reported information from people about their
-                  characteristics, thoughts, feelings, perceptions, behaviors,
-                  and attitudes
-                </h6>
-                <figure>
-                  <img
-                    src="images/survey.jpeg"
-                    alt="A screenshot of an Apple online support survey"
-                    width="460"
-                  />
-                  <!--Image Source: https://uxpamagazine.org/writing-usable-survey-questions/-->
-                  <figcaption>
-                    Example of an Apple Online Support Survey. Source:
-                    https://uxpamagazine.org/writing-usable-survey-questions/
-                  </figcaption>
-                </figure>
-                <p>
-                  Surveys are a way to collect information from a larger sample
-                  of participants. Because of their ability to collect large
-                  amounts of data in a short amount of time, they are an
-                  efficient tool. Unlike other self-report methods such as
-                  interviews, surveys enable the collection of attitudinal
-                  information from a broader and more diverse range of
-                  participants. However, they often do not enable researchers to
-                  answer questions about why they answered a certain way and ask
-                  follow-up questions. Popular platforms for deploying surveys
-                  range in sophistication with
-                  <a href="docs.google.com/forms">Google Forms</a> and
-                  <a href="https://forms.office.com/">Microsoft Forms</a>
-                  providing relatively simple functionality, but available to
-                  all email account holders, to
-                  <a href="https://www.surveymonkey.com/">Survey Monkey</a>,
-                  which provides a medium amount of functionality, and
-                  <a href="https://www.qualtrics.com/">Qualtrics</a>, which is
-                  highly sophisticated and customizable.
-                </p>
-                <p class="outline">Steps for Conducting a Survey:</p>
-                <ol>
-                  <li>
-                    <span class="list-start"
-                      >Define your overarching research question.
-                    </span>
-                  </li>
-                  <li>
-                    <span class="list-start">Develop the survey. </span>Define
-                    key topics you hope to explore in your survey to break the
-                    survey into sections. Within each topic, identify tangible
-                    survey questions and intended formats (i.e. radio buttons,
-                    sliders, rating buttons, dropdowns, matrices, etc.) to ask
-                    respondents. Avoid too many free response questions as they
-                    lead to survey fatigue and open-ended questions, which will
-                    make data analysis difficult later on.
-                  </li>
-                  <li>
-                    <span class="list-start">Recruit survey respondents. </span
-                    >Many online platforms such as
-                    <a href="https://www.mturk.com/">Amazon Mechanical Turk</a>
-                    or
-                    <a href="https://www.surveymonkey.com/">Survey Monkey's</a>
-                    built-in recruiting platform can assist in helping you
-                    screen and identify participants that fit your criteria.
-                  </li>
-                  <li>
-                    <span class="list-start">Deploy the survey. </span>Set the
-                    survey to be open and collecting responses for a set amount
-                    of time.
-                  </li>
-                  <li>
-                    <span class="list-start">Analyze the survey data. </span
-                    >Once the survey is closed, analyze the survey data. Online
-                    tools provide initial visualizations of the data, but data
-                    can also be downloaded for further analysis and examination
-                    of statistical significance in Excel, Tableau, Python, SPSS,
-                    or R.
-                  </li>
-                  <li>
-                    <span class="list-start">Interpret survey results. </span
-                    >What did you learn from your survey? What insights can you
-                    include?
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
