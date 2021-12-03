@@ -255,15 +255,20 @@ figcaption {
 }
 
 .caption {
-  font-size: 10px;
+  font-size: 8px;
   font-style: italic;
   color: #667085;
 }
 
 #methods .caption {
-  padding-top: 3%;
+  padding-top: 5%;
+  font-size: 12px;
   padding-left: 2%;
-  padding-right: 2%;
+  padding-right: 4%;
+}
+
+#methods .caption a {
+  color: #004a8e;
 }
 
 .modal-body a {
