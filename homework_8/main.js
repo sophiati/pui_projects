@@ -7,6 +7,10 @@ if (storedValue == null) {
   plan = storedValue
 }
 
+function homePage() {
+  window.location.href = "index.html"
+}
+
 function startQuiz() {
   clearQuiz()
   window.location.href = "practice.html"
@@ -47,11 +51,14 @@ function submitQuiz() {
 
   //Checks Goal
   if (document.getElementById("strategize").checked) {
-    var goal = "Strategize"
+    var goal =
+      "Strategize - Inspire, explore, and choose new directions and opportunities"
   } else if (document.getElementById("execute").checked) {
-    var goal = "Execute"
+    var goal =
+      "Execute  - Inform and optimize designs in order to reduce risk and improve usability"
   } else if (document.getElementById("assess").checked) {
-    var goal = "Assess"
+    var goal =
+      "Assess - Measure product performance against itself or competition"
   }
 
   console.log(goal)
@@ -122,59 +129,35 @@ function updatePage() {
   const clone = template.content.cloneNode(true)
   clone.querySelector("#question-input").innerText = research.question
   clone.querySelector("#goal-input").innerText = research.goal
-  // if (research.methods == 1) {
-  // const card_template = document.getElementById("m1-card")
-  // const card_clone = card_template.content.cloneNode(true)
-  // card_clone.replaceWith(document.getElementById("#ab-testing"))
-  // console.log(1)
-  // clone
-  //   .querySelector("#m1-card")
-  //   .replaceWith(document.querySelector("#ab-testing"))
-  //   clone
-  //     .querySelector("#m2-card")
-  //     .replaceWith(document.querySelector("#heuristic"))
-  //   clone
-  //     .querySelector("#m3-card")
-  //     .replaceWith(document.querySelector("#web-analytics"))
-  // } else if (research.methods == 2) {
-  //   clone
-  //     .querySelector("#m1-card")
-  //     .replaceWith(document.querySelector("#usability-testing"))
-  //   clone
-  //     .querySelector("#m2-card")
-  //     .replaceWith(document.querySelector("#think-aloud"))
-  //   clone
-  //     .querySelector("#m3-card")
-  //     .replaceWith(document.querySelector("#contextual-inquiry"))
-  // } else if (research.methods == 3) {
-  // const card_template = document.getElementById("m3-card")
-  // const card_clone = card_template.content.cloneNode(true)
-  // card_clone.replaceWith(document.getElementById("#diaries"))
-  //   console.log(3)
-  //   clone
-  //     .querySelector("#m1-card")
-  //     .replaceWith(document.getElementById("#diaries"))
-  //   console.log("diaries")
-  //   clone
-  //     .querySelector("#m2-card")
-  //     .replaceWith(document.querySelector("#codesign"))
-  //   clone
-  //     .querySelector("#m3-card")
-  //     .replaceWith(document.querySelector("#interviews"))
-  // } else if (research.methods == 4) {
-  //   clone
-  //     .querySelector("#m1-card")
-  //     .replaceWith(document.querySelector("#speed-dating"))
-  //   clone
-  //     .querySelector("#m2-card")
-  //     .replaceWith(document.querySelector("#card-sorting"))
-  //   clone
-  //     .querySelector("#m3-card")
-  //     .replaceWith(document.querySelector("#survey"))
-  // }
-  // clone.querySelector("#m1-card").replaceWith(research.method1)
-  // clone.querySelector("#m2-card").replaceWith(research.method2)
-  // clone.querySelector("#m3-card").replaceWith(research.method3)
+  if (research.methods == 1) {
+    clone.querySelector("#m1-title").innerText = abTesting.title
+    clone.querySelector("#m1-subtitle").innerText = abTesting.subtitle
+    clone.querySelector("#m2-title").innerText = heuristic.title
+    clone.querySelector("#m2-subtitle").innerText = heuristic.subtitle
+    clone.querySelector("#m3-title").innerText = webAnalytics.title
+    clone.querySelector("#m3-subtitle").innerText = webAnalytics.subtitle
+  } else if (research.methods == 2) {
+    clone.querySelector("#m1-title").innerText = usabilityTesting.title
+    clone.querySelector("#m1-subtitle").innerText = usabilityTesting.subtitle
+    clone.querySelector("#m2-title").innerText = thinkAloud.title
+    clone.querySelector("#m2-subtitle").innerText = thinkAloud.subtitle
+    clone.querySelector("#m3-title").innerText = contextualInquiry.title
+    clone.querySelector("#m3-subtitle").innerText = contextualInquiry.subtitle
+  } else if (research.methods == 3) {
+    clone.querySelector("#m1-title").innerText = digitalDiaries.title
+    clone.querySelector("#m1-subtitle").innerText = digitalDiaries.subtitle
+    clone.querySelector("#m2-title").innerText = codesign.title
+    clone.querySelector("#m2-subtitle").innerText = codesign.subtitle
+    clone.querySelector("#m3-title").innerText = interviews.title
+    clone.querySelector("#m3-subtitle").innerText = interviews.subtitle
+  } else if (research.methods == 4) {
+    clone.querySelector("#m1-title").innerText = speedDating.title
+    clone.querySelector("#m1-subtitle").innerText = speedDating.subtitle
+    clone.querySelector("#m2-title").innerText = cardSorting.title
+    clone.querySelector("#m2-subtitle").innerText = cardSorting.subtitle
+    clone.querySelector("#m3-title").innerText = survey.title
+    clone.querySelector("#m3-subtitle").innerText = survey.subtitle
+  }
   resultDiv.appendChild(clone)
 
   resultDiv.style.visibility = "visible"

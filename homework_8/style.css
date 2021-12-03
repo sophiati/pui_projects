@@ -147,11 +147,14 @@ body {
 
 .card h5 {
   font-size: 36px;
+  font-weight: 400;
 }
 
 .card-subtitle {
   color: white !important;
   font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
   padding-bottom: 2%;
 }
 
@@ -197,12 +200,12 @@ body {
   transform: rotateY(-180deg);
   text-align: left;
   display: block;
-  padding-left: 0px !important;
+  padding-left: 5%;
 }
 
-.quant-b .flip-card-back p {
-  padding-left: 0px !important;
-}
+/* .quant-b .flip-card-back p {
+  padding-left: ;
+} */
 
 /*Modals*/
 /* .modal {
