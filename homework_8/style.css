@@ -150,6 +150,10 @@ body {
   font-weight: 400;
 }
 
+.card-title {
+  padding-bottom: 2%;
+  padding-right: 10px;
+}
 .card-subtitle {
   color: white !important;
   font-style: italic;
@@ -194,40 +198,52 @@ body {
   backface-visibility: hidden;
 }
 
-.discover .flip-card-back {
-  background-color: #9bc700;
-  border-color: #9bc700;
+.flip-card-back {
   transform: rotateY(-180deg);
   text-align: left;
   display: block;
   padding-left: 5%;
+  padding-right: 5%;
+}
+
+.discover .flip-card-back {
+  background-color: #9bc700;
+  border-color: #9bc700;
+  /* transform: rotateY(-180deg);
+  text-align: left;
+  display: block;
+  padding-left: 5%;
+  padding-right: 5%; */
 }
 
 .explore .flip-card-back {
   background-color: #41bfe7;
   border-color: #41bfe7;
-  transform: rotateY(-180deg);
+  /* transform: rotateY(-180deg);
   text-align: left;
   display: block;
   padding-left: 5%;
+  padding-right: 5%; */
 }
 
 .test .flip-card-back {
   background-color: #ff5a9c;
   border-color: #ff5a9c;
-  transform: rotateY(-180deg);
+  /* transform: rotateY(-180deg);
   text-align: left;
   display: block;
   padding-left: 5%;
+  padding-right: 5%; */
 }
 
 .listen .flip-card-back {
   background-color: #f0cc08;
   border-color: #f0cc08;
-  transform: rotateY(-180deg);
+  /* transform: rotateY(-180deg);
   text-align: left;
   display: block;
   padding-left: 5%;
+  padding-right: 5%; */
 }
 
 /* .quant-b .flip-card-back p {

@@ -242,6 +242,30 @@ html {
   padding-left: 5%;
 }
 
+.card-link {
+  padding-top: 8px;
+  color: white;
+  text-decoration: underline;
+  align-content: bottom;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.card-link:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.flip-card-back {
+  border-radius: 8px;
+  padding-top: 5%;
+}
+
+.note p {
+  padding-bottom: 5%;
+  font-size: 22px;
+}
+
 /*Quiz*/
 /*Quiz Styles*/
 /* @import "variables.scss";
@@ -327,11 +351,11 @@ h5 {
 }
 
 #goal label {
-  padding-bottom: 2%;
+  margin-bottom: 5%;
 }
 
 #goal {
-  margin-bottom: 10%;
+  margin-bottom: 6%;
 }
 
 #question-bucket .footer {
@@ -343,7 +367,7 @@ h5 {
 }
 
 #focus .inputs {
-  padding-bottom: 5%;
+  padding-bottom: 3%;
 }
 
 #abc {
@@ -389,7 +413,7 @@ h5 {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
-  margin: 10px auto 10px auto;
+  /* margin: 10px auto 10px auto; */
 }
 
 #ww input[type="radio"] {
@@ -411,7 +435,7 @@ h5 {
   font-size: 20px;
   text-align: center;
   padding-top: 3%;
-  padding-bottom: 3%;
+  padding-bottom: 1%;
   color: #2b3b4b;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -422,10 +446,6 @@ h5 {
   color: white;
   font-weight: 700;
   border: 0px;
-}
-
-#focus-container {
-  padding-bottom: 10%;
 }
 
 #results-container {
@@ -472,6 +492,10 @@ h4 {
   font-size: 22px;
 }
 
+#results-template h4 {
+  color: #004a8e;
+}
+
 .return {
   justify-content: center;
   margin: auto;
@@ -483,7 +507,7 @@ h4 {
 }
 
 .return a {
-  color: #2b3b4b;
+  color: #004a8e;
   font-size: 18px;
 }
 

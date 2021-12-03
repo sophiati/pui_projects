@@ -132,31 +132,44 @@ function updatePage() {
   if (research.methods == 1) {
     clone.querySelector("#m1-title").innerText = abTesting.title
     clone.querySelector("#m1-subtitle").innerText = abTesting.subtitle
+    clone.querySelector("#m1-body").style.background = "#ff5a9c"
+    // clone.querySelector("#m1-link").setAttribute = ("href", "index.html")
     clone.querySelector("#m2-title").innerText = heuristic.title
     clone.querySelector("#m2-subtitle").innerText = heuristic.subtitle
+    clone.querySelector("#m2-body").style.background = "#ff5a9c"
     clone.querySelector("#m3-title").innerText = webAnalytics.title
     clone.querySelector("#m3-subtitle").innerText = webAnalytics.subtitle
+    clone.querySelector("#m3-body").style.background = "#f0cc08"
   } else if (research.methods == 2) {
     clone.querySelector("#m1-title").innerText = usabilityTesting.title
     clone.querySelector("#m1-subtitle").innerText = usabilityTesting.subtitle
+    clone.querySelector("#m1-body").style.background = "#ff5a9c"
     clone.querySelector("#m2-title").innerText = thinkAloud.title
     clone.querySelector("#m2-subtitle").innerText = thinkAloud.subtitle
+    clone.querySelector("#m2-body").style.background = "#ff5a9c"
     clone.querySelector("#m3-title").innerText = contextualInquiry.title
     clone.querySelector("#m3-subtitle").innerText = contextualInquiry.subtitle
+    clone.querySelector("#m3-body").style.background = "#9bc700"
   } else if (research.methods == 3) {
     clone.querySelector("#m1-title").innerText = digitalDiaries.title
     clone.querySelector("#m1-subtitle").innerText = digitalDiaries.subtitle
+    clone.querySelector("#m1-body").style.background = "#9bc700"
     clone.querySelector("#m2-title").innerText = codesign.title
     clone.querySelector("#m2-subtitle").innerText = codesign.subtitle
+    clone.querySelector("#m2-body").style.background = "#41bfe7"
     clone.querySelector("#m3-title").innerText = interviews.title
     clone.querySelector("#m3-subtitle").innerText = interviews.subtitle
+    clone.querySelector("#m3-body").style.background = "#9bc700"
   } else if (research.methods == 4) {
     clone.querySelector("#m1-title").innerText = speedDating.title
     clone.querySelector("#m1-subtitle").innerText = speedDating.subtitle
+    clone.querySelector("#m1-body").style.background = "#41bfe7"
     clone.querySelector("#m2-title").innerText = cardSorting.title
     clone.querySelector("#m2-subtitle").innerText = cardSorting.subtitle
+    clone.querySelector("#m2-body").style.background = "#41bfe7"
     clone.querySelector("#m3-title").innerText = survey.title
     clone.querySelector("#m3-subtitle").innerText = survey.subtitle
+    clone.querySelector("#m3-body").style.background = "#f0cc08"
   }
   resultDiv.appendChild(clone)
 
