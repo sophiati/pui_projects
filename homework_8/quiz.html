@@ -20,9 +20,10 @@
   </head>
 
   <body>
-    <!-- <div class="container"> -->
-    <!-- <div class="row justify-content-center"> -->
-    <!-- <div
+    <main>
+      <!-- <div class="container"> -->
+      <!-- <div class="row justify-content-center"> -->
+      <!-- <div
       class="
         col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5
         text-center
@@ -31,295 +32,304 @@
         mb-2
       "
     > -->
-    <!-- <div class="px-0 pt-4 pb-0 mt-3 mb-3"> -->
-    <div id="progress-form">
-      <ul id="progressbar">
-        <li class="active" id="step1">
-          <strong>Question</strong>
-        </li>
-        <li id="step2"><strong>Goals</strong></li>
-        <li id="step3"><strong>Focus</strong></li>
-        <li id="step4"><strong>Your Plan</strong></li>
-      </ul>
-      <div class="progress">
-        <div class="progress-bar"></div>
-      </div>
-      <br />
-      <div class="col-md-8">
-        <div class="form-group col-md-3">
-          <fieldset class="overall-fieldset">
-            <legend>Input your research question.</legend>
-            <div class="quiz-container" id="question-bucket">
-              <div class="content">
-                <h1>Let's start with your research question.</h1>
-                <h2>Input your research question here:</h2>
-                <section class="question" required>
-                  <label for="question">Enter your question...</label>
-                  <br />
-                  <textarea
-                    id="question"
-                    name="question"
-                    rows="5"
-                    cols="80"
-                    required
-                  ></textarea>
-                </section>
-              </div>
-            </div>
-            <input
-              type="button"
-              name="previous-step"
-              class="previous-step btn btn-light prev-btn"
-              value="Previous"
-              onclick="homePage()"
-            />
-            <input
-              type="button"
-              name="next-step"
-              class="next-step btn-secondary nxt-btn"
-              value="Next"
-            />
-          </fieldset>
-          <fieldset>
-            <legend>Select your project goal.</legend>
-            <div class="quiz-container" id="goals">
-              <div class="content">
-                <h1>Goals</h1>
-                <h2>My main project goal is to...</h2>
-                <div class="inputs">
-                  <form>
-                    <div id="goal">
-                      <input type="radio" id="strategize" name="goal-answer" />
-                      <label for="strategize"
-                        ><span class="start-text">Strategize</span> - Inspire,
-                        explore, and choose new directions and opportunities
-                      </label>
-                      <br />
-                      <input type="radio" id="execute" name="goal-answer" />
-                      <label for="execute"
-                        ><span class="start-text">Execute</span> - Inform and
-                        optimize designs in order to reduce risk and improve
-                        usability
-                      </label>
-                      <br />
-                      <input type="radio" id="assess" name="goal-answer" />
-                      <label for="assess"
-                        ><span class="start-text">Assess</span> - Measure
-                        product performance against itself or competition
-                      </label>
-                    </div>
-                  </form>
+      <!-- <div class="px-0 pt-4 pb-0 mt-3 mb-3"> -->
+      <div id="progress-form">
+        <ul id="progressbar">
+          <li class="active" id="step1">
+            <strong>Question</strong>
+          </li>
+          <li id="step2"><strong>Goals</strong></li>
+          <li id="step3"><strong>Focus</strong></li>
+          <li id="step4"><strong>Your Plan</strong></li>
+        </ul>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <br />
+        <div class="col-md-8">
+          <div class="form-group col-md-3">
+            <fieldset class="overall-fieldset">
+              <legend>Input your research question.</legend>
+              <div class="quiz-container" id="question-bucket">
+                <div class="content">
+                  <h1>Let's start with your research question.</h1>
+                  <h2>Input your research question here:</h2>
+                  <section class="question" required>
+                    <label for="question">Enter your question...</label>
+                    <br />
+                    <textarea
+                      id="question"
+                      name="question"
+                      rows="5"
+                      cols="80"
+                      required
+                    ></textarea>
+                  </section>
                 </div>
               </div>
-            </div>
-            <input
-              type="button"
-              name="previous-step"
-              class="previous-step btn btn-light prev-btn"
-              value="Previous"
-            />
-            <input
-              type="button"
-              name="next-step"
-              class="next-step btn-secondary nxt-btn"
-              value="Next"
-            />
-          </fieldset>
-          <fieldset>
-            <legend>
-              Answer what you hope to learn about users. Attitudes or Behavior?
-              What or Why?
-            </legend>
-            <div class="quiz-container" id="focus">
-              <div class="content">
-                <h1>Focus</h1>
-                <div id="focus-container">
-                  <h2>I want to understand users'...</h2>
+              <input
+                type="button"
+                name="previous-step"
+                class="previous-step btn btn-light prev-btn"
+                value="Previous"
+                onclick="homePage()"
+              />
+              <input
+                type="button"
+                name="next-step"
+                class="next-step btn-secondary nxt-btn"
+                value="Next"
+              />
+            </fieldset>
+            <fieldset>
+              <legend>Select your project goal.</legend>
+              <div class="quiz-container" id="goals">
+                <div class="content">
+                  <h1>Goals</h1>
+                  <h2>My main project goal is to...</h2>
                   <div class="inputs">
                     <form>
-                      <div id="abc">
+                      <div id="goal">
                         <input
                           type="radio"
-                          id="attitudes"
-                          name="abc_answer"
-                          required
+                          id="strategize"
+                          name="goal-answer"
                         />
-                        <label for="attitudes">Attitudes </label>
+                        <label for="strategize"
+                          ><span class="start-text">Strategize</span> - Inspire,
+                          explore, and choose new directions and opportunities
+                        </label>
                         <br />
-                        <input type="radio" id="behaviors" name="abc_answer" />
-                        <label for="behaviors">Behaviors </label>
+                        <input type="radio" id="execute" name="goal-answer" />
+                        <label for="execute"
+                          ><span class="start-text">Execute</span> - Inform and
+                          optimize designs in order to reduce risk and improve
+                          usability
+                        </label>
                         <br />
-                      </div>
-                    </form>
-                  </div>
-
-                  <h2>I want to answer...</h2>
-                  <div class="inputs">
-                    <form>
-                      <div id="ww">
-                        <input type="radio" id="what" name="ww_answer" />
-                        <label for="what">What?</label>
-                        <br />
-                        <input type="radio" id="why" name="ww_answer" />
-                        <label for="why">Why?</label>
-                        <br />
+                        <input type="radio" id="assess" name="goal-answer" />
+                        <label for="assess"
+                          ><span class="start-text">Assess</span> - Measure
+                          product performance against itself or competition
+                        </label>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
-            </div>
-            <input
-              type="button"
-              name="previous-step"
-              class="previous-step btn btn-light prev-btn"
-              value="Previous"
-            />
-            <input
-              type="button"
-              name="next-step"
-              class="next-step btn-secondary nxt-btn"
-              value="Submit"
-              onclick="getResults()"
-            />
-          </fieldset>
-          <fieldset>
-            <legend>View your output research plan.</legend>
-            <div class="finish">
-              <div id="result">
-                <div class="progress">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    style="width: 100%"
-                    aria-valuenow="100"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
+              <input
+                type="button"
+                name="previous-step"
+                class="previous-step btn btn-light prev-btn"
+                value="Previous"
+              />
+              <input
+                type="button"
+                name="next-step"
+                class="next-step btn-secondary nxt-btn"
+                value="Next"
+              />
+            </fieldset>
+            <fieldset>
+              <legend>
+                Answer what you hope to learn about users. Attitudes or
+                Behavior? What or Why?
+              </legend>
+              <div class="quiz-container" id="focus">
+                <div class="content">
+                  <h1>Focus</h1>
+                  <div id="focus-container">
+                    <h2>I want to understand users'...</h2>
+                    <div class="inputs">
+                      <form>
+                        <div id="abc">
+                          <input
+                            type="radio"
+                            id="attitudes"
+                            name="abc_answer"
+                            required
+                          />
+                          <label for="attitudes">Attitudes </label>
+                          <br />
+                          <input
+                            type="radio"
+                            id="behaviors"
+                            name="abc_answer"
+                          />
+                          <label for="behaviors">Behaviors </label>
+                          <br />
+                        </div>
+                      </form>
+                    </div>
+
+                    <h2>I want to answer...</h2>
+                    <div class="inputs">
+                      <form>
+                        <div id="ww">
+                          <input type="radio" id="what" name="ww_answer" />
+                          <label for="what">What?</label>
+                          <br />
+                          <input type="radio" id="why" name="ww_answer" />
+                          <label for="why">Why?</label>
+                          <br />
+                        </div>
+                      </form>
+                    </div>
+                  </div>
                 </div>
-                <div class="content" id="results-container">
-                  <h1>Your Research Plan</h1>
-                  <template id="results-template">
-                    <div id="result-question">
-                      <h2>Research Question</h2>
-                      <p id="question-input">
-                        How might we foster collaboration in everyday auditing
-                        of algorithmic biases to amplify impact?
-                      </p>
-                    </div>
+              </div>
+              <input
+                type="button"
+                name="previous-step"
+                class="previous-step btn btn-light prev-btn"
+                value="Previous"
+              />
+              <input
+                type="button"
+                name="next-step"
+                class="next-step btn-secondary nxt-btn"
+                value="Submit"
+                onclick="getResults()"
+              />
+            </fieldset>
+            <fieldset>
+              <legend>View your output research plan.</legend>
+              <div class="finish">
+                <div id="result">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 100%"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="content" id="results-container">
+                    <h1>Your Research Plan</h1>
+                    <template id="results-template">
+                      <div id="result-question">
+                        <h2>Research Question</h2>
+                        <p id="question-input">
+                          How might we foster collaboration in everyday auditing
+                          of algorithmic biases to amplify impact?
+                        </p>
+                      </div>
 
-                    <hr />
-                    <div id="result-goal">
-                      <h2>Research Goal</h2>
-                      <p id="goal-input">
-                        <span class="start-text">Strategize</span> - Inspire,
-                        explore, and choose new directions and opportunities
-                      </p>
-                    </div>
+                      <hr />
+                      <div id="result-goal">
+                        <h2>Research Goal</h2>
+                        <p id="goal-input">
+                          <span class="start-text">Strategize</span> - Inspire,
+                          explore, and choose new directions and opportunities
+                        </p>
+                      </div>
 
-                    <hr />
-                    <div id="result-methods">
-                      <h2>Research Methods</h2>
-                      <p>
-                        We recommend exploring using these research methods:
-                      </p>
-                      <div class="col-md-8">
-                        <div class="form-group col-md-3">
-                          <div class="container">
-                            <div class="row">
-                              <div class="col">
-                                <div
-                                  class="card flip-card"
-                                  style="width: 18rem"
-                                >
+                      <hr />
+                      <div id="result-methods">
+                        <h2>Research Methods</h2>
+                        <p>
+                          We recommend exploring using these research methods:
+                        </p>
+                        <div class="col-md-8">
+                          <div class="form-group col-md-3">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col">
                                   <div
-                                    class="card-body flip-card-inner"
-                                    id="m1-body"
+                                    class="card flip-card"
+                                    style="width: 18rem"
                                   >
-                                    <div class="flip-card-front">
-                                      <h3 class="card-title" id="m1-title">
-                                        Contextual Inquiry
-                                      </h3>
-                                      <h4
-                                        class="card-subtitle mb-2 text-muted"
-                                        id="m1-subtitle"
-                                      >
-                                        Qualitative, Behavioral
-                                      </h4>
-                                    </div>
-                                    <div class="flip-card-back">
-                                      <p id="m1-description">
-                                        Description of A/B Testing Description
-                                        of A/B Testing Description of A/B
-                                        Testing Description of A/B Testing
-                                        Description of A/B Testing Description
-                                        of A/B Testing
-                                      </p>
+                                    <div
+                                      class="card-body flip-card-inner"
+                                      id="m1-body"
+                                    >
+                                      <div class="flip-card-front">
+                                        <h3 class="card-title" id="m1-title">
+                                          Contextual Inquiry
+                                        </h3>
+                                        <h4
+                                          class="card-subtitle mb-2 text-muted"
+                                          id="m1-subtitle"
+                                        >
+                                          Qualitative, Behavioral
+                                        </h4>
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <p id="m1-description">
+                                          Description of A/B Testing Description
+                                          of A/B Testing Description of A/B
+                                          Testing Description of A/B Testing
+                                          Description of A/B Testing Description
+                                          of A/B Testing
+                                        </p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
 
-                              <div class="col">
-                                <div
-                                  class="card flip-card"
-                                  style="width: 18rem"
-                                >
+                                <div class="col">
                                   <div
-                                    class="card-body flip-card-inner"
-                                    id="m2-body"
+                                    class="card flip-card"
+                                    style="width: 18rem"
                                   >
-                                    <div class="flip-card-front">
-                                      <h3 class="card-title" id="m2-title">
-                                        Web Analytics
-                                      </h3>
-                                      <h4
-                                        class="card-subtitle mb-2 text-muted"
-                                        id="m2-subtitle"
-                                      >
-                                        Quantitative, Behavioral
-                                      </h4>
-                                    </div>
-                                    <div class="flip-card-back">
-                                      <p id="m2-description">
-                                        Description of A/B Testing Description
-                                        of A/B Testing Description of A/B
-                                        Testing Description of A/B Testing
-                                        Description of A/B Testing Description
-                                        of A/B Testing
-                                      </p>
+                                    <div
+                                      class="card-body flip-card-inner"
+                                      id="m2-body"
+                                    >
+                                      <div class="flip-card-front">
+                                        <h3 class="card-title" id="m2-title">
+                                          Web Analytics
+                                        </h3>
+                                        <h4
+                                          class="card-subtitle mb-2 text-muted"
+                                          id="m2-subtitle"
+                                        >
+                                          Quantitative, Behavioral
+                                        </h4>
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <p id="m2-description">
+                                          Description of A/B Testing Description
+                                          of A/B Testing Description of A/B
+                                          Testing Description of A/B Testing
+                                          Description of A/B Testing Description
+                                          of A/B Testing
+                                        </p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="col">
-                                <div
-                                  class="card flip-card"
-                                  style="width: 18rem"
-                                >
+                                <div class="col">
                                   <div
-                                    class="card-body flip-card-inner"
-                                    id="m3-body"
+                                    class="card flip-card"
+                                    style="width: 18rem"
                                   >
-                                    <div class="flip-card-front">
-                                      <h3 class="card-title" id="m3-title">
-                                        Survey
-                                      </h3>
-                                      <h4
-                                        class="card-subtitle mb-2 text-muted"
-                                        id="m3-subtitle"
-                                      >
-                                        Quantitative, Attitudinal
-                                      </h4>
-                                    </div>
-                                    <div class="flip-card-back">
-                                      <p id="m3-description">
-                                        Description of A/B Testing Description
-                                        of A/B Testing Description of A/B
-                                        Testing Description of A/B Testing
-                                        Description of A/B Testing Description
-                                        of A/B Testing
-                                      </p>
+                                    <div
+                                      class="card-body flip-card-inner"
+                                      id="m3-body"
+                                    >
+                                      <div class="flip-card-front">
+                                        <h3 class="card-title" id="m3-title">
+                                          Survey
+                                        </h3>
+                                        <h4
+                                          class="card-subtitle mb-2 text-muted"
+                                          id="m3-subtitle"
+                                        >
+                                          Quantitative, Attitudinal
+                                        </h4>
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <p id="m3-description">
+                                          Description of A/B Testing Description
+                                          of A/B Testing Description of A/B
+                                          Testing Description of A/B Testing
+                                          Description of A/B Testing Description
+                                          of A/B Testing
+                                        </p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -328,25 +338,25 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </template>
+                    </template>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="note">
-              <p>
-                Return to the home page to learn more about these methods or to
-                take the quiz again!
-              </p>
-            </div>
+              <div class="note">
+                <p>
+                  Return to the home page to learn more about these methods or
+                  to take the quiz again!
+                </p>
+              </div>
 
-            <div class="return">
-              <a href="index.html">Return to Home</a>
-            </div>
-          </fieldset>
+              <div class="return">
+                <a href="index.html">Return to Home</a>
+              </div>
+            </fieldset>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <!-- </div> -->
     <!-- </div> -->
     <!-- </div> -->
