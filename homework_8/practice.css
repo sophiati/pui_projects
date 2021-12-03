@@ -231,7 +231,7 @@ html {
   font-size: 36px;
   font-weight: 400;
   padding-top: 8%;
-  padding-left: 8%;
+  padding-left: 5%;
 }
 
 .card-subtitle {
@@ -239,7 +239,7 @@ html {
   font-style: italic;
   padding-bottom: 2%;
   padding-top: 8%;
-  padding-left: 8%;
+  padding-left: 5%;
 }
 
 /*Quiz*/
