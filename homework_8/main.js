@@ -13,7 +13,7 @@ function homePage() {
 
 function startQuiz() {
   clearQuiz()
-  window.location.href = "practice.html"
+  window.location.href = "quiz.html"
 }
 
 function clearQuiz() {
