@@ -87,7 +87,10 @@ body {
 
 /*Overview Styles*/
 #overview {
-  margin: 15%;
+  margin-left: 15%;
+  margin-top: 15%;
+  margin-right: 15%;
+  margin-bottom: 10%;
 }
 
 #overview p {
@@ -108,10 +111,11 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 5%;
+  padding-bottom: 5%;
 }
 
 #methods h3 {
-  padding-bottom: 2%;
+  padding-bottom: 2;
 }
 
 .row {
@@ -248,6 +252,18 @@ figcaption {
   font-size: 12px;
   font-style: italic;
   width: 460px;
+}
+
+.caption {
+  font-size: 10px;
+  font-style: italic;
+  color: #667085;
+}
+
+#methods .caption {
+  padding-top: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .modal-body a {
