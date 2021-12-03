@@ -236,8 +236,10 @@ body {
   border-color: #f0cc08;
 }
 
-.modal-body h6 {
+.modal-body h5 {
   font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .modal-body figure {
