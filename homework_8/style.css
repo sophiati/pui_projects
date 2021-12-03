@@ -59,6 +59,11 @@ body {
   margin-top: 20%;
 }
 
+.start-button:hover {
+  background-color: #004a8e;
+  border-color: #004a8e;
+}
+
 #arrow {
   justify-items: center;
   margin: auto;
@@ -204,51 +209,27 @@ body {
   display: block;
   padding-left: 5%;
   padding-right: 5%;
+  font-size: 18px;
 }
 
 .discover .flip-card-back {
   background-color: #9bc700;
-  border-color: #9bc700;
-  /* transform: rotateY(-180deg);
-  text-align: left;
-  display: block;
-  padding-left: 5%;
-  padding-right: 5%; */
 }
 
 .explore .flip-card-back {
   background-color: #41bfe7;
   border-color: #41bfe7;
-  /* transform: rotateY(-180deg);
-  text-align: left;
-  display: block;
-  padding-left: 5%;
-  padding-right: 5%; */
 }
 
 .test .flip-card-back {
   background-color: #ff5a9c;
   border-color: #ff5a9c;
-  /* transform: rotateY(-180deg);
-  text-align: left;
-  display: block;
-  padding-left: 5%;
-  padding-right: 5%; */
 }
 
 .listen .flip-card-back {
   background-color: #f0cc08;
   border-color: #f0cc08;
-  /* transform: rotateY(-180deg);
-  text-align: left;
-  display: block;
-  padding-left: 5%;
-  padding-right: 5%; */
 }
-
-/* .quant-b .flip-card-back p {
-  padding-left: ;
-} */
 
 /*Modals*/
 /* .modal {
@@ -267,7 +248,3 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 } */
-
-/*Quiz Styles*/
-
-/*Result Page Styles*/

@@ -21,24 +21,12 @@ function clearQuiz() {
 }
 
 //1 - Function to create objects for each item
-function Item(
-  itemQuestion,
-  itemGoal,
-  itemABC,
-  itemWW,
-  itemMethods
-  // itemMethod1,
-  // itemMethod2,
-  // itemMethod3
-) {
+function Item(itemQuestion, itemGoal, itemABC, itemWW, itemMethods) {
   this.question = itemQuestion
   this.goal = itemGoal
   this.abc = itemABC
   this.ww = itemWW
   this.methods = itemMethods
-  // this.method1 = itemMethod1
-  // this.method2 = itemMethod2
-  // this.method3 = itemMethod3
 }
 
 function getResults() {
@@ -84,24 +72,12 @@ function submitQuiz() {
   //Selects Methods
   if (abc == "behaviors" && ww == "what") {
     var methods = 1
-    // var method1 = document.querySelector("#ab-testing")
-    // var method2 = document.querySelector("#heuristic")
-    // var method3 = document.querySelector("#web-analytics")
   } else if (abc == "behaviors" && ww == "why") {
     var methods = 2
-    // var method1 = document.querySelector("#usability-testing")
-    // var method2 = document.querySelector("#think-aloud")
-    // var method3 = document.querySelector("#contextual-inquiry")
   } else if (abc == "attitudes" && ww == "why") {
     var methods = 3
-    // var method1 = document.querySelector("#diaries")
-    // var method2 = document.querySelector("#codesign")
-    // var method3 = document.querySelector("#interviews")
   } else if (abc == "attitudes" && ww == "what") {
     var methods = 4
-    // var method1 = document.querySelector("#speed-dating")
-    // var method2 = document.querySelector("#card-sorting")
-    // var method3 = document.querySelector("#survey")
   }
   console.log(methods)
 
@@ -111,8 +87,6 @@ function submitQuiz() {
   plan.push(research)
 
   localStorage.setItem("savedPlan", JSON.stringify(plan))
-
-  // window.location.href = "fake_results.html"
 }
 
 function displayResults() {
@@ -132,78 +106,60 @@ function updatePage() {
   if (research.methods == 1) {
     clone.querySelector("#m1-title").innerText = abTesting.title
     clone.querySelector("#m1-subtitle").innerText = abTesting.subtitle
+    clone.querySelector("#m1-description").innerText = abTesting.description
     clone.querySelector("#m1-body").style.background = "#ff5a9c"
-    // clone.querySelector("#m1-link").setAttribute = ("href", "index.html")
     clone.querySelector("#m2-title").innerText = heuristic.title
     clone.querySelector("#m2-subtitle").innerText = heuristic.subtitle
+    clone.querySelector("#m2-description").innerText = heuristic.description
     clone.querySelector("#m2-body").style.background = "#ff5a9c"
     clone.querySelector("#m3-title").innerText = webAnalytics.title
     clone.querySelector("#m3-subtitle").innerText = webAnalytics.subtitle
+    clone.querySelector("#m3-description").innerText = webAnalytics.description
     clone.querySelector("#m3-body").style.background = "#f0cc08"
   } else if (research.methods == 2) {
     clone.querySelector("#m1-title").innerText = usabilityTesting.title
     clone.querySelector("#m1-subtitle").innerText = usabilityTesting.subtitle
+    clone.querySelector("#m1-description").innerText =
+      usabilityTesting.description
     clone.querySelector("#m1-body").style.background = "#ff5a9c"
     clone.querySelector("#m2-title").innerText = thinkAloud.title
     clone.querySelector("#m2-subtitle").innerText = thinkAloud.subtitle
+    clone.querySelector("#m2-description").innerText = thinkAloud.description
     clone.querySelector("#m2-body").style.background = "#ff5a9c"
     clone.querySelector("#m3-title").innerText = contextualInquiry.title
     clone.querySelector("#m3-subtitle").innerText = contextualInquiry.subtitle
+    clone.querySelector("#m3-description").innerText =
+      contextualInquiry.description
     clone.querySelector("#m3-body").style.background = "#9bc700"
   } else if (research.methods == 3) {
     clone.querySelector("#m1-title").innerText = digitalDiaries.title
     clone.querySelector("#m1-subtitle").innerText = digitalDiaries.subtitle
+    clone.querySelector("#m1-description").innerText =
+      digitalDiaries.description
     clone.querySelector("#m1-body").style.background = "#9bc700"
     clone.querySelector("#m2-title").innerText = codesign.title
     clone.querySelector("#m2-subtitle").innerText = codesign.subtitle
+    clone.querySelector("#m2-description").innerText = codesign.description
     clone.querySelector("#m2-body").style.background = "#41bfe7"
     clone.querySelector("#m3-title").innerText = interviews.title
     clone.querySelector("#m3-subtitle").innerText = interviews.subtitle
+    clone.querySelector("#m3-description").innerText = interviews.description
     clone.querySelector("#m3-body").style.background = "#9bc700"
   } else if (research.methods == 4) {
     clone.querySelector("#m1-title").innerText = speedDating.title
     clone.querySelector("#m1-subtitle").innerText = speedDating.subtitle
+    clone.querySelector("#m1-description").innerText = speedDating.description
     clone.querySelector("#m1-body").style.background = "#41bfe7"
     clone.querySelector("#m2-title").innerText = cardSorting.title
     clone.querySelector("#m2-subtitle").innerText = cardSorting.subtitle
+    clone.querySelector("#m2-description").innerText = cardSorting.description
     clone.querySelector("#m2-body").style.background = "#41bfe7"
     clone.querySelector("#m3-title").innerText = survey.title
     clone.querySelector("#m3-subtitle").innerText = survey.subtitle
+    clone.querySelector("#m3-description").innerText = survey.description
     clone.querySelector("#m3-body").style.background = "#f0cc08"
   }
   resultDiv.appendChild(clone)
 
   resultDiv.style.visibility = "visible"
 }
-// let i = 0
-// document.getElementById("goals").style.visibility = "hidden"
-// document.getElementById("focus").style.visibility = "hidden"
-// document.getElementById("question-bucket").style.visibility = "visible"
-
-// function nextPage() {
-//   let page = ["question-bucket", "goals"]
-//   if ((i = 0)) {
-//     document.getElementById("goals").style.visibility = "none"
-//     document.getElementById("focus").style.visibility = "none"
-//     document.getElementById("question-bucket").style.display = "block"
-//   } else if ((i = 1)) {
-//     document.getElementById("focus").style.display = "hidden"
-//     document.getElementById("question-bucket").style.display = "hidden"
-//     document.getElementById("goals").style.display = "block"
-//   } else if ((i = 2)) {
-//     document.getElementById("question-bucket").style.display = "hidden"
-//     document.getElementById("goals").style.display = "hidden"
-//     document.getElementById("focus").style.display = "block"
-//   }
-//   i++
-// }
-
-// //Open Modals
-// $(function () {
-//   $("#exampleModalCenter").modal({
-//     show: true,
-//     backdrop: "static",
-//   })
-//   //now on button click
-//   $("#exampleModalCenter").modal("show")
-// })

@@ -227,6 +227,10 @@ html {
   border: 0px;
 }
 
+.card p {
+  font-size: 16px;
+}
+
 .card h5 {
   font-size: 36px;
   font-weight: 400;
@@ -259,6 +263,12 @@ html {
 .flip-card-back {
   border-radius: 8px;
   padding-top: 5%;
+}
+
+#m1-description,
+#m2-description,
+#m3-description {
+  font-size: 18px !important;
 }
 
 .note p {
