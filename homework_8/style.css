@@ -58,6 +58,7 @@ body {
   border-color: #41bfe7;
   box-shadow: 0px 4px 4px rgba(15, 15, 15, 0.25);
   margin-top: 20%;
+  color: #2b2b2b;
 }
 
 .start-button:hover {
@@ -124,7 +125,7 @@ body {
 }
 
 .card-body {
-  color: white;
+  color: #2b2b2b;
   height: 233px;
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(15, 15, 15, 0.25);
@@ -165,7 +166,7 @@ body {
   padding-right: 10px;
 }
 .card-subtitle {
-  color: white !important;
+  color: #2b2b2b !important;
   font-style: italic;
   font-size: 20px;
   font-weight: 400;
@@ -178,13 +179,13 @@ body {
 }
 
 .card-link {
-  color: white;
+  color: #2b2b2b;
   text-decoration: underline;
   align-content: bottom;
 }
 
 .card-link:hover {
-  color: white;
+  color: #2b2b2b;
 }
 
 .flip-card {
@@ -219,6 +220,7 @@ body {
 
 .discover .flip-card-back {
   background-color: #9bc700;
+  border-color: #9bc700;
 }
 
 .explore .flip-card-back {
@@ -279,23 +281,27 @@ figcaption {
 }
 
 .discover-text {
-  color: #9bc700;
+  color: #000000;
   font-weight: 700;
+  background-color: #9bc700;
 }
 
 .explore-text {
-  color: #41bfe7;
+  color: #000000;
   font-weight: 700;
+  background-color: #41bfe7;
 }
 
 .test-text {
-  color: #ff5a9c;
+  color: #000000;
   font-weight: 700;
+  background-color: #ff5a9c;
 }
 
 .listen-text {
-  color: #f0cc08;
+  color: #000000;
   font-weight: 700;
+  background-color: #f0cc08;
 }
 
 .modal-body a {
