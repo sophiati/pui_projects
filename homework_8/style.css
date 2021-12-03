@@ -300,7 +300,8 @@ figcaption {
 }
 
 .outline {
-  text-decoration: underline;
+  font-weight: 700;
+  color: #004a8e;
 }
 
 .list-start {
