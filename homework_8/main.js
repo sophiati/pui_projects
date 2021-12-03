@@ -8,8 +8,8 @@ if (storedValue == null) {
 }
 
 function startQuiz() {
-  window.location.href = "fake_quiz.html"
   clearQuiz()
+  window.location.href = "practice.html"
 }
 
 function clearQuiz() {
@@ -35,6 +35,11 @@ function Item(
   // this.method1 = itemMethod1
   // this.method2 = itemMethod2
   // this.method3 = itemMethod3
+}
+
+function getResults() {
+  submitQuiz()
+  displayResults()
 }
 
 function submitQuiz() {
@@ -100,31 +105,102 @@ function submitQuiz() {
 
   localStorage.setItem("savedPlan", JSON.stringify(plan))
 
-  window.location.href = "fake_results.html"
+  // window.location.href = "fake_results.html"
 }
 
-let i = 0
-document.getElementById("goals").style.visibility = "hidden"
-document.getElementById("focus").style.visibility = "hidden"
-document.getElementById("question-bucket").style.visibility = "visible"
-
-function nextPage() {
-  let page = ["question-bucket", "goals"]
-  if ((i = 0)) {
-    document.getElementById("goals").style.visibility = "none"
-    document.getElementById("focus").style.visibility = "none"
-    document.getElementById("question-bucket").style.display = "block"
-  } else if ((i = 1)) {
-    document.getElementById("focus").style.display = "hidden"
-    document.getElementById("question-bucket").style.display = "hidden"
-    document.getElementById("goals").style.display = "block"
-  } else if ((i = 2)) {
-    document.getElementById("question-bucket").style.display = "hidden"
-    document.getElementById("goals").style.display = "hidden"
-    document.getElementById("focus").style.display = "block"
-  }
-  i++
+function displayResults() {
+  const storedValue = JSON.parse(localStorage.getItem("savedPlan"))
+  console.log(storedValue)
+  document.getElementById("result").style.display = "block"
+  updatePage()
 }
+
+function updatePage() {
+  const resultDiv = document.getElementById("results-container")
+  const template = document.getElementById("results-template")
+  const research = plan[0]
+  const clone = template.content.cloneNode(true)
+  clone.querySelector("#question-input").innerText = research.question
+  clone.querySelector("#goal-input").innerText = research.goal
+  // if (research.methods == 1) {
+  // const card_template = document.getElementById("m1-card")
+  // const card_clone = card_template.content.cloneNode(true)
+  // card_clone.replaceWith(document.getElementById("#ab-testing"))
+  // console.log(1)
+  // clone
+  //   .querySelector("#m1-card")
+  //   .replaceWith(document.querySelector("#ab-testing"))
+  //   clone
+  //     .querySelector("#m2-card")
+  //     .replaceWith(document.querySelector("#heuristic"))
+  //   clone
+  //     .querySelector("#m3-card")
+  //     .replaceWith(document.querySelector("#web-analytics"))
+  // } else if (research.methods == 2) {
+  //   clone
+  //     .querySelector("#m1-card")
+  //     .replaceWith(document.querySelector("#usability-testing"))
+  //   clone
+  //     .querySelector("#m2-card")
+  //     .replaceWith(document.querySelector("#think-aloud"))
+  //   clone
+  //     .querySelector("#m3-card")
+  //     .replaceWith(document.querySelector("#contextual-inquiry"))
+  // } else if (research.methods == 3) {
+  // const card_template = document.getElementById("m3-card")
+  // const card_clone = card_template.content.cloneNode(true)
+  // card_clone.replaceWith(document.getElementById("#diaries"))
+  //   console.log(3)
+  //   clone
+  //     .querySelector("#m1-card")
+  //     .replaceWith(document.getElementById("#diaries"))
+  //   console.log("diaries")
+  //   clone
+  //     .querySelector("#m2-card")
+  //     .replaceWith(document.querySelector("#codesign"))
+  //   clone
+  //     .querySelector("#m3-card")
+  //     .replaceWith(document.querySelector("#interviews"))
+  // } else if (research.methods == 4) {
+  //   clone
+  //     .querySelector("#m1-card")
+  //     .replaceWith(document.querySelector("#speed-dating"))
+  //   clone
+  //     .querySelector("#m2-card")
+  //     .replaceWith(document.querySelector("#card-sorting"))
+  //   clone
+  //     .querySelector("#m3-card")
+  //     .replaceWith(document.querySelector("#survey"))
+  // }
+  // clone.querySelector("#m1-card").replaceWith(research.method1)
+  // clone.querySelector("#m2-card").replaceWith(research.method2)
+  // clone.querySelector("#m3-card").replaceWith(research.method3)
+  resultDiv.appendChild(clone)
+
+  resultDiv.style.visibility = "visible"
+}
+// let i = 0
+// document.getElementById("goals").style.visibility = "hidden"
+// document.getElementById("focus").style.visibility = "hidden"
+// document.getElementById("question-bucket").style.visibility = "visible"
+
+// function nextPage() {
+//   let page = ["question-bucket", "goals"]
+//   if ((i = 0)) {
+//     document.getElementById("goals").style.visibility = "none"
+//     document.getElementById("focus").style.visibility = "none"
+//     document.getElementById("question-bucket").style.display = "block"
+//   } else if ((i = 1)) {
+//     document.getElementById("focus").style.display = "hidden"
+//     document.getElementById("question-bucket").style.display = "hidden"
+//     document.getElementById("goals").style.display = "block"
+//   } else if ((i = 2)) {
+//     document.getElementById("question-bucket").style.display = "hidden"
+//     document.getElementById("goals").style.display = "hidden"
+//     document.getElementById("focus").style.display = "block"
+//   }
+//   i++
+// }
 
 // //Open Modals
 // $(function () {
