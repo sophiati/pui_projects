@@ -48,8 +48,9 @@ body {
   padding-bottom: 10%; */
 }
 
-#intro_text h5 {
+#intro_text h2 {
   font-weight: 400;
+  font-size: 20px;
 }
 
 .start-button {
@@ -154,7 +155,7 @@ body {
   border: 0px;
 }
 
-.card h5 {
+.card h4 {
   font-size: 36px;
   font-weight: 400;
 }
