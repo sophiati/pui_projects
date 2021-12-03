@@ -271,6 +271,30 @@ figcaption {
   color: #004a8e;
 }
 
+#method-intro {
+  font-size: 18px;
+}
+
+.discover-text {
+  color: #9bc700;
+  font-weight: 700;
+}
+
+.explore-text {
+  color: #41bfe7;
+  font-weight: 700;
+}
+
+.test-text {
+  color: #ff5a9c;
+  font-weight: 700;
+}
+
+.listen-text {
+  color: #f0cc08;
+  font-weight: 700;
+}
+
 .modal-body a {
   color: #004a8e;
 }
