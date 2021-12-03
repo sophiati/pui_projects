@@ -231,6 +231,10 @@ body {
   border-color: #f0cc08;
 }
 
+.modal-body h6 {
+  font-size: 18px;
+}
+
 .modal-body figure {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -244,6 +248,10 @@ figcaption {
   font-size: 12px;
   font-style: italic;
   width: 460px;
+}
+
+.modal-body a {
+  color: #004a8e;
 }
 
 .outline {
