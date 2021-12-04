@@ -178,10 +178,9 @@ h1 {
   padding-bottom: 2%;
   font-size: 24px;
   font-weight: 700;
-  color: #2b3b4b;
 }
 
-h2 {
+.result-title-text h2 {
   padding-bottom: 2%;
   font-weight: 400;
   font-size: 18px;
@@ -414,6 +413,12 @@ h4 {
   color: #004a8e !important;
   font-size: 22px;
   font-weight: 600;
+}
+
+#results-template h4 {
+  color: #004a83 !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
 }
 
 /*Return Link*/
